@@ -59,7 +59,7 @@ contact: 'd.theodorakis@metoffice.gov.uk'
 
 # Order of episodes in your lesson
 episodes:
-- 01-working-practices.md
+- 01-issues.md
 - 02-branching.md
 - 03-feature-branch.md
 - 04-review.md
