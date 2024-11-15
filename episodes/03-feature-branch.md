@@ -67,7 +67,7 @@ The Collaborator doesn't want to overwrite their own version of `climate`, so
 needs to clone the Owner's repository to a different location than their own
 repository with the same name.
 
-To clone the Owner's repo into their `Desktop` folder, the Collaborator enters:
+To clone the Owner's repository into their `Desktop` folder, the Collaborator enters:
 
 ```bash
 $ git clone git@github.com:mo-eormerod/weather.git ~/Desktop/mo-eormerod-weather
@@ -205,14 +205,14 @@ If you don't see this notification click on the branches dropdown
 , the button showing `main`,
 and click on the `3_shipping-forecast` branch.
 
-![](fig/feature-branch-1.png){alt='A screenshot of the GitHub weather repo showing the branch selection dropdown.'}
+![](fig/feature-branch-1.png){alt='A screenshot of the GitHub weather repository showing the branch selection dropdown.'}
 
 You should now see the Code view for the `3_shipping-forecast` branch
 and a **Contribute** button.
 Click on the **Contribute** button and select the green
 **Open pull request** option.
 
-![](fig/feature-branch-2.png){alt='A screenshot of the GitHub weather repo showing code view for the 3_shipping-forecast branch. The Contribute dropdown is expanded to show the Open pull request option.'}
+![](fig/feature-branch-2.png){alt='A screenshot of the GitHub weather repository showing code view for the 3_shipping-forecast branch. The Contribute dropdown is expanded to show the Open pull request option.'}
 
 You may have noticed when running `git push`
 on the `3_shipping-forecast` branch for the first time
@@ -251,8 +251,8 @@ are reviewed and merged back into `main` in more detail.
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
-- Add collaborators to your repo by going to the repository **Settings** then the **Collaborators** tab.
-- Cloning a repo gives you a local copy of the repository:
+- Add collaborators to your repository by going to the repository **Settings** then the **Collaborators** tab.
+- Cloning a repository gives you a local copy of the repository:
   `git clone <repository> <directory>`
 - Automatically close Issues when a PR is merged by adding
   a `Closes #<Issue number>` line to the first comment in the PR.
