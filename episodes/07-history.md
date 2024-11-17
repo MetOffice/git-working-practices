@@ -81,7 +81,7 @@ The key here is `--graph` shows us the graphical
 representation of our history on the left of the
 terminal.
 `*`'s are commits which are connected by lines.
-The vertical lines on the far left represent the `main` branch.
+The vertical lines represent links between commits.
 The output above shows two feature branches each with
 only one commit which were then merged back into
 `main` via a pull request.
