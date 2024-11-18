@@ -1,12 +1,13 @@
 ---
 title: Rebasing
 teaching: 15
-exercises: 0
+exercises: 10
 ---
 
 ::::::::::::::::::::::::::::::::::::::: objectives
 
-- Rebase a feature branch.
+- Rebase a feature branch to clean up its history.
+- Use rebase to update a feature branch to the `HEAD` of `main`.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -56,7 +57,7 @@ $ nano plot_lfric.py
 $ cat plot_lfric.py
 ```
 
-```output
+```python
 # pretnd there is code here!
 ```
 
@@ -78,7 +79,7 @@ $ nano plot_lfric.py
 $ cat plot_lfric.py
 ```
 
-```output
+```python
 # pretnd there is code here!
 # more Python
 ```
@@ -99,7 +100,7 @@ $ nano plot_lfric.py
 $ cat plot_lfric.py
 ```
 
-```output
+```python
 # pretend there is code here!
 # more Python
 ```
@@ -170,7 +171,7 @@ three feature branch commits which is `ed14d18`
 from the log above:
 
 ```bash
-git rebase -i ed14d18
+$ git rebase -i ed14d18
 ```
 
 ```output
@@ -230,61 +231,64 @@ $ git rebase --abort
 
 :::
 
-We are going to move our spelling fix up one
-line and use the `fixup` keyword to merge
-those changes with the previous commit:
+We are going to drop our spelling fix and
+amend our first commit to fix the spelling:
 
 ```output
-pick 64ac261 Adds in a Python script to plot LFRic data
-fixup 0bb7871 Fixes the axis labels spelling in the LFRic data plotting script
+edit 64ac261 Adds in a Python script to plot LFRic data
 pick 7053de7 Extends the LFRic data plotting script to plot 2D fields
+drop 0bb7871 Fixes the axis labels spelling in the LFRic data plotting script
 ```
 
-Save the and close the file.
+Save and close the file.
 
 ```output
-Auto-merging plot_lfric.py
-CONFLICT (content): Merge conflict in plot_lfric.py
-error: could not apply 0bb7871... Fixes the axis labels spelling in the LFRic data plotting script
-hint: Resolve all conflicts manually, mark them as resolved with
-hint: "git add/rm <conflicted_files>", then run "git rebase --continue".
-hint: You can instead skip this commit: run "git rebase --skip".
-hint: To abort and get back to the state before "git rebase", run "git rebase --abort".
-Could not apply 0bb7871... Fixes the axis labels spelling in the LFRic data plotting script
+Stopped at 64ac261...  Adds in a Python script to plot LFRic data
+You can amend the commit now, with
+
+  git commit --amend 
+
+Once you are satisfied with your changes, run
+
+  git rebase --continue
+[git-training-demo]:(add_plot_script|REBASE 1/3)$
 ```
 
-The first commit adding the file and the spelling
-fix commit inevitable conflicted with each other
-since the file in the spelling fix commit also has
-the changes from the original second commit.
+The rebase has stopped at 64ac261, the commit
+which added in the `plot_lfric.py` file,
+because we asked to amend the commit.
+We can now open up the plotting script and
+make our changes.
 
 Opening up the file now shows:
 
 ```bash
-[git-training-demo]:(add_plot_script *+|REBASE 2/3)$ nano plot_lfric.py
+[git-training-demo]:(add_plot_script *+|REBASE 1/3)$ nano plot_lfric.py
+[git-training-demo]:(add_plot_script *+|REBASE 1/3)$ cat plot_lfric.py
 ```
 
-```
-<<<<<<< HEAD
+```python
 # pretnd there is code here!
-=======
-# pretend there is code here!
-# more Python
->>>>>>> 0bb7871 
 ```
 
 Modify and save the file so that it reads:
 
-```
+```python
 # pretend there is code here!
 ```
 
-This is the combination of our first and third commits.
-Add the file and continue rebasing:
+Add the file and confirm the amendment:
 
 ```bash
-[git-training-demo]:(add_plot_script *+|REBASE 2/3)$ git add plot_lfric.py 
-[git-training-demo]:(add_plot_script +|REBASE 2/3)$ git rebase --continue 
+[git-training-demo]:(add_plot_script *|REBASE 1/3)$ git add plot_lfric.py
+[git-training-demo]:(add_plot_script +|REBASE 1/3)$ git commit --amend
+```
+
+```output
+[detached HEAD 76fd423] Adds in a Python script to plot LFRic data
+ Date: Mon Nov 18 10:49:25 2024 +0000
+ 1 file changed, 1 insertion(+)
+ create mode 100644 plot_lfric.py
 ```
 
 For the last few commands we have included the
@@ -293,15 +297,13 @@ provided by the `git-prompt.sh` script
 you set up in the [git-novice lesson](https://www.astropython.com/git-novice/index.html#git-autocomplete).
 You can see the prompt clearly states we are
 rebasing, `REBASE`, and that it is on
-line `2/3` of the file we edited earlier.
+line `1/3` of the rebase to-do file we edited earlier.
 
-We now see the following output:
+Now we have amended the commit we can
+continue with the rebase:
 
-```output
-[detached HEAD e56ed99] Adds in a Python script to plot LFRic data
- Date: Sat Nov 16 19:53:42 2024 +0000
- 1 file changed, 1 insertion(+)
- create mode 100644 plot_lfric.py
+```bash
+[git-training-demo]:(add_plot_script|REBASE 1/3)$ git rebase --continue
 Auto-merging plot_lfric.py
 CONFLICT (content): Merge conflict in plot_lfric.py
 error: could not apply 7053de7... Extends the LFRic data plotting script to plot 2D fields
@@ -310,18 +312,31 @@ hint: "git add/rm <conflicted_files>", then run "git rebase --continue".
 hint: You can instead skip this commit: run "git rebase --skip".
 hint: To abort and get back to the state before "git rebase", run "git rebase --abort".
 Could not apply 7053de7... Extends the LFRic data plotting script to plot 2D fields
+[git-training-demo]:(add_plot_script *+|REBASE 2/3)$ 
 ```
 
-The rebase has tried to apply the third commit
-which has resulted in another merge error.
-Open the file again to resolve the conflict:
+The rebase has tried to apply the second commit
+which still has the spelling mistake
+resulting in a merge error.
+Open the file again and resolve the conflict:
 
 ```bash
-[git-training-demo]:(add_plot_script *+|REBASE 3/3)$ nano plot_lfric.py 
-[git-training-demo]:(add_plot_script *+|REBASE 3/3)$ cat plot_lfric.py 
+[git-training-demo]:(add_plot_script *+|REBASE 2/3)$ nano plot_lfric.py 
+[git-training-demo]:(add_plot_script *+|REBASE 2/3)$ cat plot_lfric.py 
 ```
 
-```output
+```python
+<<<<<<< HEAD
+# pretend there is code here!
+=======
+# pretnd there is code here!
+# more Python
+>>>>>>> 3343f91
+```
+
+Modify and save the file so that it reads:
+
+```python
 # pretend there is code here!
 # more Python
 ```
@@ -329,14 +344,15 @@ Open the file again to resolve the conflict:
 Add the file and continue with the rebase:
 
 ```bash
-[git-training-demo]:(add_plot_script *+|REBASE 3/3)$ git add plot_lfric.py
-[git-training-demo]:(add_plot_script +|REBASE 3/3)$ git rebase --continue
+[git-training-demo]:(add_plot_script *+|REBASE 2/3)$ git add plot_lfric.py
+[git-training-demo]:(add_plot_script +|REBASE 2/3)$ git rebase --continue
 ```
 
 ```output
 [detached HEAD d7def6a] Extends the LFRic data plotting script to plot 2D fields
  1 file changed, 1 insertion(+)
 Successfully rebased and updated refs/heads/add_plot_script.
+[git-training-demo]:(add_plot_script)$ 
 ```
 
 We have now successfully rebased our feature branch.
@@ -475,34 +491,62 @@ to check yourself.
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Modifying Commits and their Messages
+## Modifying Commit Messages
 
-`git rebase` can also be used to modify individual commits
-and their messages.
-So instead of creating a new commit to fix a typo you
-could use rebase to edit the commit directly.
+`git rebase` can also be used to modify commit messages.
 
 Look again at the output of the interactive rebase
-in this lesson. Which keywords let you:
-
-1. Edit the contents of a commit
-2. Edit the commit message
+in this lesson.
+Which keyword lets you edit the commit message?
 
 :::::::::::::::  solution
 
 ## Solution
 
-1. Edit the contents of a commit
+Edit the commit message:
 
-```
-# e, edit <commit> = use commit, but stop for amending
-```
-
-2. Edit the commit message
-
-```
+```text
 # r, reword <commit> = use commit, but edit the commit message
 ```
+
+:::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
+
+:::::::::::::::::::::::::::::::::::::::  challenge
+
+## Re-ordering Commits
+
+In the first example removing the spelling mistake
+we used the following keywords in our rebase to-do list:
+
+```output
+edit 64ac261 Adds in a Python script to plot LFRic data
+pick 7053de7 Extends the LFRic data plotting script to plot 2D fields
+drop 0bb7871 Fixes the axis labels spelling in the LFRic data plotting script
+```
+
+You can also re-order the lines in this file
+to re-order commits.
+Look at the possible rebase options again.
+What other combination of keywords and/or
+line-reordering would have given us the same result?
+
+:::::::::::::::  solution
+
+## Solution
+
+```output
+pick 64ac261 Adds in a Python script to plot LFRic data
+fixup 0bb7871 Fixes the axis labels spelling in the LFRic data plotting script
+pick 7053de7 Extends the LFRic data plotting script to plot 2D fields
+```
+
+This is one possibility.
+We move the last commit just underneath the first
+which introduced the mistake.
+We use the `fixup` keyword to fix this change up
+into the previous commit.
 
 :::::::::::::::::::::::::
 
