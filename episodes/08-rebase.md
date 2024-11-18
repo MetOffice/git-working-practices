@@ -390,6 +390,21 @@ output above, on the feature branch.
 
 ## Updating a Branch
 
+::::::::::::::::::::::::::::::::::::: instructor
+
+To ensure the `main` branch of the
+`git-training-demo` repository has
+moved forward one commit, the co-instructor
+should merge a PR making any change
+they like to the repository.
+
+Or they can make a direct edit and merge
+to main by for example editing the `README.md`
+file and using their branch protection
+override.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
 You can also use rebase to move your changes to
 branch off the `HEAD` of `main`.
 While we rebased our feature branch another
@@ -423,7 +438,15 @@ gitGraph
     commit id: 'd7def6a'
 ```
 
-Simply run:
+Go back to your fork on GitHub
+and click on the [**Sync fork**](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork) button.
+Then run `git pull` to fetch the changes:
+
+```bash
+$ git pull origin main
+```
+
+To rebase we run:
 
 ```bash
 $ git rebase main
