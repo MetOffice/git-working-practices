@@ -21,6 +21,8 @@ your organisation.
    name `git-training-demo`.
 7. Link your local repo to the remote and
    push all changes.
+8. Setup a rule to require a PR before
+   merging with `main`.
 
 Pay particular attention to the instructor
 callouts in episodes [05](../episodes/05-forks.md)
