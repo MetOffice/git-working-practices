@@ -20,3 +20,4 @@ when it comes to GitHub!
 - In this lesson you saw automated testing
   of PRs using [GitHub Actions](https://learn.microsoft.com/en-us/training/modules/introduction-to-github-actions/) which you might like to explore more.
 - These tests ran [pre-commit](https://pre-commit.com/) checks which you can set up locally to run before you commit.
+  The optional [pre-commit episode](./09-pre-commit.md) outlines how to set up some basic checks.
