@@ -512,6 +512,45 @@ if there are commits on the remote branch
 you would override by pushing if you forgot
 to check yourself.
 
+## Pulling a Rebased Branch
+
+If you have rebased a feature branch
+and then overwritten the remote branch
+on GitHub your collaborators may need to pull
+these changes to their local copies.
+
+If the collaborator already had a copy
+of your branch from before the rebase;
+attempting a normal pull will result in a
+lot of conflicts due to the incompatible
+histories of the original and the rebased
+branches.
+
+The collaborator should
+first switch to the local branch they want to
+overwrite with the rebased remote version:
+
+```bash
+$ git switch add_plot_script
+```
+
+Now fetch but don't attempt to merge the
+remote branch:
+
+```bash
+$ git fetch origin add_plot_script
+```
+
+Reset the local branch to match the remote origin:
+
+```bash
+$ git reset --hard origin/add_plot_script
+```
+
+Now their local branch matches the rebased
+feature branch from GitHub and
+everyone's branches are in sync.
+
 :::::::::::::::::::::::::::::::::::::::  challenge
 
 ## Modifying Commit Messages
