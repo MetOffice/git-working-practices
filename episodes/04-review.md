@@ -116,7 +116,9 @@ you can approve the PR:
 Swap back to the Conversations tab.
 The PR is now ready to merge and has no conflicts with the
 base (`main` in this case) branch.
-Click **Squash and merge**:
+Click **Squash and merge**; don't forget to move the PR
+number to the start of the commit message like you did
+in the Version Control with Git lesson:
 
 ![](fig/pr-review-5.png){alt='A screenshot of a PR showing the Conversations tab. The PR is ready to merge.'}
 
