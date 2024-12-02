@@ -162,6 +162,26 @@ goes wrong during the rebase:
 $ git branch add_plot_script.backup
 ```
 
+If at anytime you want to restore the branch
+from your backup switch to the backup:
+
+```bash
+$ git switch add_plot_script.backup
+```
+
+Delete the branch where rebasing was attempted:
+
+```bash
+$ git branch -D add_plot_script
+```
+
+Re-create the original branch while still
+on the backup branch:
+
+```bash
+$ git switch -c add_plot_script
+```
+
 :::
 
 We will rebase interactively using the `-i` flag.
