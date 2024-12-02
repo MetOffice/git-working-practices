@@ -1,5 +1,5 @@
 ---
-title: Rebasing
+title: 'Rebasing'
 teaching: 15
 exercises: 10
 ---

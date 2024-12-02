@@ -1,5 +1,5 @@
 ---
-title: 'Optional: Pre-commit'
+title: 'Pre-commit'
 teaching: 10
 exercises: 10
 ---

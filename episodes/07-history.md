@@ -268,9 +268,6 @@ a commit that introduced a bug.
 
 Your team will decide what approach is right
 for your project.
-If you choose to perform normal merge's on
-your PRs we recommend rebasing your feature branch
-before the PR is ready for review.
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
