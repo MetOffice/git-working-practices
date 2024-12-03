@@ -70,6 +70,22 @@ An image of a cloud should do!
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+### Projects, milestones, and labels
+
+Your instructor has set up a Project and some custom milestones
+for you to add to your Issue.
+
+- [Labels](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels)
+  help you classify Issues and PRs.
+- [Milestones](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/about-milestones)
+  group Issues and PRs, tracking their progress towards a common milestone automatically.
+- [Projects](https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects)
+  are a tool for planning and tracking work via GitHub.
+  Multiple repositories can be linked to a single project.
+  Projects can have multiple views depending on your needs;
+  some have kanban boards and gantt charts, others separate out
+  an individual colleagues Issues to avoid clutter.
+
 ## Create a Fork
 
 On the repository Code tab click on the **Fork** dropdown arrow

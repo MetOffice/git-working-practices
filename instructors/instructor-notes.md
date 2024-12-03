@@ -29,3 +29,10 @@ callouts in episodes [05](../episodes/05-forks.md)
 and [08](../episodes/08-rebase.md)
 which outline how to create the conflicts
 the learners will have to resolve.
+
+You will need to create a GitHub Project for learners to
+link Issues they create on the `git-training-demo` repository to.
+You can name this Project: **Git & GitHub WP INSERT_DATE**
+
+The last step is to create a new milestone on the repository
+with an identical or similar name to the Project name.
