@@ -133,6 +133,20 @@ config:
         merge large_feature
 ```
 
+An alternative way of viewing this workflow is:
+
+```mermaid
+graph TD
+    main --> |switch/checkout| lfb["feature branch"]
+    lfb --> |push| rfb["feature branch"]
+    subgraph github
+        rfb --> |"pull request (PR)"| main
+    end
+    subgraph local["my computer"]
+        lfb
+    end
+```
+
 -----------------------------------------
 
 ### Forking
@@ -142,6 +156,26 @@ to contribute to on GitHub in your personal space.
 You develop your changes using this fork.
 When a change is ready you open a pull request to contribute the changes
 back to the original repository.
+
+```mermaid
+graph BT
+    subgraph local["my computer"]
+        lfb
+    end
+    subgraph github
+        subgraph "my fork"
+            rfb
+            mm["my copy of main"]
+        end
+        rfb --> |"pull request (PR)"| main
+        main --> |"sync"| mm
+        subgraph upstream
+            main
+        end
+    end
+    mm --> |switch/checkout| lfb["feature branch"]
+    lfb --> |push| rfb["feature branch"]
+```
 
 #### Pros
 
@@ -208,6 +242,35 @@ merged onto the `develop` and `main` branches.
         merge release tag:"1.0"
         checkout develop
         merge release
+```
+
+Or, alternatively:
+
+```mermaid
+graph BT
+    subgraph local["my computer"]
+        lfb
+        lbfb
+    end
+    subgraph github
+        subgraph "my fork"
+            md["my copy of develop"]
+            rfb
+            rbfb
+            mm["my copy of main"]
+        end
+        rfb --> |"pull request (PR)"| develop
+        rbfb --> |"pull request (PR)"| main
+        develop --> |"sync"| md
+        main --> |"sync"| mm
+        subgraph upstream
+            develop <--> |sync| main
+        end
+    end
+    md --> |switch/checkout| lfb["feature branch"]
+    lbfb --> |push| rbfb["bugfix branch"]
+    lfb --> |push| rfb["feature branch"]
+    mm --> |switch/checkout| lbfb["bugfix branch"]
 ```
 
 ## Recommendations
