@@ -33,25 +33,11 @@ Your instructor will give you a link to the `git-training-demo`
 repository you will be forking.
 This is the **upstream** repository for you fork.
 
-::::::::::::::::::::::::::::::::::::: instructor
-
-To create the conflict at the end of the episode
-for all learners your co-instructor should
-follow along making the same changes the learners
-make. The co-instructors PR should be merged
-just before the learners open their PRs.
-If the co-instructor has the relevant permissions
-they can do this themselves while the instructor
-is still teaching.
-
-::::::::::::::::::::::::::::::::::::::::::::::::
-
 ## Open an Issue
 
 Remember we track our work with Issues.
 Open an Issue on the `git-training-demo` repository 
-for adding yourself to the list of authors in the
-`CITATION.cff` file.
+to add a file stating your favourite cloud type.
 
 Navigate to the **Issues** tab:
 
@@ -70,10 +56,19 @@ This is from the template which provides a consistent
 structure to the Issues on this repo.
 The template has also added the `enhancement` label for you.
 
-Add in a clear title such as "Add Robert FitzRoy to the list
-of authors in the CITATION file",
-replace 'Robert FitzRoy' with your name.
+Add in a clear title such as
+"Add mo-fitzroy's favourite cloud type",
+replace 'mo-fitzroy' with your GitHub username.
 Click **Submit new issue**.
+
+::::::::::::::::::::::::::::::::::::: instructor
+
+It's a good idea to remind learners that
+images can be dropped straight into the
+Issue description.
+An image of a cloud should do!
+
+::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Create a Fork
 
@@ -129,46 +124,47 @@ Create your feature branch:
 
 ```bash
 $ cd git-training-demo
-$ git switch -c add-citation-fitzroy
+$ git switch -c 1_add-favourite-cloud
 ```
 
 ```output
-Switched to a new branch 'add-citation-fitzroy'
+Switched to a new branch '1_add-favourite-cloud'
 ```
 
-Add your name to the `CITATION.cff` file,
-underneath any existing author names:
+::: callout
+
+## Branch Names
+
+Some colleagues prefix the branch name
+with the Issue number as shown above.
+This helps remind you what the branch is for!
+
+:::
+
+Add in a new file `cloud-mo-fitzroy.md`,
+replace `mo-fitzroy` with your username:
 
 ```bash
-$ nano CITATION.cff
-$ cat CITATION.cff
+$ nano cloud-mo-fitzroy.md
+$ cat cloud-mo-fitzroy.md
 ```
 
 ```output
-cff-version: 1.2.0
-message: "Met Office Colleagues and Partners"
-authors:
-- family-names: "Theodorakis"
-  given-names: "Dimitrios"
-  orcid: "https://orcid.org/0000-0001-9288-1332"
-- family-names: "FitzRoy"
-  given-names: "Robert"
-title: "Met Office Git Training Demo"
-version: 2.0.4
-doi: 10.4321/zenodo.1234
-date-released: 2024-09-23
-url: "https://github.com/MetOffice/git-training-demo"
+# My Favourite Cloud
+
+Light and fluffy cumulus.
 ```
 
 Add and commit your changes:
 
 ```bash
-$ git add CITATION.cff
-$ git commit -m "Adds Robert Fitzroy as an author"
+$ git add cloud-mo-fitzroy.md
+$ git commit -m "Adds Robert Fitzroy's favourite cloud"
 ```
 ```output
-[add-citation-fitzroy a3c5e13] "Adds Robert Fitzroy as an author" 
- 1 file changed, 2 insertions(+)
+[1_add-favourite-cloud a3c5e13] "Adds Robert Fitzroy's favourite cloud" 
+ 1 file changed, 3 insertions(+)
+ create mode 100644 cloud-mo-fitzroy.md
 ```
 
 Push your changes to your GitHub fork:
@@ -186,8 +182,8 @@ Writing objects: 100% (3/3), 354 bytes | 354.00 KiB/s, done.
 Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
 remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
 To github.com:mo-fitzroy/git-training-demo.git
-   f87bb5c..a3c5e13  add-citation-fitzroy -> add-citation-fitzroy
-branch 'add-citation-fitzroy' set up to track 'origin/add-citation-fitzroy'.
+   f87bb5c..a3c5e13  1_add-favourite-cloud -> 1_add-favourite-cloud
+branch '1_add-favourite-cloud' set up to track 'origin/1_add-favourite-cloud'.
 ```
 
 ## Open a Pull Request
@@ -203,9 +199,9 @@ Just like this repository used Issue templates it
 also uses a [PR template](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/creating-a-pull-request-template-for-your-repository).
 
 Check the Issue you opened earlier for the Issue number.
-`mo-fitzroy` checks theirs and it was Issue `#7`.
-So he changes the line `Fixes <#ISSUE_NUMBER>` to `Fixes #7`.
-This will automatically close Issue 7 when the PR is merged.
+`mo-fitzroy` checks theirs and it was Issue `#1`.
+So he changes the line `Fixes <#ISSUE_NUMBER>` to `Fixes #1`.
+This will automatically close Issue 1 when the PR is merged.
 We use the keyword `Fixes` here instead of the `Closes`
 keyword we used before because this PR comes from a fork[^link-issue-pr].
 
@@ -219,6 +215,9 @@ which look like this:
 - [ ] I have read `CONTRIBUTING.md` and added my name as a Code Contributor.
 ```
 
+Some open source projects require you to add your name
+to a list of contributors.
+We will do this later so for now mark the task as complete.
 Replace the space in the square checkbox brackets with an `x`
 to mark the task as complete:
 
@@ -230,57 +229,125 @@ Now when you open the PR it should look something like this:
 
 ![](fig/github-fork-pr-1.jpeg){alt='A screenshot of a users  pull request from their fork back to the upstream git-training-demo repository.'}
 
-This PR number `#8` will close/fix Issue number `#7` (the top left arrow).
+This image shows PR number `#8`.
+This PR will close/fix Issue number `#7` (the top left arrow).
 You can request a review on the top right.
 Some repositories will be set up to automatically assign
 a reviewer based on how many reviews each team member
 currently has open[^auto-assign-pr-review].
-The middle arrow shows the checklist items we marked as complete.
+The bottom arrow shows the checklist items we marked as complete.
 
 At the bottom of your PR you can see that a review is required
 before merging.
 All checks have passed, this repository has automatic checks
 for trailing whitespace, accidentally adding large files etc.
 More information can be found in the optional episode on
-pre-commit hooks.
-It also tells us **This branch has conflicts that must be resolved** and the conflicting file is `CITATION.cff`.
+[pre-commit hooks](./09-pre-commit.md).
 
-Go to the main `git-training-demo` repositories code tab
-and look at the contents of `CITATION.cff`:
+The PR will now need to be approved and merged by your instructors.
 
-```output
-cff-version: 1.2.0
-message: "Met Office Colleagues and Partners"
-authors:
-- family-names: "Theodorakis"
-  given-names: "Dimitrios"
-  orcid: "https://orcid.org/0000-0001-9288-1332"
-- family-names: "Hogan"
-  given-names: "Emma"
-title: "Met Office Git Training Demo"
-version: 2.0.4
-doi: 10.4321/zenodo.1234
-date-released: 2024-09-23
-url: "https://github.com/MetOffice/git-training-demo"
+::::::::::::::::::::::::::::::::::::: instructor
+
+Take a break here!
+This will give you and your co-instructor time
+to approve, and squash and merge the PRs.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+## Updating a Fork
+
+Our fork is now behind the main upstream repository
+by one commit.
+We are going to update our fork.
+First we need to set the correct upstream remote in git.
+
+Switch back to your forks `main` branch:
+
+```bash
+$ git switch main
 ```
 
-Someone else has added their name
-before our PR could be merged.
-These changes now conflict with the one you made.
-In the next episode you will learn how to deal with
-conflicts.
+Now run:
 
-:::::::::::::::::::::::::::::::::::::::::  spoiler
+```bash
+$ git remote -v
+```
 
-## Practicing By Yourself
+```output
+origin	git@github.com:mo-fitzroy/git-training-demo.git (fetch)
+origin	git@github.com:mo-fitzroy/git-training-demo.git (push)
+```
 
-If you're working through this lesson on your own,
-you won't see a conflict.
-You should still follow the materials through
-the next episode on conflicts to learn
-what to do when you do encounter a conflict.
+This shows the GitHub remote links for our fork.
+To set the upstream remote we can run:
 
-::::::::::::::::::::::::::::::::::::::::::::::::::
+```bash
+$ git remote add upstream git@github.com:MetOffice/git-training-demo.git
+$ git remote -v
+```
+
+```output
+origin	git@github.com:mo-fitzroy/git-training-demo.git (fetch)
+origin	git@github.com:mo-fitzroy/git-training-demo.git (push)
+upstream	git@github.com:MetOffice/git-training-demo.git (fetch)
+upstream	git@github.com:MetOffice/git-training-demo.git (push)
+```
+
+Now git knows about the forks upstream repository.
+We can fetch the changes to the upstream repository by running:
+
+```bash
+$ git fetch upstream
+```
+
+```output
+remote: Enumerating objects: 6, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 4 (delta 3), reused 2 (delta 2), pack-reused 0 (from 0)
+Unpacking objects: 100% (4/4), 1.10 KiB | 41.00 KiB/s, done.
+From github.com:MetOffice/git-training-demo
+ * [new branch]      main                   -> upstream/main
+```
+
+We now have access to the `upstream/main` branch.
+To merge in the changes on `upstream/main`:
+
+```bash
+$ git merge upstream/main
+```
+
+And push:
+
+```bash
+$ git push
+```
+
+```output
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:mo-fitzroy/git-training-demo.git
+   f87bb5c..90808ab  main -> main
+```
+
+Your forks `main` branch is now up to date with the
+main `git-training-demo` repositories `main` branch.
+
+::: callout
+
+## Sync via GitHub
+
+This is equivalent of syncing your fork via the GitHub banner
+shown earlier:
+
+![](fig/github-fork-sync-fork-button.png){alt='A screenshot of a users repository showing just the banner announcing the repository is a fork and that is up to date with the upstream repository.'}
+
+If your fork is **behind** the upstream repository
+GitHub will alert you on the banner.
+You can use the **Sync fork** button to update your fork like we did above.
+After syncing your fork this way you only need to run `git pull`
+on your local `main` branch.
+
+:::
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
 

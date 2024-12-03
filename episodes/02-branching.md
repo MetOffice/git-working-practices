@@ -52,8 +52,8 @@ When using git you have a wide range of models to pick from.
 This means the first rule when collaborating using git is:
 “Talk about your branching model.”
 
-A repositories `CONTRIBUTING` file may include details of their branching model.
-This information might also be in a repositories `README` file.
+A repository's `CONTRIBUTING` file may include details of their branching model.
+This information might also be in a repository's `README` file.
 If in doubt ask!
 You can also look at how other people appear to be contributing to the repository.
 

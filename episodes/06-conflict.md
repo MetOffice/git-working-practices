@@ -17,131 +17,186 @@ exercises: 0
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-As soon as people can work in parallel, they'll likely step on each other's
-toes.  This will even happen with a single person: if we are working on
+As soon as people start working in parallel, they'll likely step on each other's
+toes. This will even happen with a single person: if we are working on
 a piece of software on both our laptop and a server in the lab, we could make
-different changes to each copy.  Version control helps us manage these
+different changes to each copy. Version control helps us manage these
 [conflicts](../learners/reference.md#conflict) by giving us tools to
 [resolve](../learners/reference.md#resolve) overlapping changes.
 
-Good communication can help avoid conflicts.
-In the last episode if we had communicated
-that we each needed to edit the `CITATION.cff` file
-we could have made our changes sequentially to
-avoid the conflict we now have.
+::::::::::::::::::::::::::::::::::::: instructor
 
-## Updating a Fork
+To create the conflict for all learners your co-instructor should
+follow along making the same changes the learners make.
+The co-instructors PR should be merged
+just before the learners open their PRs.
+If the co-instructor has the relevant permissions
+they can do this themselves while the instructor
+is still teaching.
 
-Our fork is now behind the main upstream repository
-by one commit.
-We are going to update our fork.
-First we need to set the correct upstream remote in git.
+::::::::::::::::::::::::::::::::::::::::::::::::
 
-Switch back to your forks `main` branch:
+To learn how to resolve conflicts we are going to create one on purpose.
+We will do this by getting everyone to edit the same line
+of the same file at once.
+Open an Issue on the `git-training-demo` repository 
+for adding yourself to the list of authors in the
+`CITATION.cff` file.
+Make a note of the Issue number to use as the prefix for your feature
+branch name.
+
+Make sure you are on the `main` branch.
+Create your feature branch:
 
 ```bash
-$ git switch main
-```
-
-Now run:
-
-```bash
-$ git remote -v
+$ git switch -c 7_add-citation-fitzroy
 ```
 
 ```output
-origin	git@github.com:mo-fitzroy/git-training-demo.git (fetch)
-origin	git@github.com:mo-fitzroy/git-training-demo.git (push)
+Switched to a new branch '7_add-citation-fitzroy'
 ```
 
-This shows the GitHub remote links for our fork.
-To set the upstream remote we can run:
+Add your name to the `CITATION.cff` file,
+underneath any existing author names:
 
 ```bash
-$ git remote add upstream git@github.com:MetOffice/git-training-demo.git
-$ git remote -v
+$ nano CITATION.cff
+$ cat CITATION.cff
 ```
 
 ```output
-origin	git@github.com:mo-fitzroy/git-training-demo.git (fetch)
-origin	git@github.com:mo-fitzroy/git-training-demo.git (push)
-upstream	git@github.com:MetOffice/git-training-demo.git (fetch)
-upstream	git@github.com:MetOffice/git-training-demo.git (push)
+cff-version: 1.2.0
+message: "Met Office Colleagues and Partners"
+authors:
+- family-names: "Theodorakis"
+  given-names: "Dimitrios"
+  orcid: "https://orcid.org/0000-0001-9288-1332"
+- family-names: "FitzRoy"
+  given-names: "Robert"
+title: "Met Office Git Training Demo"
+version: 2.0.4
+doi: 10.4321/zenodo.1234
+date-released: 2024-09-23
+url: "https://github.com/MetOffice/git-training-demo"
 ```
 
-Now git knows about the forks upstream repository.
-We can fetch the changes to the upstream repository by running:
+Add and commit your changes:
 
 ```bash
-$ git fetch upstream
+$ git add CITATION.cff
+$ git commit -m "Adds Robert Fitzroy as an author"
 ```
-
 ```output
-remote: Enumerating objects: 6, done.
-remote: Counting objects: 100% (6/6), done.
-remote: Compressing objects: 100% (2/2), done.
-remote: Total 4 (delta 3), reused 2 (delta 2), pack-reused 0 (from 0)
-Unpacking objects: 100% (4/4), 1.10 KiB | 41.00 KiB/s, done.
-From github.com:MetOffice/git-training-demo
- * [new branch]      main                   -> upstream/main
-```
-
-We now have access to the `upstream/main` branch.
-To merge in the changes on `upstream/main`:
-
-```bash
-$ git merge upstream/main
-```
-
-```output
-Updating f87bb5c..90808ab
-Fast-forward
- CITATION.cff | 2 ++
+[7_add-citation-fitzroy a3c5e13] "Adds Robert Fitzroy as an author" 
  1 file changed, 2 insertions(+)
 ```
 
-And push:
+Push your changes to your GitHub fork:
 
 ```bash
 $ git push
 ```
 
 ```output
-Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 354 bytes | 354.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
 To github.com:mo-fitzroy/git-training-demo.git
-   f87bb5c..90808ab  main -> main
+   f87bb5c..a3c5e13  7_add-citation-fitzroy -> 7_add-citation-fitzroy
+branch '7_add-citation-fitzroy' set up to track 'origin/7_add-citation-fitzroy'.
 ```
 
-Your forks `main` branch is now up to date with the
-main `git-training-demo` repositories `main` branch.
+## Open a Pull Request
+
+Head back to your fork on GitHub and open a PR to
+contribute your changes upstream to the main
+`git-training-demo` repository.
+Fill out the template like you did in the previous episode.
+
+At the bottom of your PR GitHub is telling us
+**This branch has conflicts that must be resolved**
+and the conflicting file is `CITATION.cff`.
+
+Go to the main `git-training-demo` repositories code tab
+and look at the contents of `CITATION.cff`:
+
+```output
+cff-version: 1.2.0
+message: "Met Office Colleagues and Partners"
+authors:
+- family-names: "Theodorakis"
+  given-names: "Dimitrios"
+  orcid: "https://orcid.org/0000-0001-9288-1332"
+- family-names: "Hogan"
+  given-names: "Emma"
+title: "Met Office Git Training Demo"
+version: 2.0.4
+doi: 10.4321/zenodo.1234
+date-released: 2024-09-23
+url: "https://github.com/MetOffice/git-training-demo"
+```
+
+Someone else has added their name
+before our PR could be merged.
+These changes now conflict with the one you made.
+
+:::::::::::::::::::::::::::::::::::::::::  spoiler
+
+## Practising By Yourself
+
+If you're working through this lesson on your own,
+you won't see a conflict.
+You should still follow the materials to learn
+what to do when you encounter a conflict.
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
+
+### Blame
+
+GitHub lets you see who made changes to the file
+you are looking at in the Code viewer.
+Click on the **Blame** button:
+
+![](fig/github-blame.png){alt='A screenshot of a users weather repository showing blame on the forecast.md file in the Code viewer.'}
+
+The image above shows blame on the `weather` repositories `forecast.md` file.
+The far left shows how long ago the commit was that changed those lines.
+Then the commit message is displayed before the file contents.
+Click on the little page icon after a commit message to see previous
+commits which altered the same lines.
+
 
 ## Resolving Conflicts
 
 We're going to resolve the conflict by merging
 in our `main` branch into our feature branch
-`add-citation-fitzroy`:
+`7_add-citation-fitzroy`:
 
 ```mermaid
 gitGraph
     accDescr {A git graph showing the <code>main</code> branch being merged
-    into the <code>add-citation-fitzroy</code> branch to resolve merge conflicts.}
+    into the <code>7_add-citation-fitzroy</code> branch to resolve merge conflicts.}
     commit id: 'cdb7fa6'
-    branch add-citation-fitzroy
+    branch 7_add-citation-fitzroy
     commit id: 'a3c5e13 Adds Robert Fitzroy as an author'
     checkout main
     commit id: 's7dja9o'
-    checkout add-citation-fitzroy
+    checkout 7_add-citation-fitzroy
     merge main
 ```
 
 Switch to the feature branch:
 
 ```bash
-$ git switch add-citation-fitzroy
+$ git switch 7_add-citation-fitzroy
 ```
 
 ```output
-Switched to branch 'add-citation-fitzroy'
+Switched to branch '7_add-citation-fitzroy'
 ```
 
 Merge in the `main` branch:
@@ -164,8 +219,8 @@ $ git status
 ```
 
 ```output
-On branch add-citation-fitzroy
-Your branch is up to date with 'origin/add-citation-fitzroy'.
+On branch 7_add-citation-fitzroy
+Your branch is up to date with 'origin/7_add-citation-fitzroy'.
 
 You have unmerged paths.
   (fix conflicts and run "git commit")
@@ -254,7 +309,7 @@ $ git status
 ```
 
 ```output
-On branch add-citation-fitzroy
+On branch 7_add-citation-fitzroy
 All conflicts fixed but you are still merging.
   (use "git commit" to conclude merge)
 
@@ -268,7 +323,7 @@ $ git commit
 ```
 
 ```output
-[add-citation-fitzroy 312c561] Merge branch 'main' into add-citation-fitzroy
+[7_add-citation-fitzroy 312c561] Merge branch 'main' into 7_add-citation-fitzroy
 ```
 
 Now we can push our changes to GitHub:
@@ -286,7 +341,7 @@ Writing objects: 100% (3/3), 385 bytes | 128.00 KiB/s, done.
 Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
 remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
 To github.com:mo-fitzroy/git-training-demo.git
-   a3c5e13..312c561  add-citation-fitzroy -> add-citation-fitzroy
+   a3c5e13..312c561  7_add-citation-fitzroy -> 7_add-citation-fitzroy
 ```
 
 Your PR on GitHub should now be ready to merge,
