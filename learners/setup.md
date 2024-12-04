@@ -40,10 +40,23 @@ $ git add shipping-forecast.md
 $ git commit -m "Add a file for the shipping forecast"
 ```
 
+<!-- Add link to previous lesson  -->
+
 Create a public remote `weather` repository on GitHub and
 push your local repository to the remote:
 
 ```bash
-$ git remote add origin git@github.com:mo-eormerod/weather.git
+$ git remote add origin git@github.com:<your username>/weather.git
 $ git push
 ```
+
+The first time you push to a remote repository you will get this message:
+
+```bash
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream main
+```
+
+You can copy and paste the suggested command.
