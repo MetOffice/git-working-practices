@@ -9,41 +9,20 @@ to the start of the workshop.
 This information is vital for us to keep improving the lesson
 for other learners.
 
-## Setup your Respository
+## Give Your GitHub Username to the Instructors
 
-We will be working collaboratively on the `weather` repository.
-If you already have a `weather` repository from the git-novice course
-then skip this section.
+In this lesson you will be working on a new repository,
+called `git-training-demo`, which your instructors have set up for you.
+If you are working through this material as part of a workshop
+your instructors will ask you to provide them with your
+GitHub username, no other setup is required.
 
-Create a new local repository with the name `weather`:
-
-```bash
-$ mkdir ~/Desktop/weather
-$ cd ~/Desktop/weather
-$ git init
-```
-
-```output
-Initialised empty Git repository in ~/Desktop/weather/.git/
-```
-
-Create an empty `shipping-forecast.md` file:
-
-```bash
-$ touch shipping-forecast.md
-```
-
-Commit your changes.
-
-```bash
-$ git add shipping-forecast.md
-$ git commit -m "Add a file for the shipping forecast"
-```
-
-Create a public remote `weather` repository on GitHub and
-push your local repository to the remote:
-
-```bash
-$ git remote add origin git@github.com:mo-eormerod/weather.git
-$ git push
-```
+If you are working through this material in your own time
+you will need to be provided with repository permissions for Episodes 1-5.
+Met Office colleagues should request membership to the
+[`git-and-github-training` GitHub team](https://github.com/orgs/MetOffice/teams/git-and-github-training).
+Met Office partners should email the
+[Science Git Migration Project](mailto:ScienceGitMigrationProjectSupport@metoffice.gov.uk) with the subject: **GH WP Training Permissions Request**,
+please include your GitHub username in the email.
+Please be patient when you arrive at Episode 5 Review
+as you will need to wait for an instructor to review your changes.

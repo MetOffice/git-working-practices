@@ -28,7 +28,8 @@ looks like this:
 9. Tidy up your branches
 
 During this workshop you will practice collaborating
-using a similar albeit simplified process on your own and others repositories.
+using a similar albeit simplified process on a test repository
+your instructors have set up.
 By the end of the course you should have the skills and knowledge
 to decide what working practices are best for you and your team.
 

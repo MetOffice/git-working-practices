@@ -23,6 +23,13 @@ A more linear history is easier to understand
 and can be helpful when using certain git
 commands to explore your history.
 
+Your Git history will look different depending on the merge
+strategy you use when merging PRs
+and whether you allow merging `main` into a feature branch
+like we did in the last episode to resolve the conflict.
+It's up to you and your team to decide which strategy is
+best for your repository.
+
 ## Viewing History
 
 You have already learnt that we can use the
@@ -265,6 +272,11 @@ push to the GitHub remote to override your remotes history.
 The history in this case is linear and retains all
 the commits which makes it easier to search for
 a commit that introduced a bug.
+Rebasing a feature branch can be difficult / impossible if you have
+merged `main` into your feature branch to update it
+with the latest changes or resolve conflicts.
+You should choose to move your feature branch to the `HEAD` of
+`main` using rebasing instead.
 
 Your team will decide what approach is right
 for your project.
@@ -274,7 +286,7 @@ for your project.
 - `git log --decorate --oneline --graph` lets you visualise your repository history in graph form.
 - There are three options for merging your feature
 branch into `main`.
-- merge: creates a merge commit and results in a non-linear history unless you first rebase your feature branch
+- merge: creates a merge commit and results in a non-linear history unless you first rebase your feature branch.
 - squash and merge: squashes all your feature branch commits into one merge commit on `main`. Your history is linear.
 - rebase: re-writes your git history so that all the feature branch commits are now on `main`. Your history is linear. 
 

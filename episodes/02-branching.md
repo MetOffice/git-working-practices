@@ -226,9 +226,9 @@ You can find more information using the links below:
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
-- A clearly communicated branching model helps developers
-- For small projects use the Feature Branch flow
+- A clearly communicated branching model helps developers.
+- For small projects use the Feature Branch flow.
 - For larger projects or those with external collaborators use
-  forks with feature branches
+  forks with feature branches.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::

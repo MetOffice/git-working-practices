@@ -26,5 +26,5 @@ when it comes to GitHub!
 - In this lesson you saw automated testing
   of PRs using [GitHub Actions](https://learn.microsoft.com/en-us/training/modules/introduction-to-github-actions/) which you might like to explore more.
 - The optional [rebasing episode](./08-rebase.md) guides you through rebasing a branch.
-- These PR tests ran [pre-commit](https://pre-commit.com/) checks which you can set up locally to run before you commit.
+- Your Pull Requests ran automated tests using [pre-commit](https://pre-commit.com/) checks which you can set up locally to run before you commit.
   The optional [pre-commit episode](./09-pre-commit.md) outlines how to set up some basic checks.

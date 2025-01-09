@@ -650,7 +650,8 @@ into the previous commit.
   branch from the remote **before** rebasing.
 - **Always** check before pushing to the remote
   after rebasing that no new commits were added
-  to the remote as these will be lost.
+  to the remote as these will be lost,
+  use the `--force-with-lease` flag with `git push` to help prevent this.
 - Use `git push --force-with-lease` to update the
   remote branch.
 
