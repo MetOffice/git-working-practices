@@ -275,6 +275,22 @@ for trailing whitespace, accidentally adding large files etc.
 More information can be found in the optional episode on
 [pre-commit hooks](./09-pre-commit.md).
 
+::: caution
+
+## Help: Some checks have failed
+
+If your now open Pull Request says some checks have failed
+this is because your changes did not pass the automatic
+pre-commit checks.
+
+Click on the **Details** link next to the failed test
+and fix your code on your local repository.
+Commit and then push this fix to GitHub.
+Your PR will automatically update and re-run the tests,
+you may need to refresh the page.
+
+:::
+
 ### Automatically closing Issues via PRs
 
 A PR can automatically close an Issue when it is merged into `main`.

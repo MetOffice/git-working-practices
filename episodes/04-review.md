@@ -68,6 +68,7 @@ Click on the file icon or press <kbd>Ctrl+g</kbd>:
 
 ![](fig/pr-suggestion.png){alt='A screenshot of a PR showing the diff in the Files changed tab. A line has been highlighted to show how to add an inline comment with a suggestion.'}
 
+Add in a suggested change for your review.
 Click on the green **Start a review** button.
 Now click on the green button in the top right which says
 **Finish your review** or **Review Changes**,
@@ -99,6 +100,21 @@ and then marked the conversation with the suggested change as resolved.
 
 Re-request a review by clicking on the two arrows forming a circle
 next to the reviewers name at the top of the PR.
+
+::: caution
+
+## Help: Some checks have failed
+
+Since our PR is running automatic checks it's best
+not to make large changes by accepting suggestions this way.
+Instead make changes to your feature branch using your local copy,
+run the [checks locally](09-pre-commit.md),
+push the changes to GitHub
+and then mark the conversations with the suggested changes as resolved.
+You can add a commit hash in the conversation which will automatically
+link to the commit responding to any review comments.
+
+:::
 
 ## Approving Changes
 
