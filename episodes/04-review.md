@@ -143,6 +143,21 @@ in the Version Control with Git lesson:
 
 ![](fig/pr-review-5.png){alt='A screenshot of a PR showing the Conversations tab. The PR is ready to merge.'}
 
+::: callout
+
+## Who presses the merge button?
+
+In this case both the contributor and reviewer have
+write access to the repository.
+This means they can both merge and close the PR
+and it is up to your team to decide whether the contributor
+or the reviewer does the merge as part of your working practices.
+
+When using the forking model later the reviewer always
+merges the PR as the contributor will not have sufficient permissions.
+
+:::
+
 When your PR is merged the Conversations tab will show:
 
 ![](fig/pr-review-6.png){alt='A screenshot of a PR showing the Conversations tab. The notification tells us our PR has been successfully merged and closed.'}
