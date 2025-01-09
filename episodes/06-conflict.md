@@ -173,7 +173,7 @@ commits which altered the same lines.
 ## Resolving Conflicts
 
 We're going to resolve the conflict by merging
-in our `main` branch into our feature branch
+in the `main` branch into our feature branch
 `7_add-citation-fitzroy`:
 
 ```mermaid
@@ -189,7 +189,18 @@ gitGraph
     merge main
 ```
 
-Switch to the feature branch:
+First we need to make sure our fork's `main` branch
+is in sync with the upstream repository.
+Navigate to your fork on GitHub and click on the **Sync fork** button.
+
+In your local copy of your fork, update the `main` branch:
+
+```bash
+$ git switch main
+$ git pull
+```
+
+Switch back to the feature branch:
 
 ```bash
 $ git switch 7_add-citation-fitzroy
