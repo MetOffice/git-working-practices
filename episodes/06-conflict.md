@@ -168,7 +168,26 @@ The far left shows how long ago the commit was that changed those lines.
 Then the commit message is displayed before the file contents.
 Click on the little page icon after a commit message to see previous
 commits which altered the same lines.
+Try using blame on the `CITATION.cff` file to see who added
+the conflicting change.
 
+### Compare changes
+
+In the git-novice lesson we learnt how to diff between commits
+on the same branch.
+You can also look at diffs between branches even if they are on
+a different fork using GitHub.
+
+To see a difference for a repository add `/compare`
+to the end of the repository url.
+
+1. Navigate to: [`https://github.com/MetOffice/git-training-demo/compare/`](https://github.com/MetOffice/git-training-demo/compare/),
+and click on the **compare across forks** link.
+2. Click on the **head repository** dropdown and find your fork.
+3. Click on the **compare** dropdown and select your feature branch.
+
+A diff should appear comparing your fork's feature branch with
+the upstream repositories `main` branch.
 
 ## Resolving Conflicts
 
