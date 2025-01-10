@@ -20,6 +20,32 @@ exercises: 10
 
 In this section we will explore how to properly review
 code and suggest changes if necessary.
+Both science and code reviews happen in a Pull Request.
+The general process is outlined in the diagram below:
+
+```mermaid
+sequenceDiagram
+   accDescr {A sequence diagram showing the process of reviewing.}
+   autonumber
+   actor Developer
+   actor Reviewer
+
+   Developer->>Reviewer: Request a reviewer
+   Reviewer->>Reviewer: #32;
+   Note over Reviewer: Add the reviewer<br/>to the pull request
+   Reviewer->>Reviewer: #32;
+   Note over Reviewer: Perform the review
+   loop
+      Reviewer->>Developer: Submit the review
+      Developer->>Developer: #32;
+      Note over Developer: Respond to each<br/>review comment
+      Developer->>Reviewer: Re-request a review
+      Reviewer->>Reviewer: #32;
+      Note over Reviewer: Respond to each review<br/>comment response
+   end
+   Reviewer->>Developer: Approve the pull request
+```
+
 Make sure you know who is in your pair.
 Find your colleagues open PR on the `git-training-demo`
 repository using the Pull Requests tab

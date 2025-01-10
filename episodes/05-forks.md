@@ -278,6 +278,60 @@ on your local `main` branch.
 
 :::
 
+## Summary Diagram
+
+The workflow for forking is similar to that for branching.
+There are only a few differences after you've set up your fork
+for the first time:
+
+- You should open Issues on the upstream repository not your fork.
+- After merging in a PR on the upstream repository you need the
+  added step of syncing your forks `main` branch.
+
+```mermaid
+sequenceDiagram
+    accDescr {A sequence diagram showing the steps for using
+    Forks with the branching model.}
+    autonumber
+    participant UM as upstream main
+    participant GHM as origin main
+    participant GHF as origin feature
+    participant M as main
+    UM ->> UM: #f
+    Note over UM: Open an Issue for the change
+    UM -->> GHM: #f
+    Note right of UM: First time: Fork the repository
+    GHM -->> M: #f
+    Note right of GHM: First time: git clone<br/>Then: git pull
+    create participant F as feature
+    M ->> F: Create a feature branch:<br/>git switch -c feature
+    loop
+        F ->> F: #f
+        Note over F: Develop changes:<br/>git add<br/>git commit
+    end
+    F -->> GHF: #f
+    Note left of F: Push to GitHub: git push<br/>The first push creates origin feature!
+    destroy GHF
+    GHF -->> UM: #f
+    Note left of GHF: Pull Request and then Merge.<br/>Delete origin feature branch.
+    UM -->> GHM: #f
+    Note right of UM: Sync your fork
+    GHM -->> M: #f
+    Note right of GHM: git pull
+    Note over F: Delete branch:<br/>git branch -d feature
+    box Upstream Remote - GitHub
+    participant UM
+    end
+    box Fork Remote - GitHub
+    participant GHM
+    participant GHF
+    end
+    box Fork - Local
+    participant M
+    participant F
+    end
+```
+
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
 - A fork is a server side, in our case GitHub, copy
