@@ -221,7 +221,7 @@ The next few episodes will guide you through examples of both models.
 This wasn't an exhaustive list of branching models!
 You can find more information using the links below:
 
-- [From Novice to Pro: Understanding Git Branching Strategies, GitProtect](https://gitprotect.io/blog/from-novice-to-pro-understanding-git-branching-models/)
+- [From Novice to Pro: Understanding Git Branching Strategies, GitProtect](https://gitprotect.io/blog/from-novice-to-pro-understanding-git-branching-strategies/)
 - [What is a Git workflow?, GitLab](https://about.gitlab.com/topics/version-control/what-is-git-workflow/#forking-git-workflow)
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
