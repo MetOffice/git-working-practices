@@ -105,6 +105,30 @@ Some things we'll be thinking about:
 - Do we merge main (trunk) into our feature branches?
 - Who presses the merge button?
 
+At the start of the lesson take some time to:
+
+While you are waiting for everyone post the pre-lesson survey form in the chat.
+If they haven't done this they must now.
+
+- Introduce the instructors and the helpers
+- Outline a rough schedule (there is a rough schedule in the instructor view setup page)
+  Or simply state that the morning focuses on Git and the afternoon on GitHub
+- Remember to take regular breaks
+- What are the outcomes of the lesson? They are on the Setup page!
+- How to navigate the material.
+  Where are the git and fcm to git cheatsheets?
+  Learners can do the challenges or the read the Discussion section if they are ahead.
+- We understand a large amount of the information in this course will likely be new to most of you,
+  so we encourage you to ask questions at any time.
+  Remember, there is no such thing as a stupid question!
+  (remember to let learners know how you want them to ask Qs
+  in-person learners can raise their hands or use green/red sticky notes,
+  online learners can raise their hand)
+- How to get help with anything related to Git and GitHub after the training (surgeries and support mailbox)
+- Mention about the feedback form and that any feedback will be used to improve the training
+- Ensure the material can be read by learners in the room (to change the font size in firefox use View --> Zoom --> Zoom In or <ctrl><+>)
+- Ensure learners can hear you well
+
 ### [Repository Access](../episodes/00-repo-access.md)
 
 At the start of this episode you will demonstrate how to give
