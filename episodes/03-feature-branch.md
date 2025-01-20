@@ -41,8 +41,6 @@ $ git clone git@github.com:metoffice/git-training-demo.git
 
 Make sure to navigate to the `Desktop` folder first.
 
-![](fig/github-collaboration.svg){alt='A diagram showing that "git clone" can create a copy of a remote GitHub repository, allowing a second person to create their own local repository that they can make changes to.'}
-
 ## Feature Branches
 
 You can now make changes to the `git-training-demo` repository
