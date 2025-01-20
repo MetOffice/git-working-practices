@@ -43,7 +43,7 @@ Some previous experience with the shell is expected,
 
 This is a follow up course from the
 [Version Control with Git](https://www.astropython.com/git-novice/)
-lesson. Please ensure you have worked through the
+lesson. Please ensure you are comfortable with the
 beginner material prior to starting this course.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
