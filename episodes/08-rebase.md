@@ -388,6 +388,16 @@ $ git log --decorate --oneline --graph
 * ed14d18 (origin/main) Adds Robert FitzRoy as an author (#8)
 ```
 
+It's a good idea here to diff against
+your backup branch to check that you
+haven't accidentally removed changes.
+
+```bash
+$ git diff add_plot_script.backup add_plot_script
+```
+
+This command should show **no** output.
+
 ::: callout
 
 ## detached HEAD
@@ -409,21 +419,6 @@ output above, on the feature branch.
 :::
 
 ## Updating a Branch
-
-::::::::::::::::::::::::::::::::::::: instructor
-
-To ensure the `main` branch of the
-`git-training-demo` repository has
-moved forward one commit, the co-instructor
-should merge a PR making any change
-they like to the repository.
-
-Or they can make a direct edit and merge
-to main by for example editing the `README.md`
-file and using their branch protection
-override.
-
-::::::::::::::::::::::::::::::::::::::::::::::::
 
 You can also use rebase to move your changes to
 branch off the `HEAD` of `main`.
@@ -458,9 +453,7 @@ gitGraph
     commit id: 'd7def6a'
 ```
 
-Go back to your fork on GitHub
-and click on the [**Sync fork**](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork) button.
-Then run `git pull` to fetch the changes:
+Run `git pull` to fetch the changes from GitHub:
 
 ```bash
 $ git pull origin main
@@ -491,6 +484,24 @@ Rebasing a branch with merge commits
 is difficult to impossible.
 
 :::
+
+### Updating a Branch with Upstream Changes
+
+Go back to your fork on GitHub
+and click on the [**Sync fork**](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork) button.
+
+Then you can follow the steps above to update
+your branch.
+
+It's a good idea to diff your origin feature branch here.
+
+```bash
+$ git diff feature origin/feature
+```
+
+You should only see the changes brought
+in from the upstream repository **not**
+your feature branch changes.
 
 ## Updating the Remote
 
