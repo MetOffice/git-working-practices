@@ -23,6 +23,8 @@ A fork is simply a copy of the repository that you make
 on the server, in our case GitHub, side.
 This avoids having to give repository permissions to
 every single collaborator[^access-private].
+You may only have one fork of a repository in your
+personal space or organisation.
 
 [^access-private]: If the repository is private collaborators will
 need to be given access to see the repository and create a fork.
