@@ -111,6 +111,11 @@ While you are waiting for everyone post the pre-lesson survey form in the chat.
 If they haven't done this they must now.
 
 - Introduce the instructors and the helpers
+- Describe what it means to be an instructor and a helper, and how they will interact with each other and the learners during the training.
+  This should be agreed by the instructor and the helper before the training.
+  For example, some instructors are more than happy for a helper to jump in if they have something useful to share
+  / if they have forgotten something. The learners should be told about this,
+  so that it doesn't appear to the learners that the helper is interrupting.
 - Outline a rough schedule (there is a rough schedule in the instructor view setup page)
   Or simply state that the morning focuses on Git and the afternoon on GitHub
 - Remember to take regular breaks
