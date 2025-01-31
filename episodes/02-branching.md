@@ -68,22 +68,28 @@ where the developers make changes.
 Once the feature is done, they submit a pull request and
 merge it into the `main` branch after review.
 Feature branches should be relatively short-lived.
+Each collaborator must be given **write** level, or higher, permissions
+on the repository.
+There are 2 repositories for each person to be mindful of, ***local*** and ***origin***.
 
 #### Pros
 
-- Each feature is developed away from `main` so you don't affect production code
-- Multiple features can be developed in parallel feature branches
-- It's a simple model that's easy for those new to git and your project
-- Easy to set up with continuous integration testing and deployment
+- Each feature is developed away from `main` so you don't affect production code.
+- Multiple features can be developed in parallel feature branches.
+- It's a simple model that's easy for those new to git and your project.
+- Easy to set up with continuous integration testing and deployment.
 
 #### Cons
 
 - If you don't regularly merge changes to `main` into your feature branch
-  it can become outdated, leading to merge conflicts
+  it can become outdated, leading to merge conflicts.
 - You may struggle if you need to maintain multiple production versions
-  simultaneously in the same repository
+  simultaneously in the same repository.
 
 The Feature Branch model is sometimes called GitHub Flow.
+Note that all branches and commits exist within the single GitHub, ***origin***, repository
+(and are therefore easily visible by anyone who has read access to the repository)
+and any contributor can write to any branch that has not been explicitly protected.
 
 ```mermaid
 ---
@@ -142,14 +148,21 @@ to contribute to on GitHub in your personal space.
 You develop your changes using this fork.
 When a change is ready you open a pull request to contribute the changes
 back to the original repository.
+There are 3 repositories for each person to be mindful of,
+***local***, ***origin*** (your fork), and ***upstream*** (the original repository).
 
 #### Pros
 
-- Removes the need to give all collaborators adequate permissions
-  on your repository
-- Only project maintainers can approve new code
+- Removes the need to give all collaborators write level or higher permissions
+  on your repository.
+  Anyone with read access to a repository can contribute.
+- Only project maintainers can approve new code.
 - You can use any other model within your main repository and
-  forks to develop changes
+  forks to develop changes.
+
+Note that all branches and commits exist within the collaborators fork, not the ***upstream*** repository
+(and are therefore less visible to anyone who has read access to the upstream repository).
+Collaborators can use their fork to test more complex changes, including for example testing github actions within a dummy-PR.
 
 -----------------------------------------
 
@@ -163,12 +176,12 @@ merged onto the `develop` and `main` branches.
 
 #### Pros
 
-- There is a clear purpose for each branch
-- Handles complex projects well
+- There is a clear purpose for each branch.
+- Handles complex projects well.
 
 #### Cons
 
-- Very steep learning curve, not suitable for novices
+- Very steep learning curve, not suitable for novices.
 
 ```mermaid
     gitGraph
@@ -212,11 +225,18 @@ merged onto the `develop` and `main` branches.
 
 ## Recommendations
 
-For small projects using a Feature Branch model is normally sufficient.
-If your team is large, or you expect external collaborators to contribute
-then we recommend developing using forks.
-Most open source projects require you to submit new code using a fork.
-The next few episodes will guide you through examples of both models.
+For repositories where collaborators are a small and trusted group the Feature Branch
+model is normally sufficient. 
+
+A Forking model is preferable if:
+- There are more collaborators, because the number of branches may become unwieldy. 
+- There are external collaborators whose contribution is valued,
+  but the repository owners need to retain control of the original.
+  For this reason most open source projects use a Forking Model.
+
+These working pattern are conventions not rules.
+It is easy to switch from one working pattern to the other.
+Or even to use the feature branch pattern for trusted colleagues and the forking pattern for outside contributors.
 
 This wasn't an exhaustive list of branching models!
 You can find more information using the links below:
