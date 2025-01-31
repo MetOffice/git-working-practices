@@ -25,7 +25,7 @@ different changes to each copy. Version control helps us manage these
 [resolve](../learners/reference.md#resolve) overlapping changes.
 You will encounter conflicts no matter which branching model you choose.
 No model is better than another when it comes to conflicts.
-Using forks has no impact on how likely conflicts occur either.
+Using forks has no impact on how likely conflicts are to occur.
 
 ::::::::::::::::::::::::::::::::::::: instructor
 
