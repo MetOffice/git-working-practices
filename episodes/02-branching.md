@@ -160,9 +160,9 @@ There are 3 repositories for each person to be mindful of,
 - You can use any other model within your main repository and
   forks to develop changes.
 
-Note that all branches and commits exist within the collaborators fork, not the ***upstream*** repository
-(and are therefore less visible to anyone who has read access to the upstream repository).
-Collaborators can use their fork to test more complex changes, including for example testing github actions within a dummy-PR.
+All branches and commits exist within the collaborators fork, not the ***upstream*** repository. They are harder to find for anyone who has read access to the upstream repository.
+
+Collaborators can use their fork to test more complex changes. For example testing github actions within a dummy-PR.
 
 -----------------------------------------
 
