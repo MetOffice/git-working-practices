@@ -181,7 +181,7 @@ merged onto the `develop` and `main` branches.
 
 #### Cons
 
-- Very steep learning curve, not suitable for novices.
+- Steeper learning curve, novices may require more help.
 
 ```mermaid
     gitGraph
