@@ -87,9 +87,9 @@ There are 2 repositories for each person to be mindful of, ***local*** and ***or
   simultaneously in the same repository.
 
 The Feature Branch model is sometimes called GitHub Flow.
-Note that all branches and commits exist within the single GitHub, ***origin***, repository
-(and are therefore easily visible by anyone who has read access to the repository)
-and any contributor can write to any branch that has not been explicitly protected.
+Note that all branches and commits exist within the single GitHub, origin repository.
+They are  visible to anyone who has read access to the repository.
+Any contributor can write to any branch that is not explicitly protected.
 
 ```mermaid
 ---
