@@ -68,7 +68,7 @@ where the developers make changes.
 Once the feature is done, they submit a pull request and
 merge it into the `main` branch after review.
 Feature branches should be relatively short-lived.
-Each collaborator must be given **write** level, or higher, permissions
+Each collaborator must have **write** level, or higher, permissions
 on the repository.
 There are 2 repositories for each person to be mindful of, ***local*** and ***origin***.
 
