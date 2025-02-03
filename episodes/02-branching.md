@@ -74,8 +74,8 @@ There are 2 repositories for each person to be mindful of, ***local*** and ***or
 
 #### Pros
 
-- Each feature is developed away from `main` so you don't affect production code.
-- Multiple features can be developed in parallel feature branches.
+- Developers create each feature  away from `main` so you don't affect production code.
+- Developers can create many features in parallel feature branches.
 - It's a simple model that's easy for those new to git and your project.
 - Easy to set up with continuous integration testing and deployment.
 
