@@ -72,7 +72,6 @@ To check your version run:
 
 ```bash
 $ git --version
-git version 2.47.0
 ```
 
 If your version of Git is lower than **2.23**
