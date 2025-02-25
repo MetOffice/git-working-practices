@@ -69,7 +69,7 @@ For all lower levels of access use the forking model.
 [^permission-org]: The [GitHub Documentation](https://docs.github.com/en/organizations/managing-user-access-to-your-organizations-repositories/managing-repository-roles/repository-roles-for-an-organization) has more information on the 
 different permission levels for repositories in organisations.
 
-#### Checking Access
+#### Checking Access for Organisational Repositories
 
 ::: group-tab
 
@@ -110,6 +110,17 @@ Navigate to the top right **Settings** tab from the repository homepage.
 See the GitHub documentation[^permission-org] for the differences between Maintainers and Admins.
 
 :::
+
+:::::::::::::::::::::::::::::::::::::::  challenge
+
+## Add a comment to the Confirm Access Issue
+
+Your instructors have set up an Issue on the
+git-training-demo repository with the title **Confirm Access**.
+
+Navigate to the Issue and add a comment saying: **I'm here!**.
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
 

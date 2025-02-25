@@ -9,6 +9,22 @@ to the start of the workshop.
 This information is vital for us to keep improving the lesson
 for other learners.
 
+## SSH Check
+
+Run:
+
+```bash
+$ ssh -T git@github.com
+```
+
+If you **DO NOT** see the output:
+
+```output
+Hi <username>! You've successfully authenticated, but GitHub does not provide shell access.
+```
+
+Please go back to the [introduction lesson's SSH setup instructions](https://www.astropython.com/git-novice/#ssh-setup).
+
 ## Give Your GitHub Username to the Instructors
 
 In this lesson you will be working on a new repository,
@@ -16,6 +32,15 @@ called `git-training-demo`, which your instructors have set up for you.
 If you are working through this material as part of a workshop
 your instructors will ask you to provide them with your
 GitHub username, no other setup is required.
+
+::: caution
+
+### Failure to provide your GitHub username
+
+If you do not provide your GitHub username to your instructors
+**before** the workshop your registration will be removed.
+
+:::
 
 If you are working through this material in your own time
 you will need to be provided with repository permissions for Episodes 1-5.
