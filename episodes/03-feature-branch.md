@@ -62,6 +62,43 @@ you created in Episode 2 Issues.
 Your team may choose a different naming convention such
 as prefixing the branch name by `feature`, `bug` etc.
 
+::: spoiler
+
+### Older Versions of Git / JASMIN Users
+
+The `git switch` command was added in
+Git version **2.23**.
+To check your version run:
+
+```bash
+$ git --version
+git version 2.47.0
+```
+
+If your version of Git is lower than **2.23**
+you should use the `git checkout` command
+to swap branches. To create a branch:
+
+```bash
+$ git checkout -b 1_favourite_cloud
+```
+
+```output
+Switched to branch '1_favourite_cloud'
+```
+
+To swap to a branch leave out the `-b` flag:
+
+```bash
+$ git checkout 1_favourite_cloud
+```
+
+```output
+Switched to branch '1_favourite_cloud'
+```
+
+:::
+
 Add in a new file `cloud-mo-fitzroy.md`,
 replace `mo-fitzroy` with your username:
 
