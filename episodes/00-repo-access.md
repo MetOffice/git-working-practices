@@ -56,7 +56,12 @@ As a collaborator you will be able to edit files on GitHub.
 
 If you aren't a collaborator you will see the message:
 
+> You need to fork this repository to propose changes.
 > Sorry, you're not able to edit this repository directly
+
+Or if you have made a fork of the repository already you may see the GitHub editor and a banner message stating:
+
+> You’re making changes in a project you don’t have write access to...
 
 If you are a collaborator, GitHub's online editor will appear.
 
@@ -98,6 +103,7 @@ With write access you will be able to edit files on GitHub.
 
 If you don't have write access this message is displayed in a banner:
 
+> You need to fork this repository to propose changes.
 > You're making changes in a project you don't have write access to.
 
 If you have write access (or higher), GitHub's online editor will appear.
