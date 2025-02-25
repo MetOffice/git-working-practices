@@ -576,4 +576,3 @@ no longer exists.
 - The version control system does not allow people to overwrite each other's changes blindly, but highlights conflicts so that they can be resolved.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
- 

@@ -65,9 +65,9 @@ episodes:
 - 03-feature-branch.md
 - 04-review.md
 - Break.md
+- 07-history.md
 - 05-forks.md
 - 06-conflict.md
-- 07-history.md
 - End.md
 - 08-rebase.md
 - 09-pre-commit.md

@@ -214,6 +214,14 @@ the yellow challenge **Local Cleanup**.
 
 Remember to take regular breaks.
 
+### [History](../episodes/07-history.md)
+
+Users will have covered using `git log` in the intro lesson.
+Show learners what the history of the repository looks like now.
+Then walk through the merge options, keep it short and snappy.
+There are no learner exercises in this episode,
+make sure you ask learners what questions they have at the end.
+
 ### [Forks](../episodes/05-forks.md)
 
 You can choose here to either change everyone's permissions down
@@ -234,14 +242,6 @@ and merge this after opening (and after learners have updated their `main`
 branches and created their feature branches).
 They can bypass protections and do this while the first instructor is teaching.
 This generates the citation file conflict the first instructor will point out.
-
-### [History](../episodes/07-history.md)
-
-Users will have covered using `git log` in the intro lesson.
-Show learners what the history of the repository looks like now.
-Then walk through the merge options, keep it short and snappy.
-There are no learner exercises in this episode,
-make sure you ask learners what questions they have at the end.
 
 ### [End](../episodes/End.md)
 

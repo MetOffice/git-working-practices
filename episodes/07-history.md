@@ -25,45 +25,19 @@ commands to explore your history.
 
 Your Git history will look different depending on the merge
 strategy you use when merging PRs
-and whether you allow merging `main` into a feature branch
-like we did in the last episode to resolve the conflict.
+and whether you allow merging `main` into a feature branch.
 It's up to you and your team to decide which strategy is
 best for your repository.
 
+::: spoiler
+
 ## Viewing History
 
-You have already learnt that we can use the
-`git log` command to output the commit history
+In the [Introduction to Version Control
+with Git](https://www.astropython.com/git-novice/05-history.html) lesson you learnt that we can use the
+`git log` command to view the commit history
 of our repository.
 
-```bash
-$ git log
-```
-
-```output
-commit acce45c86ece7fd4823ddc6c1addb43edf4c0794
-Merge: e3fc783 ca8aca9
-Author: Robert FitzRoy <r.fitzroy@mo-weather.uk>
-Date:   Mon Sep 23 15:50:15 2024 +0100
-
-    Merge pull request #1 from MetOffice/mo-fitzroy-patch-1
-    
-    Create CITATION.cff
-
-commit ca8aca9f2f43a4d799eb5c9ce9596b42360faa8b
-Author: Robert FitzRoy <r.fitzroy@mo-weather.uk>
-Date:   Mon Sep 23 15:49:36 2024 +0100
-
-    Create CITATION.cff
-
-commit e3fc783648222d5eef0739922b06794b8d690341
-Author: Robert FitzRoy <r.fitzroy@mo-weather.uk>
-Date:   Fri Sep 20 13:01:05 2024 +0100
-
-    Initial commit
-```
-
-This shows the first 3 commits to the `git-training-demo` repository (the full output isn't shown here because it's very long).
 We can use certain flags with `git log` to better
 visualise the history in graph form:
 
@@ -71,49 +45,11 @@ visualise the history in graph form:
 $ git log --decorate --oneline --graph
 ```
 
-```output
-*   d800b46 (HEAD -> main, origin/main, origin/HEAD) Merge pull request #2 from MetOffice/mo-fitzroy-patch-2
-|\  
-| * dbc944d Add pre-commit checks
-|/  
-*   acce45c Merge pull request #1 from MetOffice/mo-fitzroy-patch-1
-|\  
-| * ca8aca9 Create CITATION.cff
-|/  
-* e3fc783 Initial commit
-```
-
-The [GitHub Documentation for git log](https://git-scm.com/docs/git-log) has    information on all the available flags.
-The key here is `--graph` shows us the graphical
-representation of our history on the left of the
-terminal.
-`*`'s are commits which are connected by lines.
-The vertical lines represent links between commits.
-The output above shows two feature branches each with
-only one commit which were then merged back into
-`main` via a pull request.
-
-You can either remember the flags using
-the phrase "git dog", `d` for `--decorate`,
-`o` for `--oneline`, `g` for `--graph` or
-you can set an alias for the `git log` command:
-
-```bash
-$ git config --global alias.dog "log --decorate --oneline --graph"
-```
-
-This alias makes these two commands equivalent:
-
-```bash
-$ git dog
-$ git log --decorate --oneline --graph
-```
-
-You can of course customise the log command
-with other keywords and set more aliases for
-different log views.
-Some useful examples can be found on
+The [GitHub Documentation for git log](https://git-scm.com/docs/git-log) has information on all the available flags.
+Some useful examples of `git log` alias's  and flags can be found on
 [this Stackoverflow comment](https://stackoverflow.com/questions/1838873/visualizing-branch-topology-in-git/34467298#34467298).
+
+:::
 
 ::: callout
 
@@ -127,14 +63,14 @@ If you use VSCode we recommend the [Git Graph extension](https://marketplace.vis
 
 ## Merge Options
 
-When you opened your PRs you were given
+When you open a PR you are given
 three options for merging your feature
 branch into `main`.
 We will now explore how each merging method
 affects the history of your repository.
 In all the examples below we start with the same git history.
 
-### Merge
+## Merge
 
 Starting with:
 
@@ -183,7 +119,7 @@ keeps all the individual commits that made
 up your change so more accurately represents
 the history of your repository.
 
-### Squash and Merge
+## Squash and Merge
 
 Starting with:
 
@@ -226,7 +162,7 @@ Squashing in this case will make bug hunting harder.
 Remember you should try and break work down into
 small pieces so you avoid huge branches.
 
-### Rebase
+## Rebase
 
 Starting with:
 
@@ -288,6 +224,6 @@ for your project.
 branch into `main`.
 - merge: creates a merge commit and results in a non-linear history unless you first rebase your feature branch.
 - squash and merge: squashes all your feature branch commits into one merge commit on `main`. Your history is linear.
-- rebase: re-writes your git history so that all the feature branch commits are now on `main`. Your history is linear. 
+- rebase: re-writes your git history so that all the feature branch commits are now on `main`. Your history is linear.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
