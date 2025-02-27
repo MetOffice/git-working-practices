@@ -25,6 +25,20 @@ Hi <username>! You've successfully authenticated, but GitHub does not provide sh
 
 Please go back to the [introduction lesson's SSH setup instructions](https://www.astropython.com/git-novice/#ssh-setup).
 
+## Single sign-on (SSO) Check
+
+If you are part of an organisation that requires single
+sign-on (SSO) to access their GitHub organisation you
+will need to authorise the SSH key for use in the organisation.
+
+Next to the SSH key in the [GitHub settings](https://github.com/settings/keys)
+click on "Configure SSO".
+Find the organisation in the list and click on "Authorise".
+If the key is already authorised the "Deauthorise" button will appear instead.
+
+Full instructions on SSH key setup and SSO authorisation
+can be found in the [introduction lesson's SSH setup instructions](https://www.astropython.com/git-novice/#ssh-setup).
+
 ## Give Your GitHub Username to the Instructors
 
 In this lesson you will be working on a new repository,
