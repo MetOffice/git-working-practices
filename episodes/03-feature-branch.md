@@ -26,6 +26,18 @@ so that you can review each others code changes.
 Your instructor may have already paired you
 with another learner.
 
+::: spoiler
+
+### Working through the material independently
+
+If you are working through the material in your own time,
+you will be able to complete all the steps in this episode
+without another learner.
+At the end of this episode you will need to wait
+for a repository admin to review your work.
+
+:::
+
 ## Cloning a Repository
 
 You will both need to download a copy of the `git-training-demo` repository.
