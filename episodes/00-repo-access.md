@@ -71,7 +71,7 @@ Repositories in organisations have more levels of permissions[^permission-org].
 Team members require at least **write** access to use the branching model.
 For all lower levels of access use the forking model.
 
-[^permission-org]: The [GitHub Documentation](https://docs.github.com/en/organizations/managing-user-access-to-your-organizations-repositories/managing-repository-roles/repository-roles-for-an-organization) has more information on the 
+[^permission-org]: The [GitHub documentation](https://docs.github.com/en/organizations/managing-user-access-to-your-organizations-repositories/managing-repository-roles/repository-roles-for-an-organization) has more information on the
 different permission levels for repositories in organisations.
 
 #### Checking Access for Organisational Repositories
@@ -113,7 +113,8 @@ If you have write access (or higher), GitHub's online editor will appear.
 If you have Maintain or Admin privileges you can edit the repositories settings.
 Navigate to the top right **Settings** tab from the repository homepage.
 
-See the GitHub documentation[^permission-org] for the differences between Maintainers and Admins.
+See the [GitHub documentation](https://docs.github.com/en/organizations/managing-user-access-to-your-organizations-repositories/managing-repository-roles/repository-roles-for-an-organization)
+for the differences between Maintainers and Admins.
 
 :::
 
