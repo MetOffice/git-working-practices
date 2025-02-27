@@ -99,19 +99,19 @@ config:
 ---
     gitGraph
         accDescr {A git graph showing four branches including the default
-        <code>main</code> branch.
+        main branch.
         Each circle is a commit.
         A circle with an outline but no fill colour is a merge commit 
         where one branch has been merged into another.
-        The two feature branches and the <code>bug_fix</code> branch 
-        all branch off of <code>main</code> at the same commit.
-        The <code>bug_fix</code> and <code>small_feature</code> branches
-        are merged back into <code>main</code> after
+        The two feature branches and the bug_fix branch 
+        all branch off of main at the same commit.
+        The bug_fix and small_feature branches
+        are merged back into main after
         being developed on their branches.
-        The <code>large_feature</code> branch merges in the
-        changes to <code>main</code> to fix any conflicts
+        The large_feature branch merges in the
+        changes to main to fix any conflicts
         before the feature is ready to be merged
-        back into the <code>main</code> branch via a pull request.}
+        back into the main branch via a pull request.}
         commit
         branch bug_fix
         checkout main

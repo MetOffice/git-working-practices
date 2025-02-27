@@ -76,7 +76,7 @@ Starting with:
 
 ```mermaid
 gitGraph
-    accDescr {A Git graph showing the <code>main</code> branch with a <code>feature</code> branch branching off at the second commit of <code>main</code>.}
+    accDescr {A Git graph showing the main branch with a feature branch branching off at the second commit of main.}
     commit id: '4631ebc'
     commit id: 'ee406ac'
     branch feature
@@ -93,7 +93,7 @@ the two branches:
 
 ```mermaid
 gitGraph
-    accDescr {A Git graph showing the result of merging a <code>feature</code> branch with the <code>main</code> branch. The history is non-linear in this case and difficult to read.}
+    accDescr {A Git graph showing the result of merging a feature branch with the main branch. The history is non-linear in this case and difficult to read.}
     commit id: '4631ebc'
     commit id: 'ee406ac'
     branch feature
@@ -125,7 +125,7 @@ Starting with:
 
 ```mermaid
 gitGraph
-    accDescr {A Git graph showing the <code>main</code> branch with a <code>feature</code> branch branching off at the second commit of <code>main</code>.}
+    accDescr {A Git graph showing the main branch with a feature branch branching off at the second commit of main.}
     commit id: '4631ebc'
     commit id: 'ee406ac'
     branch feature
@@ -143,7 +143,7 @@ commit which is then merged onto main:
 
 ```mermaid
 gitGraph
-    accDescr {A Git graph showing the result of squashing then merging a <code>feature</code> branch with the <code>main</code> branch.}
+    accDescr {A Git graph showing the result of squashing then merging a feature branch with the main branch.}
     commit id: '4631ebc'
     commit id: 'ee406ac'
     commit id: '62440f8'
@@ -168,7 +168,7 @@ Starting with:
 
 ```mermaid
 gitGraph
-    accDescr {A Git graph showing the <code>main</code> branch with a <code>feature</code> branch branching off at the second commit of <code>main</code>.}
+    accDescr {A Git graph showing the main branch with a feature branch branching off at the second commit of main.}
     commit id: '4631ebc'
     commit id: 'ee406ac'
     branch feature
@@ -186,7 +186,7 @@ branch and adding them to `main`:
 
 ```mermaid
 gitGraph
-    accDescr {A Git graph showing the result of rebasing a <code>feature</code> branch with the <code>main</code> branch.}
+    accDescr {A Git graph showing the result of rebasing a feature branch with the main branch.}
     commit id: '4631ebc'
     commit id: 'ee406ac'
     commit id: '62440f8'
