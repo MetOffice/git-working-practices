@@ -230,6 +230,10 @@ You should update your local main branch and use `git log --oneline --graph`
 to demonstrate the messy history that has been created due to
 each learner selecting a random merge strategy in their PRs.
 
+You can also show learners the Network Graph on the Insights tab
+in GitHub. This will show the history of the repository and
+can be contrasted with forking in the afternoon sessions.
+
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::::  challenge

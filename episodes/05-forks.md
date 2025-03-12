@@ -183,6 +183,9 @@ Take a break here!
 This will give you and your co-instructor time
 to approve, and squash and merge the PRs.
 
+Show learners the Insights -> Network Graph on GitHub again.
+Contrast this to the section of the graph from the morning sessions.
+
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Updating a Fork
