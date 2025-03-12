@@ -53,6 +53,26 @@ $ git clone git@github.com:metoffice/git-training-demo.git
 
 Make sure to navigate to the `Desktop` folder first.
 
+::: spoiler
+
+### Commands that communicate between repositories
+
+In the Introduction to Version Control with Git and GitHub
+course you learnt that only certain git commands
+communicate between repositories.
+
+They were:
+
+- `git fetch`: To fetch changes from a remote.
+- `git pull`: To fetch changes from a remote
+  and merge them into a branch.
+- `git push`: To push changes to a remote.
+
+`git clone` also communicates with a remote.
+However it is only used once to make a local copy of a remote.
+
+:::
+
 ## Feature Branches
 
 You can now make changes to the `git-training-demo` repository
