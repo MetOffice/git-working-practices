@@ -271,6 +271,9 @@ between branches, remotes, and forks.
   A repository typically has one or more remotes,
   with the first called **origin**.
 - A fork is a copy of a repository created on GitHub.
+  When linking your local repository your fork becomes
+  the origin remote. The original repository you forked from
+  becomes the upstream remote.
 
 :::::::::::::::::::::::::
 
