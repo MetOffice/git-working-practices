@@ -9,7 +9,7 @@ title: Discussion
     When no remote is specified, by default the origin remote will be used, unless there’s an upstream branch configured for the current branch.
 2. Can you rename the upstream remote?
     Yes see the [spoiler on remotes](../episodes/03-feature-branch.md#some-more-about-remotes).
-    You should note that the names origin and upstream are just conventions.
+    You should note that the names `origin` and `upstream` are just conventions.
     You may use any name for the remotes however it may be confusing
     for new collaborators who expect origin/upstream.
 3. What do you do if you add the wrong remote link?
