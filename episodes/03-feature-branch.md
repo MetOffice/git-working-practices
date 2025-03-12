@@ -71,6 +71,8 @@ They were:
 `git clone` also communicates with a remote.
 However it is only used once to make a local copy of a remote.
 
+There are also other git commands that interact with remote repositories (e.g. `git ls-remote`), but none that appear in this course.
+
 :::
 
 ## Feature Branches
