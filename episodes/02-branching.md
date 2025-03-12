@@ -113,14 +113,14 @@ flowchart TD
   subgraph subGraph3["<div style=margin-top:>Computer 1</div>"]
     r4[("Local Repository")]
   end
-    r1 -- pull --> r2 & r3 & r4
+    r1 -- fetch/pull --> r2 & r3 & r4
     r2 -. push .-> r1
     r3 -. push .-> r1
     r4 -. push .-> r1
 
-style subGraph1 fill:#0171EB
-style subGraph2 fill:#0171EB
-style subGraph3 fill:#0171EB
+style subGraph1 fill:#A9640A
+style subGraph2 fill:#A9640A
+style subGraph3 fill:#A9640A
 ```
 
 ```mermaid
@@ -225,7 +225,7 @@ flowchart TB
     r3 -- push --> r2
     r2 -- fetch/pull --> r3
 
-style bottom fill:#0171EB
+style bottom fill:#A9640A
 ```
 
 -----------------------------------------
@@ -290,9 +290,10 @@ merged onto the `develop` and `main` branches.
 ## Recommendations
 
 For repositories where collaborators are a small and trusted group the Feature Branch
-model is normally sufficient. 
+model is normally sufficient.
 
 A Forking model is preferable if:
+
 - There are more collaborators, because the number of branches may become unwieldy. 
 - There are external collaborators whose contribution is valued,
   but the repository owners need to retain control of the original.
