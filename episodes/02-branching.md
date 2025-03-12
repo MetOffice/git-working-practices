@@ -1,7 +1,7 @@
 ---
 title: Branching Models
-teaching: 10
-exercises: 0
+teaching: 15
+exercises: 5
 ---
 
 ::::::::::::::::::::::::::::::::::::::: objectives

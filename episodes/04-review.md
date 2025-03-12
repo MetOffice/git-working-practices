@@ -1,6 +1,6 @@
 ---
 title: Review
-teaching: 30
+teaching: 60
 exercises: 10
 ---
 
