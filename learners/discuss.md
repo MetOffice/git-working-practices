@@ -10,7 +10,7 @@ title: Discussion
 2. Can you rename the upstream remote?
     Yes see the [spoiler on remotes](../episodes/03-feature-branch.md#some-more-about-remotes).
     You should note that the names `origin` and `upstream` are just conventions.
-    You may use any name for the remotes however it may be confusing
+    You may use any name for the remotes but it may be confusing
     for new collaborators who expect origin/upstream.
 3. What do you do if you add the wrong remote link?
     Change the remote url, or remove the remote and add the remote again.
@@ -22,8 +22,8 @@ title: Discussion
     Committing regularly every couple of hours and pushing straight after
     committing helps avoid losing any work.
 5. Can you have chains of forks? Or a colleagues fork as a remote?
-    Yes to both! Although the later would be an unusual working practice,
-    we'd recommend seeking advice before adding a colleagues fork
+    Yes to both! Although the latter would be an unusual working practice,
+    we'd recommend seeking advice before adding a colleague's fork
     as another remote on your local repository.
     Chains of forks are common. If a GitHub user has read access to your
     repository they can create a fork.
