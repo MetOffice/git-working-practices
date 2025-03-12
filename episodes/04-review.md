@@ -89,6 +89,18 @@ Click on the line to add an inline comment:
 
 ![](fig/pr-4.png){alt='A screenshot of a PR showing the diff in the Files changed tab. A line has been highlighted to show how to add an inline comment.'}
 
+Inline comments can cover multiple lines.
+Click on the first line number then drag your mouse down
+to the last line your comment covers.
+
+::::::::::::::::::::::::::::::::::::: instructor
+
+Ensure you show learners how to create multiline comments.
+It doesn't matter if learners choose to leave a single
+or multiline comment/suggestion for their review.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
 You can make suggested changes using inline comments.
 Click on the file icon or press <kbd>Ctrl+g</kbd>:
 
