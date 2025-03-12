@@ -13,6 +13,13 @@ title: 'Git Cheatsheets for Quick Reference'
 
 ## Glossary
 
+[branch]{#branch}
+:   A [branch](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-branches)
+is a pointer to a [commit](#commit).
+When you want to develop new changes
+you create a branch.
+The default branch in GitHub is `main`.
+
 [changeset]{#changeset}
 :   A group of changes to one or more files that are or will be added
 to a single [commit](#commit) in a [version control](#version-control)
@@ -30,6 +37,13 @@ all of the changes are recorded together.
 that is incompatible with changes made by other users.
 Helping users [resolve](#resolve) conflicts
 is one of version control's major tasks.
+
+[fork]{#fork}
+:   A GitHub [fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo)
+is a copy of a [repository](#repository).
+It is used to develop changes freely without
+affecting the original project repository, or
+when you don't have write access on the original repository.
 
 [HTTP]{#http}
 :   The Hypertext Transfer [Protocol](#protocol) used for sharing web pages and other data
@@ -77,5 +91,3 @@ small.
 Each set of changes creates a new [commit](#commit) of the files;
 the version control system allows users to recover old commits reliably,
 and helps manage conflicting changes made by different users.
-
-

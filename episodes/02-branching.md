@@ -226,10 +226,11 @@ merged onto the `develop` and `main` branches.
 ## Recommendations
 
 For repositories where collaborators are a small and trusted group the Feature Branch
-model is normally sufficient. 
+model is normally sufficient.
 
 A Forking model is preferable if:
-- There are more collaborators, because the number of branches may become unwieldy. 
+
+- There are more collaborators, because the number of branches may become unwieldy.
 - There are external collaborators whose contribution is valued,
   but the repository owners need to retain control of the original.
   For this reason most open source projects use a Forking Model.
@@ -243,6 +244,37 @@ You can find more information using the links below:
 
 - [From Novice to Pro: Understanding Git Branching Strategies, GitProtect](https://gitprotect.io/blog/from-novice-to-pro-understanding-git-branching-strategies/)
 - [What is a Git workflow?, GitLab](https://about.gitlab.com/topics/version-control/what-is-git-workflow/#forking-git-workflow)
+
+:::::::::::::::::::::::::::::::::::::::  challenge
+
+## Terminology
+
+Use the glossary to explain the differences between the following:
+
+- A branch
+- A remote
+- A fork
+
+:::::::::::::::  solution
+
+## Solution
+
+Learners are often confused by the difference
+between branches, remotes, and forks.
+
+- Branches are pointers to commits in a repository.
+  A repository will have multiple branches where
+  developers can work on features in parallel.
+- Remotes are **links** to other repositories.
+  These remotes usually link to repositories on
+  cloud platforms such as GitHub.
+  A repository typically has one or more remotes,
+  with the first called **origin**.
+- A fork is a copy of a repository created on GitHub.
+
+:::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
