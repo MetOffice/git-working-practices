@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-html/tabby.min.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.6.40">
+
+  <title>Git &amp; GitHub Working Practices</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-bbe7401fe57d4b791b917637bb662036.css">
+  <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+  <style>
+  .reveal img.center-xy, svg.center-xy {
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+  }
+  div.center-xy img,svg {
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+  }
+  .reveal img[src$=".svg"]:not(.slide-logo),svg:not(.slide-logo) {
+    object-fit: contain;
+    /* max-width: inherit !important; */
+    max-height: 80% !important;
+  }
+  div.center-xy img[src$=".svg"]:not(.slide-logo),svg:not(.slide-logo) {
+    object-fit: contain;
+    /* max-width: inherit !important; */
+    max-height: 80% !important;
+  }
+  </style>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">Git &amp; GitHub Working Practices</h1>
+  <p class="subtitle">Extract All Images</p>
+
+<div class="quarto-title-authors">
+</div>
+
+</section>
+<section>
+<section id="repository-access" class="title-slide slide level1 center">
+<h1>Repository Access</h1>
+
+</section>
+<section id="repository-access-1" class="slide level2">
+<h2>Repository Access-1</h2>
+<img data-src="fig/github-add-collaborators.png" class="center-xy" alt="A screenshot of the GitHub Collaborators settings page, which is accessed by clicking &quot;Settings&quot; then &quot;Collaborators&quot;.">
+</section></section>
+<section>
+<section id="issues" class="title-slide slide level1 center">
+<h1>Issues</h1>
+
+</section>
+<section id="issues-1" class="slide level2">
+<h2>Issues-1</h2>
+<img data-src="fig/github-fork-issue-open.png" class="center-xy" alt="A screenshot of the git-training-demo repository showing the Issues view.">
+</section>
+<section id="issues-2" class="slide level2">
+<h2>Issues-2</h2>
+<img data-src="fig/github-fork-issue-1.jpeg" class="center-xy" alt="A screenshot of the git-training-demo repository showing an Issue being opened. The template has automatically added text to the description and labelled the Issue as an enhancement.">
+</section></section>
+<section id="branching-models" class="title-slide slide level1 center">
+<h1>Branching Models</h1>
+<p>This episode contains no images.</p>
+</section>
+
+<section>
+<section id="feature-branch-model" class="title-slide slide level1 center">
+<h1>Feature Branch Model</h1>
+
+</section>
+<section id="open-a-pr-1" class="slide level2">
+<h2>Open a PR-1</h2>
+<img data-src="fig/feature-branch-1.png" class="center-xy" alt="A screenshot of the GitHub weather repository showing the branch selection dropdown.">
+</section>
+<section id="open-a-pr-2" class="slide level2">
+<h2>Open a PR-2</h2>
+<img data-src="fig/feature-branch-2.png" class="center-xy" alt="A screenshot of the GitHub weather repository showing code view for the 1_favourite_cloud branch. The Contribute dropdown is expanded to show the Open pull request option.">
+</section>
+<section id="pull-request-templates-1" class="slide level2">
+<h2>Pull Request Templates-1</h2>
+<img data-src="fig/github-fork-pr-1.jpeg" class="center-xy" alt="A screenshot of a users  pull request from their fork back to the upstream git-training-demo repository.">
+</section></section>
+<section>
+<section id="review" class="title-slide slide level1 center">
+<h1>Review</h1>
+
+</section>
+<section id="reviewing-changes-1" class="slide level2">
+<h2>Reviewing Changes-1</h2>
+<img data-src="fig/pr-1.png" class="center-xy" alt="A screenshot of a PR showing the diff in the Files changed tab. The diff is shown with Split view.">
+</section>
+<section id="reviewing-changes-2" class="slide level2">
+<h2>Reviewing Changes-2</h2>
+<img data-src="fig/pr-2.png" class="center-xy" alt="A screenshot of a PR showing the diff in the Files changed tab. The cog dropdown has been clicked to show how to change the diff view between Unified and Split.">
+</section>
+<section id="reviewing-changes-3" class="slide level2">
+<h2>Reviewing Changes-3</h2>
+<img data-src="fig/pr-rich-diff.png" class="center-xy" alt="A screenshot of a PR showing the diff in the Files changed tab using the rich diff view.">
+</section>
+<section id="reviewing-changes-4" class="slide level2">
+<h2>Reviewing Changes-4</h2>
+<img data-src="fig/pr-3.png" class="center-xy" alt="A screenshot of a PR showing the diff in the Files changed tab. The Review changes button has been clicked to show the Review popup.">
+</section>
+<section id="reviewing-changes-5" class="slide level2">
+<h2>Reviewing Changes-5</h2>
+<img data-src="fig/pr-4.png" class="center-xy" alt="A screenshot of a PR showing the diff in the Files changed tab. A line has been highlighted to show how to add an inline comment.">
+</section>
+<section id="reviewing-changes-6" class="slide level2">
+<h2>Reviewing Changes-6</h2>
+<img data-src="fig/pr-suggestion.png" class="center-xy" alt="A screenshot of a PR showing the diff in the Files changed tab. A line has been highlighted to show how to add an inline comment with a suggestion.">
+</section>
+<section id="reviewing-changes-7" class="slide level2">
+<h2>Reviewing Changes-7</h2>
+<img data-src="fig/pr-suggestion-2.png" class="center-xy" alt="A screenshot of a PR showing the diff in the Files changed tab showing the review popup.">
+</section>
+<section id="reviewing-changes-8" class="slide level2">
+<h2>Reviewing Changes-8</h2>
+<img data-src="fig/pr-review-1.png" class="center-xy" alt="A screenshot of a PR showing the Conversation tab with a review that has requested changes.">
+</section>
+<section id="responding-to-review-1" class="slide level2">
+<h2>Responding to Review-1</h2>
+<img data-src="fig/pr-review-2.png" class="center-xy" alt="A screenshot of a PR showing the Conversation tab with a review that has requested changes.">
+</section>
+<section id="approving-changes-1" class="slide level2">
+<h2>Approving Changes-1</h2>
+<img data-src="fig/pr-review-3.png" class="center-xy" alt="A screenshot of a PR showing the Conversation tab with a requested change that has been resolved.">
+</section>
+<section id="approving-changes-2" class="slide level2">
+<h2>Approving Changes-2</h2>
+<img data-src="fig/pr-review-4.png" class="center-xy" alt="A screenshot of a PR showing the Files changed tab showing how to Approve a review.">
+</section>
+<section id="approving-changes-3" class="slide level2">
+<h2>Approving Changes-3</h2>
+<img data-src="fig/pr-review-5.png" class="center-xy" alt="A screenshot of a PR showing the Conversations tab. The PR is ready to merge.">
+</section>
+<section id="approving-changes-4" class="slide level2">
+<h2>Approving Changes-4</h2>
+<img data-src="fig/pr-review-6.png" class="center-xy" alt="A screenshot of a PR showing the Conversations tab. The notification tells us our PR has been successfully merged and closed.">
+</section>
+<section id="approving-changes-5" class="slide level2">
+<h2>Approving Changes-5</h2>
+<img data-src="fig/pr-review-7.png" class="center-xy" alt="A screenshot of the weather repositories main Code tab showing the files in the main branch. The new shipping-forecast.md file can be seen with the commit message from the PR squash and merge commit that created it. The PR number, #4, link is being hovered over to display a popup with brief details of PR #4.">
+</section></section>
+<section id="break" class="title-slide slide level1 center">
+<h1>Break</h1>
+<p>This episode contains no images.</p>
+</section>
+
+<section>
+<section id="forks" class="title-slide slide level1 center">
+<h1>Forks</h1>
+
+</section>
+<section id="create-a-fork-1" class="slide level2">
+<h2>Create a Fork-1</h2>
+<img data-src="fig/github-fork.png" class="center-xy" alt="A screenshot of the git-training-demo repository showing the fork dropdown with the Create a new fork button.">
+</section>
+<section id="create-a-fork-2" class="slide level2">
+<h2>Create a Fork-2</h2>
+<img data-src="fig/github-fork-2.png" class="center-xy" alt="A screenshot of the GitHub Create a new fork page.">
+</section>
+<section id="create-a-fork-3" class="slide level2">
+<h2>Create a Fork-3</h2>
+<img data-src="fig/github-fork-3.png" class="center-xy" alt="A screenshot of a fork of the git-training-demo repository. The repository is marked as a fork by the fork symbol next to the repository name and the link to the original repository under the repository name.">
+</section>
+<section id="open-a-pull-request-1" class="slide level2">
+<h2>Open a Pull Request-1</h2>
+<img data-src="fig/github-fork-pr-open.jpeg" class="center-xy" alt="A screenshot of a user opening a pull request from their fork back to the upstream git-training-demo repository. The description has been autofilled with the pull request template contents.">
+</section>
+<section id="updating-a-fork-1" class="slide level2">
+<h2>Updating a Fork-1</h2>
+<img data-src="fig/github-fork-sync-fork-button.png" class="center-xy" alt="A screenshot of a users repository showing just the banner announcing the repository is a fork and that is up to date with the upstream repository.">
+</section></section>
+<section>
+<section id="conflicts" class="title-slide slide level1 center">
+<h1>Conflicts</h1>
+
+</section>
+<section id="open-a-pull-request-2" class="slide level2">
+<h2>Open a Pull Request-1</h2>
+<img data-src="fig/github-blame.png" class="center-xy" alt="A screenshot of a users weather repository showing blame on the forecast.md file in the Code viewer.">
+</section></section>
+<section id="history" class="title-slide slide level1 center">
+<h1>History</h1>
+<p>This episode contains no images.</p>
+</section>
+
+<section id="end" class="title-slide slide level1 center">
+<h1>End</h1>
+<p>This episode contains no images.</p>
+</section>
+
+<section id="rebasing" class="title-slide slide level1 center">
+<h1>‘Rebasing’</h1>
+<p>This episode contains no images.</p>
+</section>
+
+<section id="pre-commit" class="title-slide slide level1 center">
+<h1>‘Pre-commit’</h1>
+
+
+</section>
+    </div>
+  <div class="quarto-auto-generated-content center-xy" style="display: none;">
+<p><img src="site_libs/quarto-contrib/carpentries-images-1.0.0/images/carpentries-logo-sm.svg" class="slide-logo"></p>
+<div class="footer footer-default">
+<p>Git &amp; GitHub Working Practices: Extract All Images</p>
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: false,
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'default',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1050,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    
+
+</body></html>
