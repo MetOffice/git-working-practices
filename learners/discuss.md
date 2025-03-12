@@ -15,11 +15,11 @@ title: Discussion
 3. What do you do if you add the wrong remote link?
     Change the remote url, or remove the remote and add the remote again.
     See the [spoiler on remotes](../episodes/03-feature-branch.md#some-more-about-remotes) for the relevant Git commands.
-4. How frequently should you commit changes?
+4. How often should you commit changes?
     You learnt in the Introduction to Version Control with Git and GitHub
-    lesson that commits should occur frequently and be atomic.
+    lesson that commits should occur often and be atomic.
     That is contain one small change at a time.
-    Committing regularly every couple of hours and pushing straight after
+    Committing often (at most every couple of hours) and pushing straight after
     committing helps avoid losing any work.
 5. Can you have chains of forks? Or a colleagues fork as a remote?
     Yes to both! Although the latter would be an unusual working practice,
