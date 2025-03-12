@@ -1,6 +1,6 @@
 ---
 title: Review
-teaching: 30
+teaching: 60
 exercises: 10
 ---
 
@@ -88,6 +88,18 @@ it becomes highlighted.
 Click on the line to add an inline comment:
 
 ![](fig/pr-4.png){alt='A screenshot of a PR showing the diff in the Files changed tab. A line has been highlighted to show how to add an inline comment.'}
+
+Inline comments can cover multiple lines.
+Click on the first line number then drag your mouse down
+to the last line your comment covers.
+
+::::::::::::::::::::::::::::::::::::: instructor
+
+Ensure you show learners how to create multiline comments.
+It doesn't matter if learners choose to leave a single
+or multiline comment/suggestion for their review.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
 
 You can make suggested changes using inline comments.
 Click on the file icon or press <kbd>Ctrl+g</kbd>:
@@ -229,6 +241,10 @@ There may not be time for learners to complete the challenge
 You should update your local main branch and use `git log --oneline --graph`
 to demonstrate the messy history that has been created due to
 each learner selecting a random merge strategy in their PRs.
+
+You can also show learners the Network Graph on the Insights tab
+in GitHub. This will show the history of the repository and
+can be contrasted with forking in the afternoon sessions.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 

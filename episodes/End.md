@@ -1,6 +1,6 @@
 ---
 title: End
-teaching: 0
+teaching: 10
 exercises: 0
 ---
 
@@ -14,6 +14,28 @@ Your instructor may choose to teach these episodes
 if time permits.
 Otherwise feel free to work through the episodes
 in your own time.
+
+### Decision Time
+
+What will the working practices look like for your repositories?
+Things to think about:
+
+- Who needs access to your repos? Should there be a second admin to help you?
+  Review [Episode 1](../episodes/00-repo-access.md) Repository Access.
+- What branching model will you use?
+  Review [Episode 3](../episodes/03-feature-branch.md) Branching Models.
+- Will you use forks with your branching model?
+  Review [Episode 3 Forks](../episodes/02-branching.md#forking)
+- Who presses the merge button as part of a Pull Request,
+  the developer or the reviewer?
+- Will you need Issue and Pull Request templates
+  or other project management features such as milestones and Projects?
+- What automated tests might help your development process?
+
+Don't try and make all these decisions at once!
+Revisit the material and seek out further advice if needed before deciding.
+Remember you can change your mind anytime and evolve your working practices
+as your projects grow.
 
 ### Where to next?
 

@@ -1,7 +1,7 @@
 ---
 title: 'Rebasing'
-teaching: 15
-exercises: 10
+teaching: 60
+exercises: 15
 ---
 
 ::::::::::::::::::::::::::::::::::::::: objectives

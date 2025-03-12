@@ -1,7 +1,7 @@
 ---
 title: Branching Models
-teaching: 10
-exercises: 0
+teaching: 15
+exercises: 5
 ---
 
 ::::::::::::::::::::::::::::::::::::::: objectives
@@ -93,6 +93,38 @@ Any contributor can write to any branch that is not explicitly protected.
 
 ```mermaid
 ---
+title: Feature Branch Model
+---
+flowchart TD
+  accDescr {A flowchart showing the feature branch model.
+    Here developers work on their local copies of the
+    GitHub repository. All developers have write access
+    or higher. Developers work on feature branches,
+    and push these branches to the origin repository.}
+  subgraph subGraph0["Remote Server (GitHub)"]
+    r1[("MetOffice/git-training-demo Origin Repository")]
+  end
+  subgraph subGraph1["<div style=margin-top:>Computer 3</div>"]
+    r2[("Local Repository")]
+  end
+  subgraph subGraph2["<div style=margin-top:>Computer 2</div>"]
+    r3[(" Local Repository")]
+  end
+  subgraph subGraph3["<div style=margin-top:>Computer 1</div>"]
+    r4[("Local Repository")]
+  end
+    r1 -- fetch/pull --> r2 & r3 & r4
+    r2 -. push .-> r1
+    r3 -. push .-> r1
+    r4 -. push .-> r1
+
+style subGraph1 fill:#A9640A
+style subGraph2 fill:#A9640A
+style subGraph3 fill:#A9640A
+```
+
+```mermaid
+---
 config:
   gitGraph:
     showCommitLabel: false
@@ -164,6 +196,38 @@ All branches and commits exist within the collaborators fork, not the ***upstrea
 
 Collaborators can use their fork to test more complex changes. For example testing github actions within a dummy-PR.
 
+```mermaid
+---
+title: Forking + Feature Branch
+---
+flowchart TB
+  accDescr {A flowchart showing the use of forks
+    and the feature branch model.
+    Here developers work on their forks (GitHub copies, labelled origin) of the
+    main GitHub repository (upstream).
+    Developers work on feature branches in their fork,
+    and push these branches to the origin repository.
+    Pull requests are used to contribute changes from
+    the origin to the upstream repository.
+    Only one developers fork and local repository
+    are shown in this diagram.}
+  subgraph top["Remote Server (GitHub)"]
+    direction LR
+    r1[("MetOffice/git-training-demo Upstream Repository")]
+    r2[("username/git-training-demo Origin Repository")]
+
+    r2 -. Pull Request .-> r1
+  end
+  subgraph bottom["Computer"]
+    r3[("Local Repository")]
+  end
+    r1 -- fetch/pull --> r3
+    r3 -- push --> r2
+    r2 -- fetch/pull --> r3
+
+style bottom fill:#A9640A
+```
+
 -----------------------------------------
 
 ### Git Flow
@@ -228,9 +292,9 @@ merged onto the `develop` and `main` branches.
 For repositories where collaborators are a small and trusted group the Feature Branch
 model is normally sufficient.
 
-A Forking model is preferable if:
+A Forking model may be preferable if:
 
-- There are more collaborators, because the number of branches may become unwieldy.
+- There are more collaborators, because the number of branches may become unwieldy. 
 - There are external collaborators whose contribution is valued,
   but the repository owners need to retain control of the original.
   For this reason most open source projects use a Forking Model.

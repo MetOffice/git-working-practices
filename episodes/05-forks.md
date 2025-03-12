@@ -1,6 +1,6 @@
 ---
 title: Forks
-teaching: 30
+teaching: 45
 exercises: 0
 ---
 
@@ -182,6 +182,9 @@ The PR will now need to be approved and merged by your instructors.
 Take a break here!
 This will give you and your co-instructor time
 to approve, and squash and merge the PRs.
+
+Show learners the Insights -> Network Graph on GitHub again.
+Contrast this to the section of the graph from the morning sessions.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 

@@ -84,6 +84,12 @@ link Issues they create on the `git-training-demo` repository to.
 You can name this Project **Git & GitHub WP**.
 Give the `git-and-github-training` team permissions on the GitHub Project.
 
+### Timings
+
+You will find there is more content before the break than after.
+This means for a days workshop Episode 5 Review will spill
+over into the afternoon.
+
 ### [Introduction](../index.md)
 
 Use the following text as a guide for your intro,

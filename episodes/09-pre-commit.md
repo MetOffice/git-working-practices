@@ -1,6 +1,6 @@
 ---
 title: 'Pre-commit'
-teaching: 10
+teaching: 15
 exercises: 10
 ---
 
