@@ -5,7 +5,7 @@ title: Discussion
 ## Frequently Asked Questions
 
 1. Does Git default to origin if you run `git fetch` without origin/upstream?
-    From the [GitHub documentation](https://git-scm.com/docs/git-fetch):
+    From the [Git documentation](https://git-scm.com/docs/git-fetch):
     When no remote is specified, by default the origin remote will be used, unless there’s an upstream branch configured for the current branch.
 2. Can you rename the upstream remote?
     Yes see the [spoiler on remotes](../episodes/03-feature-branch.md#some-more-about-remotes).
