@@ -1,6 +1,6 @@
 ---
 title: Forks
-teaching: 45
+teaching: 30
 exercises: 0
 ---
 
@@ -152,10 +152,10 @@ Compressing objects: 100% (3/3), done.
 Writing objects: 100% (3/3), 369 bytes | 123.00 KiB/s, done.
 Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
 remote: Resolving deltas: 100% (1/1), completed with 1 local object.
-remote:
+remote: 
 remote: Create a pull request for '2_update_favourite_cloud' on GitHub by visiting:
 remote:      https://github.com/mo-fitzroy/git-training-demo/pull/new/2_update_favourite_cloud
-remote:
+remote: 
 To github.com:mo-fitzroy/git-training-demo.git
  * [new branch]      2_update_favourite_cloud -> 2_update_favourite_cloud
 branch '2_update_favourite_cloud' set up to track 'origin/2_update_favourite_cloud'.
@@ -173,7 +173,7 @@ from a Fork[^link-pr-issue].
 [^link-pr-issue]: The [GitHub Documentation](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/linking-a-pull-request-to-an-issue) has more information
 on linking PRs to Issues.
 
-![](fig/github-fork-pr-open.png){alt='A screenshot of a user opening a pull request from their fork back to the upstream git-training-demo repository. The description has been autofilled with the pull request template contents.'}
+![](fig/github-fork-pr-open.jpeg){alt='A screenshot of a user opening a pull request from their fork back to the upstream git-training-demo repository. The description has been autofilled with the pull request template contents.'}
 
 The PR will now need to be approved and merged by your instructors.
 
@@ -182,9 +182,6 @@ The PR will now need to be approved and merged by your instructors.
 Take a break here!
 This will give you and your co-instructor time
 to approve, and squash and merge the PRs.
-
-Show learners the Insights -> Network Graph on GitHub again.
-Contrast this to the section of the graph from the morning sessions.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -342,7 +339,7 @@ sequenceDiagram
 - A fork is a server side, in our case GitHub, copy
   of the repository.
 - Forks allow collaborators to contribute to the main
-  repository without being given
+  repository without being given 
   collaborator access or write permissions.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::

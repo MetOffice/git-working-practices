@@ -1,0 +1,37 @@
+		<footer class="row footer mx-md-3">
+			<hr/>
+			<div class="col-md-6">
+        <p>$translate.ThisLessonCoC$</p>
+        <a href="$carpentries.source$/edit/$carpentries.branch$/$if(file_source)$$else$README.md$endif$">$translate.EditOnGH$</a>
+        | <a href="$carpentries.source$/blob/$carpentries.branch$/CONTRIBUTING.md">$translate.Contributing$</a>
+        | <a href="$carpentries.source$/">$translate.Source$</a></p>
+				<p><a href="$carpentries.source$/blob/$carpentries.branch$/$carpentries.citation$">$translate.Cite$</a> | <a href="mailto:$carpentries.contact$">$translate.Contact$</a> | <a href="https://carpentries.org/about/">$translate.About$</a></p>
+			</div>
+			<div class="col-md-6">
+        $if(carpentries.license)$
+        <p>$translate.MaterialsLicensedUnder$</p>
+        $endif$
+        <p>$translate.TemplateLicense$</p>
+        <p>$translate.BuiltWith$</p>
+			</div>
+		</footer>
+	</div> <!-- / div.container -->
+	<div id="to-top">
+		<a href="#top">
+      <i class="search-icon" data-feather="arrow-up" role="img" aria-label="$translate.BackToTop$"></i><br/>
+			<!-- <span class="d-none d-sm-none d-md-none d-lg-none d-xl-block">Back</span> To Top -->
+      $translate.SpanToTop$
+		</a>
+	</div>
+  <!-- {{#json}}
+  <script type="application/ld+json">
+    {{ meta json}}
+  </script>
+  {{/json}} -->
+	<script>
+		feather.replace();
+	</script>
+
+  <!-- {{#analytics}}
+  {{ meta analytics}}
+  {{/analytics}} -->

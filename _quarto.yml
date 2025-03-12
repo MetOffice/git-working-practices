@@ -1,0 +1,63 @@
+project:
+  type: website
+  pre-render:
+    - _extensions\astrodimitrios\carpentries\create-aio-file.lua
+    - _extensions\astrodimitrios\carpentries\create-profiles-file.lua
+    - _extensions\astrodimitrios\carpentries\nav.lua
+    - _extensions\astrodimitrios\carpentries\more.lua
+  render:
+    - index.*
+    - episodes/*
+    - learners/*
+    - "!learners/setup.md"
+    - instructors/*
+    - profiles/*
+  post-render:
+    - bash _extensions\astrodimitrios\carpentries\post-process-html.sh
+
+carpentries:
+  source: https://github.com/MetOffice/git-working-practices
+  branch: main
+  contact: d.theodorakis@metoffice.gov.uk
+  license: CC-BY 4.0
+  citation: CITATION.cff
+  carpentry: cp
+  carpentry_name: Carpentries
+  carpentry_icon: carpentries
+  life_cycle: stable
+  created: '2025-03-12'
+  keywords: software, data, lesson, The Carpentries, Git, GitHub
+  episodes:
+    - 00-repo-access.md
+    - 01-issues.md
+    - 02-branching.md
+    - 03-feature-branch.md
+    - 04-review.md
+    - Break.md
+    - 05-forks.md
+    - 06-conflict.md
+    - 07-history.md
+    - End.md
+    - 08-rebase.md
+    - 09-pre-commit.md
+  # Information for Learners
+  resources: True
+  learners:
+    - reference.md
+    - discuss.md
+    - fcm-git_cheat_sheet.md
+  # Information for Instructors
+  instructors:
+    - instructor-notes.md
+  profiles:
+    - learner-profiles.md
+
+website:
+  title: "Git & GitHub Working Practices"
+  site-url: "https://metoffice.github.io/git-working-practices/"
+
+format:
+  carpentries-html
+
+metadata-files:
+  - _extensions\astrodimitrios\carpentries\translate.yml

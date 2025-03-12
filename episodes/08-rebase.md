@@ -1,7 +1,7 @@
 ---
 title: 'Rebasing'
-teaching: 60
-exercises: 15
+teaching: 15
+exercises: 10
 ---
 
 ::::::::::::::::::::::::::::::::::::::: objectives
@@ -122,7 +122,7 @@ The git history now looks something like this:
 
 ```mermaid
 gitGraph
-    accDescr {A Git graph showing the main branch with the add_plot_script branch branching off at the first commit of main.}
+    accDescr {A Git graph showing the <code>main</code> branch with the <code>add_plot_script</code> branch branching off at the first commit of <code>main</code>.}
     commit id: 'ed14d18'
     branch add_plot_script
     checkout add_plot_script
@@ -427,7 +427,7 @@ PR was merged with `main`:
 
 ```mermaid
 gitGraph
-    accDescr {A Git graph showing the main branch with the add_plot_script branch branching off at the first commit of main.}
+    accDescr {A Git graph showing the <code>main</code> branch with the <code>add_plot_script</code> branch branching off at the first commit of <code>main</code>.}
     commit id: 'ed14d18'
     branch add_plot_script
     checkout add_plot_script
@@ -444,7 +444,7 @@ This is what we are aiming for:
 
 ```mermaid
 gitGraph
-    accDescr {A Git graph showing the main branch with the add_plot_script branch branching off at the second commit of main.}
+    accDescr {A Git graph showing the <code>main</code> branch with the <code>add_plot_script</code> branch branching off at the second commit of <code>main</code>.}
     commit id: 'ed14d18'
     commit id: '4rtzk8g'
     branch add_plot_script

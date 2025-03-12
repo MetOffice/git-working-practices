@@ -1,0 +1,16 @@
+{{< include 00-repo-access.md >}}
+{{< include 01-issues.md >}}
+{{< include 02-branching.md >}}
+{{< include 03-feature-branch.md >}}
+{{< include 04-review.md >}}
+{{< include Break.md >}}
+{{< include 05-forks.md >}}
+{{< include 06-conflict.md >}}
+{{< include 07-history.md >}}
+{{< include End.md >}}
+{{< include 08-rebase.md >}}
+{{< include 09-pre-commit.md >}}
+---
+title: 'All in One Page'
+input_file: 'aio'
+---

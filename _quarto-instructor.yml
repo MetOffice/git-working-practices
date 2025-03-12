@@ -1,0 +1,8 @@
+project:
+  output-dir: _site/instructor
+
+carpentries:
+  instructor: True
+
+website:
+  site-url: "https://metoffice.github.io/git-working-practices/instructor"

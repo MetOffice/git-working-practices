@@ -1,0 +1,65 @@
+    <meta charset="utf-8" />
+    $if(quarto-version)$
+    <meta name="generator" content="quarto-$quarto-version$" />
+    $else$
+    <meta name="generator" content="quarto" />
+    $endif$
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+
+    $for(author-meta)$
+    <meta name="author" content="$author-meta$" />
+    $endfor$
+    $if(date-meta)$
+    <meta name="dcterms.date" content="$date-meta$" />
+    $endif$
+    $if(keywords)$
+    <meta name="keywords" content="$for(keywords)$$keywords$$sep$, $endfor$" />
+    $endif$
+    $if(description-meta)$
+    <meta name="description" content="$description-meta$" />
+    $endif$
+
+    <title>$pagetitle$$if(title-prefix)$ – $title-prefix$$endif$</title>
+
+    <!-- $if(carpentries.instructor)$
+    <script src="../site_libs/quarto-contrib/carpentries-theme-toggle-1.0.0/themetoggle.js"></script>
+    <script src="../site_libs/quarto-contrib/carpentries-theme-toggle-1.0.0/scripts.js"></script>
+    <link href="../site_libs/quarto-contrib/carpentries-css-1.0.0/styles.css" rel="stylesheet">
+    $else$
+    <script src="site_libs/quarto-contrib/carpentries-theme-toggle-1.0.0/themetoggle.js"></script>
+    <script src="site_libs/quarto-contrib/carpentries-theme-toggle-1.0.0/scripts.js"></script>
+    <link href="site_libs/quarto-contrib/carpentries-css-1.0.0/styles.css" rel="stylesheet">
+    $endif$ -->
+
+    <!-- <script src="$quarto_assets$quarto-nav/quarto-nav.js"></script>
+    <script src="$quarto_assets$quarto-nav/headroom.min.js"></script>
+    <script src="$quarto_assets$clipboard/clipboard.min.js"></script>
+    <script src="$quarto_assets$quarto-search/autocomplete.umd.js"></script>
+    <script src="$quarto_assets$quarto-search/fuse.min.js"></script>
+    <script src="$quarto_assets$quarto-search/quarto-search.js"></script>
+    <script src="$quarto_assets$quarto-html/quarto.js"></script>
+    <script src="$quarto_assets$quarto-html/popper.min.js"></script>
+    <script src="$quarto_assets$quarto-html/tippy.umd.min.js"></script>
+    <script src="$quarto_assets$quarto-html/anchor.min.js"></script>
+    <link href="$quarto_assets$quarto-html/tippy.css" rel="stylesheet"> -->
+
+    <!-- Responsive Favicon for The Carpentries -->
+    <link rel="apple-touch-icon" sizes="180x180" href="$favicon_path$apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="$favicon_path$favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="$favicon_path$favicon-16x16.png">
+    <link rel="manifest" href="$webmanifest_path$site.webmanifest">
+    <link rel="mask-icon" href="$favicon_path$safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="white" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="black" />
+
+    <!-- $for(css)$
+      <link rel="stylesheet" href="$css$" />
+    $endfor$
+    $for(header-includes)$
+      $header-includes$
+    $endfor$
+    $if(math)$
+      $math$
+    $endif$ -->

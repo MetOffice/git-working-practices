@@ -1,0 +1,21 @@
+.schedule-heading{
+  margin-top: 110px;
+  margin-bottom: 50px;
+}
+
+.schedule {
+  margin-bottom: 25px;
+}
+
+.schedule td {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+@include media-breakpoint-up(md) {
+
+  .schedule tr td:first-child {
+    padding-left: 50px;
+    white-space: nowrap;
+  }
+}

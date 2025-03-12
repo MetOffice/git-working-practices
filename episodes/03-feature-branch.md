@@ -26,18 +26,6 @@ so that you can review each others code changes.
 Your instructor may have already paired you
 with another learner.
 
-::: spoiler
-
-### Working through the material independently
-
-If you are working through the material in your own time,
-you will be able to complete all the steps in this episode
-without another learner.
-At the end of this episode you will need to wait
-for a repository admin to review your work.
-
-:::
-
 ## Cloning a Repository
 
 You will both need to download a copy of the `git-training-demo` repository.
@@ -52,28 +40,6 @@ $ git clone git@github.com:metoffice/git-training-demo.git
 ```
 
 Make sure to navigate to the `Desktop` folder first.
-
-::: spoiler
-
-### Commands that communicate between repositories
-
-In the Introduction to Version Control with Git and GitHub
-course you learnt that only certain git commands
-communicate between repositories.
-
-They were:
-
-- `git fetch`: To fetch changes from a remote.
-- `git pull`: To fetch changes from a remote
-  and merge them into a branch.
-- `git push`: To push changes to a remote.
-
-`git clone` also communicates with a remote.
-However it is only used once to make a local copy of a remote.
-
-There are also other git commands that interact with remote repositories (e.g. `git ls-remote`), but none that appear in this course.
-
-:::
 
 ## Feature Branches
 
@@ -96,42 +62,6 @@ you created in Episode 2 Issues.
 Your team may choose a different naming convention such
 as prefixing the branch name by `feature`, `bug` etc.
 
-::: spoiler
-
-### Older Versions of Git / JASMIN Users
-
-The `git switch` command was added in
-Git version **2.23**.
-To check your version run:
-
-```bash
-$ git --version
-```
-
-If your version of Git is lower than **2.23**
-you should use the `git checkout` command
-to swap branches. To create a branch:
-
-```bash
-$ git checkout -b 1_favourite_cloud
-```
-
-```output
-Switched to branch '1_favourite_cloud'
-```
-
-To swap to a branch leave out the `-b` flag:
-
-```bash
-$ git checkout 1_favourite_cloud
-```
-
-```output
-Switched to branch '1_favourite_cloud'
-```
-
-:::
-
 Add in a new file `cloud-mo-fitzroy.md`,
 replace `mo-fitzroy` with your username:
 
@@ -143,17 +73,8 @@ $ cat cloud-mo-fitzroy.md
 ```output
 # My Favourite Cloud
 
-Light and fluffy cumulus.    
+Light and fluffy cumulus.
 ```
-
-::: caution
-
-## Add in whitespace!
-
-To demonstrate automated testing via GitHub,
-add some spaces to the end of a line in your file.
-
-:::
 
 Add and commit your changes:
 
@@ -182,10 +103,10 @@ Compressing objects: 100% (2/2), done.
 Writing objects: 100% (3/3), 357 bytes | 178.00 KiB/s, done.
 Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
 remote: Resolving deltas: 100% (1/1), completed with 1 local object.
-remote:
+remote: 
 remote: Create a pull request for '1_favourite_cloud' on GitHub by visiting:
 remote:      https://github.com/MetOffice/git-training-demo/pull/new/1_favourite_cloud
-remote:
+remote: 
 To github.com:metoffice/git-training-demo.git
  * [new branch]      1_favourite_cloud -> 1_favourite_cloud
 branch '1_favourite_cloud' set up to track 'origin/1_favourite_cloud'.
@@ -265,6 +186,7 @@ associated with a repository. Here are some of the most useful ones:
 - `git remote rename [oldname] [newname]` changes the local alias by which a remote
   is known - its name. For example, one could use this to change `upstream` to `mo-fitzroy`.
   
+
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Open a PR
@@ -319,7 +241,7 @@ In the description scroll down to the checklists
 which look like this:
 
 ```md
-- [ ] I have read `CONTRIBUTING.md`.
+- [ ] I have read `CONTRIBUTING.md` and added my name as a Code Contributor.
 ```
 
 Some open source projects require you to add your name
@@ -329,33 +251,45 @@ Replace the space in the square checkbox brackets with an `x`
 to mark the task as complete:
 
 ```md
-- [x] I have read `CONTRIBUTING.md`.
+- [x] I have read `CONTRIBUTING.md` and added my name as a Code Contributor.
 ```
 
 Now when you open the PR it should look something like this:
 
-![](fig/github-fork-pr-1.png){alt='A screenshot of a users  pull request from their fork back to the upstream git-training-demo repository.'}
+![](fig/github-fork-pr-1.jpeg){alt='A screenshot of a users  pull request from their fork back to the upstream git-training-demo repository.'}
 
-This image shows PR number `#2`.
-This PR will close/fix Issue number `#1` (the top left arrow).
+This image shows PR number `#8`.
+This PR will close/fix Issue number `#7` (the top left arrow).
 You can request a review on the top right.
 Some repositories will be set up to automatically assign
 a reviewer based on how many reviews each team member
 currently has open[^auto-assign-pr-review].
-The middle arrow is where you assign yourself to the PR.
 The bottom arrow shows the checklist items we marked as complete.
 
 At the bottom of your PR you can see that a review is required
-before merging and some checks were not successful.
-This repository has automatic checks
+before merging.
+All checks have passed, this repository has automatic checks
 for trailing whitespace, accidentally adding large files etc.
-More information on setting up these checks
-can be found in the optional episode on
+More information can be found in the optional episode on
 [pre-commit hooks](./09-pre-commit.md).
 
-::: callout
+::: caution
 
-## Automatically closing Issues via PRs
+## Help: Some checks have failed
+
+If your now open Pull Request says some checks have failed
+this is because your changes did not pass the automatic
+pre-commit checks.
+
+Click on the **Details** link next to the failed test
+and fix your code on your local repository.
+Commit and then push this fix to GitHub.
+Your PR will automatically update and re-run the tests,
+you may need to refresh the page.
+
+:::
+
+### Automatically closing Issues via PRs
 
 A PR can automatically close an Issue when it is merged into `main`.
 To use this GitHub functionality
@@ -375,61 +309,8 @@ Make sure you change `1` to your Issue number.
 The [GitHub Documentation](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/linking-a-pull-request-to-an-issue) has more information
 on linking PRs to Issues.
 
-:::
-
-## Fixing Failing Checks
-
-Your changes did not pass the automatic pre-commit checks.
-The quickest way to check why a test failed is to click on
-the **Pull request checks / pre-commit** link near the bottom
-of the PR.
-Or you can navigate to the **Checks** tab in the PR,
-then select **Pull request checks** and click on the failing test.
-
-![](fig/pre-commit-check-fail-1.png){alt='A screenshot of a users failing pre-commit check showing the whitespace test has failed.'}
-
-You can see in the test output trailing whitespace has been found.
-This caused the tests to fail.
-Lower down in the output you will see the filename,
-and a diff of the line with the whitespace.
-
-Go back to your local repository and remove the whitespace:
-
-```bash
-$ nano cloud-mo-fitzroy.md
-$ cat cloud-mo-fitzroy.md
-```
-
-```output
-# My Favourite Cloud
-
-Light and fluffy cumulus.
-```
-
-Add and commit your changes:
-
-```bash
-$ git add cloud-mo-fitzroy.md
-$ git commit -m "Removes whitespace"
-```
-
-```output
-[1_favourite_cloud c74c7e1] Removes whitespace
- 1 file changed, 1 insertion(+), 1 deletion(-)
-```
-
-Push these changes to GitHub:
-
-```bash
-$ git push
-```
-
-Navigate back to your PR.
-You should now see a message saying all checks have passed.
-Merging is still blocked until a colleague reviews our code.
-
 In the next episode we will look at how these changes
-are reviewed and merged back into `main`.
+are reviewed and merged back into `main` in more detail.
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
@@ -444,7 +325,7 @@ On the right hand side of the PR you can also:
 2. Add labels to the PR.
 3. Add the PR to a Project by clicking on the cog
 next to the Projects section. (If you don't see a project
-related to the training you might not have been granted permissions,
+related to the training you might not have been granted permissions, 
 ask your instructors for help)
 4. Assign the PR to a milestone.
 

@@ -1,6 +1,6 @@
 ---
 title: Review
-teaching: 60
+teaching: 30
 exercises: 10
 ---
 
@@ -89,18 +89,6 @@ Click on the line to add an inline comment:
 
 ![](fig/pr-4.png){alt='A screenshot of a PR showing the diff in the Files changed tab. A line has been highlighted to show how to add an inline comment.'}
 
-Inline comments can cover multiple lines.
-Click on the first line number then drag your mouse down
-to the last line your comment covers.
-
-::::::::::::::::::::::::::::::::::::: instructor
-
-Ensure you show learners how to create multiline comments.
-It doesn't matter if learners choose to leave a single
-or multiline comment/suggestion for their review.
-
-::::::::::::::::::::::::::::::::::::::::::::::::
-
 You can make suggested changes using inline comments.
 Click on the file icon or press <kbd>Ctrl+g</kbd>:
 
@@ -115,8 +103,7 @@ When you're finished click the green **Submit review** button.
 
 ![](fig/pr-suggestion-2.png){alt='A screenshot of a PR showing the diff in the Files changed tab showing the review popup.'}
 
-The PRs **Conversation** tab now looks like this
-towards the bottom of the page:
+The PRs **Conversation** tab now looks like this:
 
 ![](fig/pr-review-1.png){alt='A screenshot of a PR showing the Conversation tab with a review that has requested changes.'}
 
@@ -176,22 +163,7 @@ you can approve the PR:
 Swap back to the Conversations tab.
 The PR is now ready to merge and has no conflicts with the
 base (`main` in this case) branch.
-
-::::::::::::::::::::::::::::::::::::: instructor
-
-Important!
-
-> Click any of the 3 merge options
-
-The two instructors can select
-squash and merge, and rebase and merge.
-Some learners will have skipped ahead and already clicked
-on a normal merge.
-This guarantees the repository history shows all three merge types.
-
-::::::::::::::::::::::::::::::::::::::::::::::::
-
-Click any of the 3 merge options; don't forget to move the PR
+Click **Squash and merge**; don't forget to move the PR
 number to the start of the commit message like you did
 in the Version Control with Git lesson:
 
@@ -233,20 +205,6 @@ Click on the number to take you to the closed PR.
 Head over to the repositories **Issues** tab.
 Check that your Issue for adding your favourite cloud file
 was closed when you merged the PR.
-
-::::::::::::::::::::::::::::::::::::: instructor
-
-There may not be time for learners to complete the challenge
-(updating their local main branch and deleting their local feature branch).
-You should update your local main branch and use `git log --oneline --graph`
-to demonstrate the messy history that has been created due to
-each learner selecting a random merge strategy in their PRs.
-
-You can also show learners the Network Graph on the Insights tab
-in GitHub. This will show the history of the repository and
-can be contrasted with forking in the afternoon sessions.
-
-::::::::::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
@@ -308,18 +266,6 @@ Deleted branch 1_favourite_cloud (was b7f26e6).
 ```
 
 :::::::::::::::::::::::::
-
-::::::::::::::::::::::::::::::::::::::::::::::::::
-
-:::::::::::::::::::::::::::::::::::::::  challenge
-
-## How was your PR merged?
-
-In this episode you merged each others PRs.
-The reviewer used a random merge strategy to merge each PR.
-
-Explore the history of the repository with `git log` and find your PR merge.
-How has the chosen merge strategy affected the repositories history?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 

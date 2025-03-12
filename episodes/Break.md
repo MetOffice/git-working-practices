@@ -1,6 +1,6 @@
 ---
 title: Break
-teaching: 60
+teaching: 0
 exercises: 0
 ---
 

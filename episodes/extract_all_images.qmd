@@ -1,0 +1,99 @@
+
+
+# Repository Access
+
+{{< include 00-repo-access.md >}}
+
+
+# Issues
+
+{{< include 01-issues.md >}}
+
+
+# Branching Models
+
+{{< include 02-branching.md >}}
+
+
+# Feature Branch Model
+
+{{< include 03-feature-branch.md >}}
+
+
+# Review
+
+{{< include 04-review.md >}}
+
+
+# Break
+
+{{< include Break.md >}}
+
+
+# Forks
+
+{{< include 05-forks.md >}}
+
+
+# Conflicts
+
+{{< include 06-conflict.md >}}
+
+
+# History
+
+{{< include 07-history.md >}}
+
+
+# End
+
+{{< include End.md >}}
+
+
+# 'Rebasing'
+
+{{< include 08-rebase.md >}}
+
+
+# 'Pre-commit'
+
+{{< include 09-pre-commit.md >}}
+---
+title: Git & GitHub Working Practices
+subtitle: 'Extract All Images'
+format: 
+  revealjs:
+    slide-level: 2
+    navigation-mode: vertical
+    logo: ../site_libs/quarto-contrib/carpentries-images-1.0.0/images/carpentries-logo-sm.svg
+    footer: 'Git & GitHub Working Practices: Extract All Images'
+    scrollable: true
+    auto-stretch: false
+    mermaid-format: svg
+    include-in-header: 
+      text: |
+        <style>
+        .reveal img.center-xy, svg.center-xy {
+          display:block;
+          margin-left:auto;
+          margin-right:auto;
+        }
+        div.center-xy img,svg {
+          display:block;
+          margin-left:auto;
+          margin-right:auto;
+        }
+        .reveal img[src$=".svg"]:not(.slide-logo),svg:not(.slide-logo) {
+          object-fit: contain;
+          /* max-width: inherit !important; */
+          max-height: 80% !important;
+        }
+        div.center-xy img[src$=".svg"]:not(.slide-logo),svg:not(.slide-logo) {
+          object-fit: contain;
+          /* max-width: inherit !important; */
+          max-height: 80% !important;
+        }
+        </style>
+filters:
+  - E:/Documents/astroDimitrios/git-working-practices/_extensions/astrodimitrios/carpentries/images-filter.lua
+---

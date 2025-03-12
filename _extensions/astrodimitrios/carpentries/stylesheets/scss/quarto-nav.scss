@@ -1,0 +1,41 @@
+$navbar-toggle-position: "right";
+
+.navbar {
+  #quarto-search {
+    order: 1;
+    margin-left: auto;
+  }
+}
+
+@include media-breakpoint-down(med) {
+  .navbar {
+    @if $navbar-toggle-position =="left" {
+      .navbar-toggler {
+        margin-right: 0.5em;
+      }
+    }
+
+    @else {
+      #quarto-search {
+        margin-right: 0.5em;
+      }
+
+      .quarto-navbar-tools .dropdown-menu {
+        left: 0;
+      }
+    }
+  }
+
+  .navbar-collapse .quarto-navbar-tools {
+    margin-left: 0.5em;
+  }
+}
+
+.sidebar #quarto-search {
+  margin-top: -1px;
+
+  svg.aa-SubmitIcon {
+    width: 16px;
+    height: 16px;
+  }
+}

@@ -1,0 +1,246 @@
+/* Basic (gray callout) */
+
+.callout {
+  border-left: 10px solid $gray;
+  margin-bottom: 25px;
+}
+
+.callout-square {
+  margin-left: -10px;
+  width: 53px;
+  height: 53px;
+  color: #ffffff;
+  background: $gray;
+  margin-right: -15px;
+}
+
+.callout-icon {
+  margin: 13px 0px 0px 13px;
+}
+
+.callout-content {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.callout-title {
+  position: relative;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin: 0px 0px 25px 0px;
+  padding: 24px 0px 0px 0px;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  code, kbd {
+    text-transform: none;
+  }
+}
+
+
+.callout li {
+  margin-left: 0px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.callout-inner {
+  padding: 0px 25px 25px 25px;
+  background: $light-gray;
+}
+
+/* Overrides for different callout types */
+
+/* Prereq */
+
+.prereq {
+  border-left: 10px solid $purple;
+}
+
+.prereq .callout-square {
+  background: $purple;
+}
+
+/* Keypoints */
+
+.keypoints {
+  border-left: 10px solid $teal;
+}
+
+.keypoints .callout-square {
+  background: $teal;
+  color: $black;
+}
+
+/* Checklist */
+
+.checklist {
+  border-left: 10px solid $bright-blue;
+}
+
+.checklist .callout-square {
+  background: $bright-blue;
+  color: #ffffff;
+}
+
+/* Testimonial */
+
+.testimonial {
+  border-left: 10px solid $deep-purple;
+}
+
+.testimonial .callout-square {
+  background: $deep-purple;
+  color: #ffffff;
+}
+
+/* Discussion */
+
+.discussion {
+  border-left: 10px solid $yellow;
+}
+
+.discussion .callout-square {
+  background: $yellow;
+  color: $black;
+}
+
+/* Challenge */
+
+.challenge {
+  border-left: 10px solid $yellow;
+}
+
+.challenge .callout-square {
+  background: $yellow;
+  color: $black;
+}
+
+/* Parent Class for Accordions in Learner View */
+
+.learner-accordion {
+  .accordion-button {
+    background: $yellow;
+    height: 43px;
+    padding-left: 25px;
+    color: $black;
+    //box-shadow: none;
+    &:hover {
+      text-decoration:underline;
+    }
+    &:focus {
+      box-shadow: var(--bs-primary-rgb) 0px 0px 0px 4px;
+    }
+    &.collapsed {
+      //box-shadow: none;
+    }
+  }
+  .accordion-item {
+    border-color: $black;
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.2rem;
+    &:first-of-type .accordion-button {
+      border-radius: 0;
+    }
+    &:last-of-type .accordion-button.collapsed {
+      border-bottom-right-radius: 0px;
+      border-bottom-left-radius: 0px;
+    }
+  }
+  .accordion-header {
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.2rem;
+  }
+  .accordion-body {
+    padding-left: 35px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background: $light-gray;
+    li {
+      list-style-type: inherit;
+      list-style-position: inside;
+      margin-left: 0px;
+      margin-top:10px;
+      margin-bottom:20px;
+    }
+  }
+  h2 {
+    border-left: 10px $yellow solid;
+  }
+}
+
+/* Child classes for solution and spoiler accordions */
+
+.challenge-accordion {
+  @extend .learner-accordion;
+  margin: -25px 0 25px 0;
+}
+
+.spoiler-accordion {
+  @extend .learner-accordion;
+  margin: 25px 0 25px 0;
+  .spoiler-button {
+    background: $light-gray;
+    height: 53px;
+    padding-left: 15px;
+    position: relative;
+    border-color: $black;
+    padding-left: 10px;
+    color: $black;
+    box-shadow: 0;
+    &:focus {
+      box-shadow: #0d6efd 0px 0px 0px 4px;
+    }
+    &, h3 {
+      font-family: Mulish;
+      font-size: 1.2rem;
+      font-style: normal;
+      font-weight: normal;
+      text-transform: uppercase;
+    }
+    h3 {
+      text-decoration: underline;
+      text-underline-offset: 25px;
+      margin-left: 65px;
+    }
+    &.collapsed {
+      color: $black;
+      h3 {
+        text-decoration: none;
+      }
+    }
+  }
+  .note-square {
+    width: 53px;
+    height: 53px;
+    color: $black;
+    background: $very-light-blue;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+
+/* Move icon, adjust margins on medium/large screens */
+
+@include media-breakpoint-up(md) {
+  .callout-square {
+    float: left;
+    position: relative;
+    left: -43px;
+  }
+
+  .callout {
+    margin-left: 42px;
+  }
+
+  .challenge-accordion {
+    margin-left: 42px;
+  }
+}

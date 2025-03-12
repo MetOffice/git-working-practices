@@ -1,6 +1,6 @@
 ---
 title: Conflicts
-teaching: 30
+teaching: 15
 exercises: 0
 ---
 
@@ -201,8 +201,8 @@ in the `main` branch into our feature branch
 
 ```mermaid
 gitGraph
-    accDescr {A git graph showing the main branch being merged
-    into the 7_add-citation-fitzroy branch to resolve merge conflicts.}
+    accDescr {A git graph showing the <code>main</code> branch being merged
+    into the <code>7_add-citation-fitzroy</code> branch to resolve merge conflicts.}
     commit id: 'cdb7fa6'
     branch 7_add-citation-fitzroy
     commit id: 'a3c5e13 Adds Robert Fitzroy as an author'
@@ -576,3 +576,4 @@ no longer exists.
 - The version control system does not allow people to overwrite each other's changes blindly, but highlights conflicts so that they can be resolved.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
+ 

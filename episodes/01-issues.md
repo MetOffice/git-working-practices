@@ -32,7 +32,7 @@ Here's some advice for writing good Issues:
 - Break up large Issues into several small ones and or
   use checklists to track tasks in the Issue
 
-Open an Issue on the `git-training-demo` repository
+Open an Issue on the `git-training-demo` repository 
 to add a file stating your favourite cloud type.
 
 Navigate to the **Issues** tab:
@@ -46,7 +46,7 @@ to provide templates for bugs and feature requests.
 Click on the green **Get started** button next to the
 **Feature request** option:
 
-![](fig/github-fork-issue-1.png){alt='A screenshot of the git-training-demo repository showing an Issue being opened. The template has automatically added text to the description and labelled the Issue as an enhancement.'}
+![](fig/github-fork-issue-1.jpeg){alt='A screenshot of the git-training-demo repository showing an Issue being opened. The template has automatically added text to the description and labelled the Issue as an enhancement.'}
 
 You can see the Issue has text in the description already.
 This is from the template which provides a consistent
@@ -93,7 +93,7 @@ On the right hand side of the Issue you can:
 you are working on it.
 2. Add the Issue to a Project by clicking on the cog
 next to the Projects section. (If you don't see a project
-related to the training you might not have been granted permissions,
+related to the training you might not have been granted permissions, 
 ask your instructors for help)
 3. Assign the Issue to a milestone.
 

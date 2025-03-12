@@ -8,10 +8,10 @@
 # lc: Library Carpentry
 # cp: Carpentries (to use for instructor training for instance)
 # incubator: The Carpentries Incubator
-carpentry: 'incubator'
+carpentry: 'swc'
 
 # Overall title for pages.
-title: 'Git and GitHub Working Practices'
+title: 'Git Working Practices'
 
 # Date the lesson was created (YYYY-MM-DD, this is empty by default)
 created: '2024-11-11'
@@ -21,7 +21,7 @@ keywords: 'software, data, lesson, The Carpentries, Git, GitHub'
 
 # Life cycle stage of the lesson
 # possible values: pre-alpha, alpha, beta, stable
-life_cycle: 'stable'
+life_cycle: 'alpha'
 
 # License of the lesson materials (recommended CC-BY 4.0)
 license: 'CC-BY 4.0'
@@ -65,9 +65,9 @@ episodes:
 - 03-feature-branch.md
 - 04-review.md
 - Break.md
-- 07-history.md
 - 05-forks.md
 - 06-conflict.md
+- 07-history.md
 - End.md
 - 08-rebase.md
 - 09-pre-commit.md

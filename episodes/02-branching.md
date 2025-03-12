@@ -1,7 +1,7 @@
 ---
 title: Branching Models
-teaching: 15
-exercises: 5
+teaching: 10
+exercises: 0
 ---
 
 ::::::::::::::::::::::::::::::::::::::: objectives
@@ -68,60 +68,22 @@ where the developers make changes.
 Once the feature is done, they submit a pull request and
 merge it into the `main` branch after review.
 Feature branches should be relatively short-lived.
-Each collaborator must have **write** level, or higher, permissions
-on the repository.
-There are 2 repositories for each person to be mindful of, ***local*** and ***origin***.
 
 #### Pros
 
-- Developers create each feature  away from `main` so you don't affect production code.
-- Developers can create many features in parallel feature branches.
-- It's a simple model that's easy for those new to git and your project.
-- Easy to set up with continuous integration testing and deployment.
+- Each feature is developed away from `main` so you don't affect production code
+- Multiple features can be developed in parallel feature branches
+- It's a simple model that's easy for those new to git and your project
+- Easy to set up with continuous integration testing and deployment
 
 #### Cons
 
 - If you don't regularly merge changes to `main` into your feature branch
-  it can become outdated, leading to merge conflicts.
+  it can become outdated, leading to merge conflicts
 - You may struggle if you need to maintain multiple production versions
-  simultaneously in the same repository.
+  simultaneously in the same repository
 
 The Feature Branch model is sometimes called GitHub Flow.
-Note that all branches and commits exist within the single GitHub, origin repository.
-They are  visible to anyone who has read access to the repository.
-Any contributor can write to any branch that is not explicitly protected.
-
-```mermaid
----
-title: Feature Branch Model
----
-flowchart TD
-  accDescr {A flowchart showing the feature branch model.
-    Here developers work on their local copies of the
-    GitHub repository. All developers have write access
-    or higher. Developers work on feature branches,
-    and push these branches to the origin repository.}
-  subgraph subGraph0["Remote Server (GitHub)"]
-    r1[("MetOffice/git-training-demo Origin Repository")]
-  end
-  subgraph subGraph1["<div style=margin-top:>Computer 3</div>"]
-    r2[("Local Repository")]
-  end
-  subgraph subGraph2["<div style=margin-top:>Computer 2</div>"]
-    r3[(" Local Repository")]
-  end
-  subgraph subGraph3["<div style=margin-top:>Computer 1</div>"]
-    r4[("Local Repository")]
-  end
-    r1 -- fetch/pull --> r2 & r3 & r4
-    r2 -. push .-> r1
-    r3 -. push .-> r1
-    r4 -. push .-> r1
-
-style subGraph1 fill:#A9640A
-style subGraph2 fill:#A9640A
-style subGraph3 fill:#A9640A
-```
 
 ```mermaid
 ---
@@ -131,19 +93,19 @@ config:
 ---
     gitGraph
         accDescr {A git graph showing four branches including the default
-        main branch.
+        <code>main</code> branch.
         Each circle is a commit.
         A circle with an outline but no fill colour is a merge commit 
         where one branch has been merged into another.
-        The two feature branches and the bug_fix branch 
-        all branch off of main at the same commit.
-        The bug_fix and small_feature branches
-        are merged back into main after
+        The two feature branches and the <code>bug_fix</code> branch 
+        all branch off of <code>main</code> at the same commit.
+        The <code>bug_fix</code> and <code>small_feature</code> branches
+        are merged back into <code>main</code> after
         being developed on their branches.
-        The large_feature branch merges in the
-        changes to main to fix any conflicts
+        The <code>large_feature</code> branch merges in the
+        changes to <code>main</code> to fix any conflicts
         before the feature is ready to be merged
-        back into the main branch via a pull request.}
+        back into the <code>main</code> branch via a pull request.}
         commit
         branch bug_fix
         checkout main
@@ -180,53 +142,14 @@ to contribute to on GitHub in your personal space.
 You develop your changes using this fork.
 When a change is ready you open a pull request to contribute the changes
 back to the original repository.
-There are 3 repositories for each person to be mindful of,
-***local***, ***origin*** (your fork), and ***upstream*** (the original repository).
 
 #### Pros
 
-- Removes the need to give all collaborators write level or higher permissions
-  on your repository.
-  Anyone with read access to a repository can contribute.
-- Only project maintainers can approve new code.
+- Removes the need to give all collaborators adequate permissions
+  on your repository
+- Only project maintainers can approve new code
 - You can use any other model within your main repository and
-  forks to develop changes.
-
-All branches and commits exist within the collaborators fork, not the ***upstream*** repository. They are harder to find for anyone who has read access to the upstream repository.
-
-Collaborators can use their fork to test more complex changes. For example testing github actions within a dummy-PR.
-
-```mermaid
----
-title: Forking + Feature Branch
----
-flowchart TB
-  accDescr {A flowchart showing the use of forks
-    and the feature branch model.
-    Here developers work on their forks (GitHub copies, labelled origin) of the
-    main GitHub repository (upstream).
-    Developers work on feature branches in their fork,
-    and push these branches to the origin repository.
-    Pull requests are used to contribute changes from
-    the origin to the upstream repository.
-    Only one developers fork and local repository
-    are shown in this diagram.}
-  subgraph top["Remote Server (GitHub)"]
-    direction LR
-    r1[("MetOffice/git-training-demo Upstream Repository")]
-    r2[("username/git-training-demo Origin Repository")]
-
-    r2 -. Pull Request .-> r1
-  end
-  subgraph bottom["Computer"]
-    r3[("Local Repository")]
-  end
-    r1 -- fetch/pull --> r3
-    r3 -- push --> r2
-    r2 -- fetch/pull --> r3
-
-style bottom fill:#A9640A
-```
+  forks to develop changes
 
 -----------------------------------------
 
@@ -240,12 +163,12 @@ merged onto the `develop` and `main` branches.
 
 #### Pros
 
-- There is a clear purpose for each branch.
-- Handles complex projects well.
+- There is a clear purpose for each branch
+- Handles complex projects well
 
 #### Cons
 
-- Steeper learning curve, novices may require more help.
+- Very steep learning curve, not suitable for novices
 
 ```mermaid
     gitGraph
@@ -289,59 +212,17 @@ merged onto the `develop` and `main` branches.
 
 ## Recommendations
 
-For repositories where collaborators are a small and trusted group the Feature Branch
-model is normally sufficient.
-
-A Forking model may be preferable if:
-
-- There are more collaborators, because the number of branches may become unwieldy. 
-- There are external collaborators whose contribution is valued,
-  but the repository owners need to retain control of the original.
-  For this reason most open source projects use a Forking Model.
-
-These working pattern are conventions not rules.
-It is easy to switch from one working pattern to the other.
-Or even to use the feature branch pattern for trusted colleagues and the forking pattern for outside contributors.
+For small projects using a Feature Branch model is normally sufficient.
+If your team is large, or you expect external collaborators to contribute
+then we recommend developing using forks.
+Most open source projects require you to submit new code using a fork.
+The next few episodes will guide you through examples of both models.
 
 This wasn't an exhaustive list of branching models!
 You can find more information using the links below:
 
 - [From Novice to Pro: Understanding Git Branching Strategies, GitProtect](https://gitprotect.io/blog/from-novice-to-pro-understanding-git-branching-strategies/)
 - [What is a Git workflow?, GitLab](https://about.gitlab.com/topics/version-control/what-is-git-workflow/#forking-git-workflow)
-
-:::::::::::::::::::::::::::::::::::::::  challenge
-
-## Terminology
-
-Use the glossary to explain the differences between the following:
-
-- A branch
-- A remote
-- A fork
-
-:::::::::::::::  solution
-
-## Solution
-
-Learners are often confused by the difference
-between branches, remotes, and forks.
-
-- Branches are pointers to commits in a repository.
-  A repository will have multiple branches where
-  developers can work on features in parallel.
-- Remotes are **links** to other repositories.
-  These remotes usually link to repositories on
-  cloud platforms such as GitHub.
-  A repository typically has one or more remotes,
-  with the first called **origin**.
-- A fork is a copy of a repository created on GitHub.
-  When linking your local repository your fork becomes
-  the origin remote. The original repository you forked from
-  becomes the upstream remote.
-
-:::::::::::::::::::::::::
-
-::::::::::::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
