@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="auto"><head>
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/quarto-contrib/carpentries-theme-toggle-1.0.0/themetoggle.js"></script>
+<script src="../site_libs/quarto-contrib/carpentries-theme-toggle-1.0.0/scripts.js"></script>
+<link href="../site_libs/quarto-contrib/carpentries-css-1.0.0/styles.css" rel="stylesheet"><meta charset="utf-8">
+            <meta name="generator" content="quarto-1.6.42">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+                    
+        <title>Instructor Notes – Git &amp; GitHub Working Practices</title>
+
+        <!--     <script src="../site_libs/quarto-contrib/carpentries-theme-toggle-1.0.0/themetoggle.js"></script>
+        <script src="../site_libs/quarto-contrib/carpentries-theme-toggle-1.0.0/scripts.js"></script>
+        <link href="../site_libs/quarto-contrib/carpentries-css-1.0.0/styles.css" rel="stylesheet">
+         -->
+
+        <!-- <script src="quarto-nav/quarto-nav.js"></script>
+        <script src="quarto-nav/headroom.min.js"></script>
+        <script src="clipboard/clipboard.min.js"></script>
+        <script src="quarto-search/autocomplete.umd.js"></script>
+        <script src="quarto-search/fuse.min.js"></script>
+        <script src="quarto-search/quarto-search.js"></script>
+        <script src="quarto-html/quarto.js"></script>
+        <script src="quarto-html/popper.min.js"></script>
+        <script src="quarto-html/tippy.umd.min.js"></script>
+        <script src="quarto-html/anchor.min.js"></script>
+        <link href="quarto-html/tippy.css" rel="stylesheet"> -->
+
+        <!-- Responsive Favicon for The Carpentries -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../site_libs/quarto-contrib/carpentries-favicons-1.0.0/favicons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../site_libs/quarto-contrib/carpentries-favicons-1.0.0/favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../site_libs/quarto-contrib/carpentries-favicons-1.0.0/favicons/favicon-16x16.png">
+        <link rel="manifest" href="../site_libs/quarto-contrib/carpentries-manifest-1.0.0/site.webmanifest">
+        <link rel="mask-icon" href="../site_libs/quarto-contrib/carpentries-favicons-1.0.0/favicons/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" media="(prefers-color-scheme: light)" content="white">
+        <meta name="theme-color" media="(prefers-color-scheme: dark)" content="black">
+
+        <!--           <script id="quarto-search-options" type="application/json">{
+                         "location": "sidebar",
+                         "copy-button": false,
+                         "collapse-after": 3,
+                         "panel-placement": "start",
+                         "type": "textbox",
+                         "limit": 50,
+                         "keyboard-shortcut": [
+                           "f",
+                           "/",
+                           "s"
+                         ],
+                         "show-item-context": false,
+                         "language": {
+                           "search-no-results-text": "No results",
+                           "search-matching-documents-text": "matching documents",
+                           "search-copy-link-title": "Copy link to search",
+                           "search-hide-matches-text": "Hide additional matches",
+                           "search-more-match-text": "more match in this document",
+                           "search-more-matches-text": "more matches in this document",
+                           "search-clear-button-title": "Clear",
+                           "search-text-placeholder": "",
+                           "search-detached-cancel-button-title": "Cancel",
+                           "search-submit-button-title": "Submit",
+                           "search-label": "Search"
+                         }
+                       }</script>
+             -->  </head>
+  <body>
+        <div id="quarto-search-results"></div>
+        <!-- content -->
+        <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+        <!-- sidebar -->
+        <!-- margin-sidebar -->
+            <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+                <nav id="TOC" role="doc-toc" class="toc-active">
+                                                       <h2 id="toc-title">On this page</h2>
+                                                    
+                                                   <ul>
+                                                   <li><a href="#general-notes" id="toc-general-notes" class="nav-link active" data-scroll-target="#general-notes">General Notes</a>
+                                                   <ul class="collapse">
+                                                   <li><a href="#setup" id="toc-setup" class="nav-link" data-scroll-target="#setup">Setup</a></li>
+                                                   <li><a href="#git-training-demo-repository" id="toc-git-training-demo-repository" class="nav-link" data-scroll-target="#git-training-demo-repository"><code>git-training-demo</code> Repository</a></li>
+                                                   <li><a href="#github-project" id="toc-github-project" class="nav-link" data-scroll-target="#github-project">GitHub Project</a></li>
+                                                   <li><a href="#timings" id="toc-timings" class="nav-link" data-scroll-target="#timings">Timings</a></li>
+                                                   <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
+                                                   <li><a href="#repository-access" id="toc-repository-access" class="nav-link" data-scroll-target="#repository-access">Repository Access</a></li>
+                                                   <li><a href="#issues" id="toc-issues" class="nav-link" data-scroll-target="#issues">Issues</a></li>
+                                                   <li><a href="#branching-models" id="toc-branching-models" class="nav-link" data-scroll-target="#branching-models">Branching Models</a></li>
+                                                   <li><a href="#feature-branch-model" id="toc-feature-branch-model" class="nav-link" data-scroll-target="#feature-branch-model">Feature Branch Model</a></li>
+                                                   <li><a href="#review" id="toc-review" class="nav-link" data-scroll-target="#review">Review</a></li>
+                                                   <li><a href="#break" id="toc-break" class="nav-link" data-scroll-target="#break">Break</a></li>
+                                                   <li><a href="#history" id="toc-history" class="nav-link" data-scroll-target="#history">History</a></li>
+                                                   <li><a href="#forks" id="toc-forks" class="nav-link" data-scroll-target="#forks">Forks</a></li>
+                                                   <li><a href="#conflicts" id="toc-conflicts" class="nav-link" data-scroll-target="#conflicts">Conflicts</a></li>
+                                                   <li><a href="#end" id="toc-end" class="nav-link" data-scroll-target="#end">End</a></li>
+                                                   </ul></li>
+                                                   <li><a href="#notes-from-within-episodes" id="toc-notes-from-within-episodes" class="nav-link" data-scroll-target="#notes-from-within-episodes">Notes from within Episodes</a></li>
+                                                   </ul>
+                                               </nav>
+            </div>
+        <!-- main -->
+        <main class="content page-columns page-full" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+        <header id="top" class="navbar navbar-expand-md top-nav carpentries">
+          <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+            <symbol id="check2" viewbox="0 0 16 16">
+              <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"></path>
+            </symbol>
+            <symbol id="circle-half" viewbox="0 0 16 16">
+              <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"></path>
+            </symbol>
+            <symbol id="moon-stars-fill" viewbox="0 0 16 16">
+              <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"></path>
+              <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path>
+            </symbol>
+            <symbol id="sun-fill" viewbox="0 0 16 16">
+              <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+            </symbol>
+          </svg>
+          <a class="visually-hidden-focusable skip-link" href="#main-content">Skip to main content</a>
+          <div class="container-fluid top-nav-container">
+            <div class="col-md-8">
+              <div class="large-logo">
+                <img id="cp-logo" alt="Carpentries" src="../site_libs/quarto-contrib/carpentries-images-1.0.0/images/carpentries-logo.svg">
+                                              </div>
+            </div>
+            <div class="selector-container">
+              <div id="theme-selector">
+                <li class="nav-item dropdown" id="theme-button-list">
+                  <button class="btn btn-link nav-link px-0 px-lg-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle theme (auto)">
+                    <svg class="bi my-1 theme-icon-active">
+                      <use href="#circle-half"></use>
+                    </svg>
+                    <i data-feather="chevron-down"></i>
+                  </button>
+                  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme-text">
+                    <li>
+                      <button type="button" class="btn dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+                        <svg class="bi me-2 theme-icon">
+                          <use href="#sun-fill"></use>
+                        </svg>
+                        Light
+                        <svg class="bi ms-auto d-none">
+                          <use href="#check2"></use>
+                        </svg>
+                      </button>
+                    </li>
+                    <li>
+                      <button type="button" class="btn dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+                        <svg class="bi me-2 theme-icon">
+                          <use href="#moon-stars-fill"></use>
+                        </svg>
+                        Dark
+                        <svg class="bi ms-auto d-none">
+                          <use href="#check2"></use>
+                        </svg>
+                      </button>
+                    </li>
+                    <li>
+                      <button type="button" class="btn dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+                        <svg class="bi me-2 theme-icon">
+                          <use href="#circle-half"></use>
+                        </svg>
+                        Auto
+                        <svg class="bi ms-auto d-none">
+                          <use href="#check2"></use>
+                        </svg>
+                      </button>
+                    </li>
+                  </ul>
+                </li>
+              </div>
+              <!-- NOTE: the language section will likely need to be generated on {sandpaper}, so we are not going to translate this now.
+                {{#yaml}}{{#language}}
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle " type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+                    English (US)  <i data-feather="chevron-down"></i>
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                    <li><button class="dropdown-item" type="button">French</button></li>
+                  </ul>
+                </div>
+                {{/language}}{{/yaml}} -->
+              <div class="dropdown" id="instructor-dropdown">
+                        <button class="btn btn-secondary dropdown-toggle bordered-button" type="button" id="dropdownMenu1" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i aria-hidden="true" class="icon" data-feather="eye"></i> Instructor View <i data-feather="chevron-down"></i>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                  <li><button class="dropdown-item" type="button" onclick="window.location.href='../instructor-notes.html';">Learner View</button></li>
+                </ul>
+                      </div>
+            </div>
+          </div>
+          <hr>
+        </header>
+        <nav class="navbar navbar-expand-xl bottom-nav carpentries" aria-label="Main Navigation">
+          <div class="container-fluid nav-container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle Navigation">
+              <span class="navbar-toggler-icon"></span>
+              <span class="menu-title">Menu</span>
+            </button>
+            <div class="nav-logo">
+              <img class="small-logo" alt="Carpentries" src="../site_libs/quarto-contrib/carpentries-images-1.0.0/images/carpentries-logo-sm.svg">
+            </div>
+            <div class="lesson-title-md">
+              Git &amp; GitHub Working Practices
+            </div>
+            <div class="search-icon-sm">
+              <!-- TODO: do not show until we have search
+                  <i role="img" aria-label="Search the All In One page" data-feather="search"></i>
+                -->
+            </div>
+            <div class="desktop-nav">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <span class="lesson-title">
+                    Git &amp; GitHub Working Practices
+                  </span>
+                </li>
+                <!-- We want to include a setup link prominently in the resources for overview pages -->
+                <li>
+                  <!-- NOTE: the reason why we do not use the site root here is because we would need to set the site context _before_ overview -->
+                  <a class="nav-link" href="index.html#setup">Setup</a>
+                </li>
+                        <li class="nav-item">
+                  <a class="nav-link" href="key-points.html">Key Points</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="instructor-notes.html">Instructor Notes</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="extract_all_images.html">Extract All Images</a>
+                </li>
+                                  <li class="nav-item dropdown">
+                    <button class="nav-link dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                      More <i data-feather="chevron-down"></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      
+
+                      <li><a class="dropdown-item" href="reference.html">Git Cheatsheets for Quick Reference</a></li>
+                      <li><a class="dropdown-item" href="discuss.html">Discussion</a></li>
+                      <li><a class="dropdown-item" href="fcm-git_cheat_sheet.html">FCM vs Git Cheat Sheet</a></li>            </ul>
+                  </li>
+                      </ul>
+            </div>
+            <!--
+              <form class="d-flex col-md-2 search-form">
+                <fieldset disabled>
+                <input class="form-control me-2 searchbox" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success tablet-search-button"  type="submit">
+                    <i class="search-icon" data-feather="search" role="img" aria-label="Search the All In One page"></i>
+                  </button>
+                </fieldset>
+              </form>
+              -->
+            <!--     <a id="search-button" class="btn btn-primary" href="instructor/aio.html" role="button"
+              aria-label="Search the All In One page">Search the All In One page</a>
+             -->
+            <div class="input-group">
+              <div id="quarto-search" class="form-outline" data-mdb-input-init="">
+                <!-- <input type="search" id="form1" class="form-control" /> -->
+                <!-- <label class="form-label" for="form1">Search</label> -->
+              </div>
+              <!-- <button type="button" class="btn btn-primary" data-mdb-ripple-init> -->
+                <!-- <i class="fas fa-search"></i> -->
+              <!-- </button> -->
+            </div>
+          </div><!--/div.container-fluid -->
+        </nav>
+
+        <div class="col-md-12 mobile-title">
+          Git &amp; GitHub Working Practices
+        </div>
+
+        <aside class="col-md-12 lesson-progress">
+          <div style="width: 0%" class="percentage">
+            0%
+          </div>
+          <div class="progress carpentries">
+            <div class="progress-bar carpentries" role="progressbar" style="width: 0%" aria-valuenow="0" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
+            </div>
+          </div>
+        </aside>    <div class="container">
+      <div class="row">
+        <div id="sidebar-col" class="col-lg-4">
+          <div id="sidebar" class="sidebar">
+            <nav aria-labelledby="flush-headingEleven">
+              <button role="button" aria-label="close menu" alt="close menu" aria-expanded="true" aria-controls="sidebar" class="collapse-toggle" data-collapse="Collapse" data-episodes="../Episodes">
+                <i class="search-icon" data-feather="x" role="img"></i>
+              </button>
+              <div class="sidebar-inner">
+                <div class="row mobile-row" id="theme-row-mobile">
+                  <div class="col" id="theme-selector">
+                    <li class="nav-item dropdown" id="theme-button-list">
+                      <button class="btn btn-link nav-link px-0 px-lg-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle theme (auto)">
+                        <svg class="bi my-1 theme-icon-active">
+                          <use href="#circle-half"></use>
+                        </svg>
+                        <span class="d-lg-none ms-1" id="bd-theme-text">Toggle Theme</span>
+                      </button>
+                      <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-theme-text">
+                        <li>
+                          <button type="button" class="btn dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+                            <svg class="bi me-2 theme-icon">
+                              <use href="#sun-fill"></use>
+                            </svg>
+                            Light
+                            <svg class="bi ms-auto d-none">
+                              <use href="#check2"></use>
+                            </svg>
+                          </button>
+                        </li>
+                        <li>
+                          <button type="button" class="btn dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+                            <svg class="bi me-2 theme-icon">
+                              <use href="#moon-stars-fill"></use>
+                            </svg>
+                            Dark
+                            <svg class="bi ms-auto d-none">
+                              <use href="#check2"></use>
+                            </svg>
+                          </button>
+                        </li>
+                        <li>
+                          <button type="button" class="btn dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+                            <svg class="bi me-2 theme-icon">
+                              <use href="#circle-half"></use>
+                            </svg>
+                            Auto
+                            <svg class="bi ms-auto d-none">
+                              <use href="#check2"></use>
+                            </svg>
+                          </button>
+                        </li>
+                      </ul>
+                    </li>
+                  </div>
+                </div>
+                <div class="row mobile-row">
+                  <div class="col">
+                    <div class="sidenav-view-selector">
+                      <div class="accordion accordion-flush" id="accordionFlush9">
+                        <div class="accordion-item">
+                                            <h2 class="accordion-header anchored" id="flush-headingNine">
+                            <button class="accordion-button collapsed" id="instructor" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseNine" aria-expanded="false" aria-controls="flush-collapseNine">
+                              <i id="eye" aria-hidden="true" class="icon" data-feather="eye"></i> Learner View
+                            </button>
+                          </h2>
+                          <div id="flush-collapseNine" class="accordion-collapse collapse" aria-labelledby="flush-headingNine" data-bs-parent="#accordionFlush2">
+                            <div class="accordion-body">
+                              <a href="instructor/instructor-notes.html">Instructor View</a>
+                            </div>
+                          </div>
+                                          </div><!--/div.accordion-item-->
+                      </div><!--/div.accordion-flush-->
+                    </div><!--div.sidenav-view-selector -->
+                  </div><!--/div.col -->
+                  <!-- {{#yaml}}{{#language}}
+                  <div class="col">
+                    <div class="sidenav-language-selector">
+                      <div class="accordion accordion-flush" id="accordionFlush10">
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="flush-headingTen">
+                            <button class="accordion-button side-language collapsed" id="language" type="button"
+                              data-bs-toggle="collapse" data-bs-target="#flush-collapseTen" aria-expanded="false"
+                              aria-controls="flush-collapseTen">English (US)
+                            </button>
+                          </h2>
+                          <div id="flush-collapseTen" class="accordion-collapse collapse" aria-labelledby="flush-headingNine"
+                            data-bs-parent="#accordionFlush2">
+                            <div class="accordion-body">
+                              <a href="#">French</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  {{/language}}{{/yaml}} -->
+                  <hr>
+                </div><!--/div.mobile-row -->
+
+                <div class="accordion accordion-flush" id="accordionFlush11">
+                  <div class="accordion-item">
+
+                    <button id="chapters" class="accordion-button show" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEleven" aria-expanded="false" aria-controls="flush-collapseEleven">
+                      <h2 class="accordion-header chapters anchored" id="flush-headingEleven">../EPISODES</h2>
+                    </button>
+                    <div id="flush-collapseEleven" class="accordion-collapse show collapse" aria-labelledby="flush-headingEleven" data-bs-parent="#accordionFlush11">
+
+                      <div class="accordion-body">
+                        
+
+                                <div class="accordion accordion-flush" id="accordionFlush1">
+                                  <div class="accordion-item">
+                                    <div class="accordion-header" id="flush-heading1">
+                                      <a href="index.html">Summary and Setup</a>
+                                    </div><!--/div.accordion-header-->
+                                  </div><!--/div.accordion-item-->
+                                </div><!--/div.accordion-flush-->
+
+
+                                <div class="accordion accordion-flush" id="accordionFlush2">
+                                  <div class="accordion-item">
+                                    <div class="accordion-header" id="flush-heading2">
+                                      <a href="00-repo-access.html">1. Repository Access</a>
+                                    </div><!--/div.accordion-header-->
+                                  </div><!--/div.accordion-item-->
+                                </div><!--/div.accordion-flush-->
+
+
+                                <div class="accordion accordion-flush" id="accordionFlush3">
+                                  <div class="accordion-item">
+                                    <div class="accordion-header" id="flush-heading3">
+                                      <a href="01-issues.html">2. Issues</a>
+                                    </div><!--/div.accordion-header-->
+                                  </div><!--/div.accordion-item-->
+                                </div><!--/div.accordion-flush-->
+
+
+                                <div class="accordion accordion-flush" id="accordionFlush4">
+                                  <div class="accordion-item">
+                                    <div class="accordion-header" id="flush-heading4">
+                                      <a href="02-branching.html">3. Branching Models</a>
+                                    </div><!--/div.accordion-header-->
+                                  </div><!--/div.accordion-item-->
+                                </div><!--/div.accordion-flush-->
+
+
+                                <div class="accordion accordion-flush" id="accordionFlush5">
+                                  <div class="accordion-item">
+                                    <div class="accordion-header" id="flush-heading5">
+                                      <a href="03-feature-branch.html">4. Feature Branch Model</a>
+                                    </div><!--/div.accordion-header-->
+                                  </div><!--/div.accordion-item-->
+                                </div><!--/div.accordion-flush-->
+
+
+                                <div class="accordion accordion-flush" id="accordionFlush6">
+                                  <div class="accordion-item">
+                                    <div class="accordion-header" id="flush-heading6">
+                                      <a href="04-review.html">5. Review</a>
+                                    </div><!--/div.accordion-header-->
+                                  </div><!--/div.accordion-item-->
+                                </div><!--/div.accordion-flush-->
+
+
+                                <div class="accordion accordion-flush" id="accordionFlush7">
+                                  <div class="accordion-item">
+                                    <div class="accordion-header" id="flush-heading7">
+                                      <a href="Break.html">6. Break</a>
+                                    </div><!--/div.accordion-header-->
+                                  </div><!--/div.accordion-item-->
+                                </div><!--/div.accordion-flush-->
+
+
+                                <div class="accordion accordion-flush" id="accordionFlush8">
+                                  <div class="accordion-item">
+                                    <div class="accordion-header" id="flush-heading8">
+                                      <a href="05-forks.html">7. Forks</a>
+                                    </div><!--/div.accordion-header-->
+                                  </div><!--/div.accordion-item-->
+                                </div><!--/div.accordion-flush-->
+
+
+                                <div class="accordion accordion-flush" id="accordionFlush9">
+                                  <div class="accordion-item">
+                                    <div class="accordion-header" id="flush-heading9">
+                                      <a href="06-conflict.html">8. Conflicts</a>
+                                    </div><!--/div.accordion-header-->
+                                  </div><!--/div.accordion-item-->
+                                </div><!--/div.accordion-flush-->
+
+
+                                <div class="accordion accordion-flush" id="accordionFlush10">
+                                  <div class="accordion-item">
+                                    <div class="accordion-header" id="flush-heading10">
+                                      <a href="07-history.html">9. History</a>
+                                    </div><!--/div.accordion-header-->
+                                  </div><!--/div.accordion-item-->
+                                </div><!--/div.accordion-flush-->
+
+
+                                <div class="accordion accordion-flush" id="accordionFlush11">
+                                  <div class="accordion-item">
+                                    <div class="accordion-header" id="flush-heading11">
+                                      <a href="End.html">10. End</a>
+                                    </div><!--/div.accordion-header-->
+                                  </div><!--/div.accordion-item-->
+                                </div><!--/div.accordion-flush-->
+
+
+                                <div class="accordion accordion-flush" id="accordionFlush12">
+                                  <div class="accordion-item">
+                                    <div class="accordion-header" id="flush-heading12">
+                                      <a href="08-rebase.html">11. 'Rebasing'</a>
+                                    </div><!--/div.accordion-header-->
+                                  </div><!--/div.accordion-item-->
+                                </div><!--/div.accordion-flush-->
+
+
+                                <div class="accordion accordion-flush" id="accordionFlush13">
+                                  <div class="accordion-item">
+                                    <div class="accordion-header" id="flush-heading13">
+                                      <a href="09-pre-commit.html">12. 'Pre-commit'</a>
+                                    </div><!--/div.accordion-header-->
+                                  </div><!--/div.accordion-item-->
+                                </div><!--/div.accordion-flush-->              </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- <a href="index.html">Home</a> -->
+
+                <hr class="half-width">
+                          <div class="accordion accordion-flush lesson-resources" id="accordionFlush12">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header anchored" id="flush-headingTwelve">
+                        <button class="accordion-button collapsed" id="lesson-resources" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwelve" aria-expanded="false" aria-controls="flush-collapseTwelve">
+                          RESOURCES
+                        </button>
+                      </h2>
+                      <div id="flush-collapseTwelve" class="accordion-collapse collapse" aria-labelledby="flush-headingTwelve" data-bs-parent="#accordionFlush12">
+                        <div class="accordion-body">
+                          <ul>
+                            <!-- We want to include a setup link prominently in the resources for overview pages -->
+                            <li>
+                              <!-- NOTE: the reason why we do not use the site root here is because we would need to set the site
+                              context _before_ overview -->
+                              <a href="index.html#setup">Setup</a>
+                            </li>
+                                                <li>
+                              <a href="key-points.html">Key Points</a>
+                            </li>
+                            <li>
+                              <a href="instructor-notes.html">Instructor Notes</a>
+                            </li>
+                            <li>
+                              <a href="extract_all_images.html">Extract All Images</a>
+                            </li>
+                                                <!-- {{{resources}}} -->
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- <hr class="half-width lesson-resources" /> -->
+                  
+                  
+                  <hr class="d-none d-sm-block d-md-none">
+
+                  <div class="d-grid gap-1">
+                              </div>
+                </div><!-- /div.accordion -->
+              </nav></div><!-- /div.sidebar-inner -->
+            
+          </div><!-- /div.sidebar -->
+        </div><!-- /div.sidebar-col -->                                <section id="general-notes" class="level2">
+                      <h2 class="anchored" data-anchor-id="general-notes">General Notes</h2>
+                      <p>General notes for each section are below:</p>
+                      <section id="setup" class="level3">
+                      <h3 class="anchored" data-anchor-id="setup"><a href="setup.html">Setup</a></h3>
+                      <p>Below are setup steps instructors need to complete before the workshop.</p>
+                      <section id="github-usernames" class="level4">
+                      <h4 class="anchored" data-anchor-id="github-usernames">GitHub Usernames</h4>
+                      <p>You should collect GitHub usernames from learners beforehand either using the sign-up form or by emailing learners separately the week before. Sort the learners into pairs before the workshop. They need to be in pairs to review each others PRs in <a href="04-review.html">Episode 5 Review</a>.</p>
+                      <p>In <a href="00-repo-access.html">Episode 1</a> you will demonstrate how to give access to a repository by adding these users to the <code>git-training-demo</code> repository. If there are many external learners from partner institutions you may wish to give some learners <strong>write</strong> access to the <code>git-training-demo</code> repository before the lesson to save time.</p>
+                      </section>
+                      </section>
+                      <section id="git-training-demo-repository" class="level3">
+                      <h3 class="anchored" data-anchor-id="git-training-demo-repository"><code>git-training-demo</code> Repository</h3>
+                      <div class="callout callout-style-simple callout-none no-icon callout-titled">
+                      <div class="callout-header d-flex align-content-center">
+                      <div class="callout-icon-container">
+                      <i class="callout-icon no-icon"></i>
+                      </div>
+                      <div class="callout-title-container flex-fill">
+                      Met Office
+                      </div>
+                      </div>
+                      <div class="callout-body-container callout-body">
+                      <p>Met Office instructors will find that the <code>git-training-demo</code> repository has already been set up for you. If for any reason you need to create a new repository you can do so by creating a new repository from the <code>git-training-demo-template</code> template repository (you will still need to setup the rule in step 8 below), or by following all the steps below.</p>
+                      </div>
+                      </div>
+                      <p>To setup the repository for this lesson you will need to create the <code>git-training-demo</code> repository using the <a href="data/git-training-demo.zip">zipped directory</a> we provide.</p>
+                      <ol type="1">
+                      <li>Download the <a href="data/git-training-demo.zip">zipped directory</a>.</li>
+                      <li>Unzip the directory on your system.</li>
+                      <li>Edit the <code>CITATION.cff</code> file so the GitHub repository url is correct for your organisation.</li>
+                      <li>Initialise the git repository locally.</li>
+                      <li>Add all files and commit.</li>
+                      <li>Create an empty GitHub repo with the name <code>git-training-demo</code>.</li>
+                      <li>Link your local repo to the remote and push all changes.</li>
+                      <li>Setup a rule to require a PR before merging with <code>main</code>. Allow admins to bypass this rule.</li>
+                      </ol>
+                      <p>The last step is to create a new milestone on the repository with the name: <strong>Git &amp; GitHub WP INSERT_DATE</strong>.</p>
+                      </section>
+                      <section id="github-project" class="level3">
+                      <h3 class="anchored" data-anchor-id="github-project">GitHub Project</h3>
+                      <div class="callout callout-style-simple callout-none no-icon callout-titled">
+                      <div class="callout-header d-flex align-content-center">
+                      <div class="callout-icon-container">
+                      <i class="callout-icon no-icon"></i>
+                      </div>
+                      <div class="callout-title-container flex-fill">
+                      Met Office
+                      </div>
+                      </div>
+                      <div class="callout-body-container callout-body">
+                      <p>Met Office instructors will find that the <strong>Git &amp; GitHub WP</strong> Project has already been setup for them. Instructors just need to ensure that all learners are either in the <code>git-and-github-training</code> Met Office GitHub team or have been given read access if they are external to the organisation.</p>
+                      </div>
+                      </div>
+                      <p>You will need to create a GitHub Project for learners to link Issues they create on the <code>git-training-demo</code> repository to. You can name this Project <strong>Git &amp; GitHub WP</strong>. Give the <code>git-and-github-training</code> team permissions on the GitHub Project.</p>
+                      </section>
+                      <section id="timings" class="level3">
+                      <h3 class="anchored" data-anchor-id="timings">Timings</h3>
+                      <p>You will find there is more content before the break than after. This means for a days workshop Episode 5 Review will spill over into the afternoon.</p>
+                      </section>
+                      <section id="introduction" class="level3">
+                      <h3 class="anchored" data-anchor-id="introduction"><a href="index.html">Introduction</a></h3>
+                      <p>Use the following text as a guide for your intro, show the web notes as you introducing the workshop.</p>
+                      <p>How do you use Git and GitHub to collaborate? This course will guide learners through two common workflows used to collaborate on code with GitHub. It will introduce you to all sorts of neat features like GitHub projects for team management and automatic code review testing. By the end of the workshop you’ll have the knowledge you need to decide which working practices are right for you and your team. Some things we’ll be thinking about:</p>
+                      <ul>
+                      <li>Who do I need to give repo access to? How do I do it?</li>
+                      <li>How do you do a full code review on GitHub?</li>
+                      <li>What do all the merge options mean?</li>
+                      <li>Do we merge main (trunk) into our feature branches?</li>
+                      <li>Who presses the merge button?</li>
+                      </ul>
+                      <p>At the start of the lesson take some time to:</p>
+                      <p>While you are waiting for everyone post the pre-lesson survey form in the chat. If they haven’t done this they must now.</p>
+                      <ul>
+                      <li>Introduce the instructors and the helpers</li>
+                      <li>Describe what it means to be an instructor and a helper, and how they will interact with each other and the learners during the training. This should be agreed by the instructor and the helper before the training. For example, some instructors are more than happy for a helper to jump in if they have something useful to share / if they have forgotten something. The learners should be told about this, so that it doesn’t appear to the learners that the helper is interrupting.</li>
+                      <li>Outline a rough schedule (there is a rough schedule in the instructor view setup page) Or simply state that the morning focuses on Git and the afternoon on GitHub</li>
+                      <li>Remember to take regular breaks</li>
+                      <li>What are the outcomes of the lesson? They are on the Setup page!</li>
+                      <li>How to navigate the material. Where are the git and fcm to git cheatsheets? Learners can do the challenges or the read the Discussion section if they are ahead.</li>
+                      <li>We understand a large amount of the information in this course will likely be new to most of you, so we encourage you to ask questions at any time. Remember, there is no such thing as a stupid question! (remember to let learners know how you want them to ask Qs in-person learners can raise their hands or use green/red sticky notes, online learners can raise their hand)</li>
+                      <li>How to get help with anything related to Git and GitHub after the training (surgeries and support mailbox)</li>
+                      <li>Mention about the feedback form and that any feedback will be used to improve the training</li>
+                      <li>Ensure the material can be read by learners in the room (to change the font size in firefox use View –&gt; Zoom –&gt; Zoom In or <ctrl>&lt;+&gt;)</ctrl></li>
+                      <li>Ensure learners can hear you well</li>
+                      </ul>
+                      </section>
+                      <section id="repository-access" class="level3">
+                      <h3 class="anchored" data-anchor-id="repository-access"><a href="00-repo-access.html">Repository Access</a></h3>
+                      <p>At the start of this episode you will demonstrate how to give collaborators access to the <code>git-training-demo</code> repository. Give <strong>write</strong> access to:</p>
+                      <ul>
+                      <li>The <code>git-and-github-training</code> team (which will include all Met Office colleagues).</li>
+                      <li>Add partners individually.</li>
+                      </ul>
+                      <p>Later on in the workshop before the episode on forking you will reduce learners permissions to <strong>triage</strong>.</p>
+                      </section>
+                      <section id="issues" class="level3">
+                      <h3 class="anchored" data-anchor-id="issues"><a href="01-issues.html">Issues</a></h3>
+                      <p>This section is relatively simple - open an Issue to add a file with your favourite cloud.</p>
+                      <ul>
+                      <li>Add a milestone, project, and assign yourself to the Issue.</li>
+                      <li>It would be good to have an image of a cloud to drag and drop in the Issue to demonstrate this functionality.</li>
+                      </ul>
+                      </section>
+                      <section id="branching-models" class="level3">
+                      <h3 class="anchored" data-anchor-id="branching-models"><a href="02-branching.html">Branching Models</a></h3>
+                      <p>There is nothing in this episode for learners to do so keep it short and snappy.</p>
+                      <ul>
+                      <li>Highlight that in the intro lesson learners used the feature branch workflow.</li>
+                      <li>Mention the links at the end of the episode which have much more detail on other models.</li>
+                      </ul>
+                      </section>
+                      <section id="feature-branch-model" class="level3">
+                      <h3 class="anchored" data-anchor-id="feature-branch-model"><a href="03-feature-branch.html">Feature Branch Model</a></h3>
+                      <p>Learners will not have cloned a repository before! PR templates and automatically closing PRs are also new. <strong>When the PR is opened they should assign the other learner in their pair as the reviewer</strong>.</p>
+                      <p>There is a chance their changes fail the PR checks. Point out that they may have failed, show the PR page and see if any have red cross next to them. Explain briefly that we use automated PR checks using pre-commit and there is an <a href="09-pre-commit.html">optional episode</a> at the end of the lesson on how to use these. You may need to help learners fix their change locally and push a new commit so these checks pass. If you take a 10 minute or longer break at the end of the episode you can help those learners whose tests failed during the break.</p>
+                      </section>
+                      <section id="review" class="level3">
+                      <h3 class="anchored" data-anchor-id="review"><a href="04-review.html">Review</a></h3>
+                      <p>It’s important that learners make a suggestion on their partners PR, it doesn’t matter what that suggestion is.</p>
+                      <p>The 2 instructors will need to swap part way through this episode.</p>
+                      <section id="reviewing-changes" class="level4">
+                      <h4 class="anchored" data-anchor-id="reviewing-changes">Reviewing Changes</h4>
+                      <p>In this section the first instructor should review the PR opened by the second instructor.</p>
+                      </section>
+                      <section id="responding-to-review" class="level4">
+                      <h4 class="anchored" data-anchor-id="responding-to-review">Responding to Review</h4>
+                      <p>In this section the second instructor should respond to the review, sharing their screen. They can change their GitHub theme so that the 2 instructors GitHub pages look visually distinct, this makes it clearer whether we are watching the reviewer or the developer.</p>
+                      </section>
+                      <section id="approving-changes" class="level4">
+                      <h4 class="anchored" data-anchor-id="approving-changes">Approving Changes</h4>
+                      <p>Swap back to the first instructor so they can approve the changes. Make sure you cover the content in the <strong>WHO PRESSES THE MERGE BUTTON?</strong> callout. Learners can use any merge strategy here, you will use this as an opportunity to see the history in the next episode and suggest sticking to one. Give learners a break and the opportunity to complete the yellow challenge <strong>Local Cleanup</strong>.</p>
+                      </section>
+                      </section>
+                      <section id="break" class="level3">
+                      <h3 class="anchored" data-anchor-id="break"><a href="Break.html">Break</a></h3>
+                      <p>Remember to take regular breaks.</p>
+                      </section>
+                      <section id="history" class="level3">
+                      <h3 class="anchored" data-anchor-id="history"><a href="07-history.html">History</a></h3>
+                      <p>Users will have covered using <code>git log</code> in the intro lesson. Show learners what the history of the repository looks like now. Then walk through the merge options, keep it short and snappy. There are no learner exercises in this episode, make sure you ask learners what questions they have at the end.</p>
+                      </section>
+                      <section id="forks" class="level3">
+                      <h3 class="anchored" data-anchor-id="forks"><a href="05-forks.html">Forks</a></h3>
+                      <p>You can choose here to either change everyone’s permissions down to <strong>triage</strong>:</p>
+                      <ul>
+                      <li>during the break before the episode.</li>
+                      <li>at the start of the episode to remind learners again how to change permissions.</li>
+                      </ul>
+                      <p>Please showcase fully, as described in the episode, how to sync your fork via the command line. They will use the handy GitHub button later.</p>
+                      </section>
+                      <section id="conflicts" class="level3">
+                      <h3 class="anchored" data-anchor-id="conflicts"><a href="06-conflict.html">Conflicts</a></h3>
+                      <p>The most important thing to remember here is the second instructor <strong>MUST</strong> have opened a PR just like the learners are doing and merge this after opening (and after learners have updated their <code>main</code> branches and created their feature branches). They can bypass protections and do this while the first instructor is teaching. This generates the citation file conflict the first instructor will point out.</p>
+                      </section>
+                      <section id="end" class="level3">
+                      <h3 class="anchored" data-anchor-id="end"><a href="End.html">End</a></h3>
+                      <p>What questions do the learners still have? If there is time then maybe with a vote decide what to briefly look at:</p>
+                      <ul>
+                      <li>Actions</li>
+                      <li>pre-commit</li>
+                      <li>Rebasing</li>
+                      </ul>
+                      </section>
+                      </section>
+                      <section id="notes-from-within-episodes" class="level2">
+                      <h2 class="anchored" data-anchor-id="notes-from-within-episodes">Notes from within Episodes</h2>
+                      <p>The following notes are stored within the episode webpages and are extracted here for completeness:</p>
+                      
+                      
+                      </section>
+      </div>
+      		<footer class="row footer mx-md-3">
+      			<hr>
+      			<div class="col-md-6">
+              <p>This lesson is subject to the &lt;(Code of Conduct)&gt;</p>
+              <a href="https://github.com/MetOffice/git-working-practices/edit/main/README.md">Edit on GitHub</a>
+              | <a href="https://github.com/MetOffice/git-working-practices/blob/main/CONTRIBUTING.md">Contributing</a>
+              | <a href="https://github.com/MetOffice/git-working-practices/">Source</a><p></p>
+      				<p><a href="https://github.com/MetOffice/git-working-practices/blob/main/CITATION.cff">Cite</a> | <a href="mailto:d.theodorakis@metoffice.gov.uk">Contact</a> | <a href="https://carpentries.org/about/">About</a></p>
+      			</div>
+      			<div class="col-md-6">
+                      <p>Materials licensed under &lt;({license})&gt; by the authors</p>
+                      <p>Template licensed under &lt;(CC-BY 4.0)&gt; by {template_authors}</p>
+              <p>Built with Quarto</p>
+      			</div>
+      		</footer>
+      	</main></div> <!-- / div.container -->
+      	<div id="to-top">
+      		<a href="#top">
+            <i class="search-icon" data-feather="arrow-up" role="img" aria-label="Back To Top"></i><br>
+      			<!-- <span class="d-none d-sm-none d-md-none d-lg-none d-xl-block">Back</span> To Top -->
+            Back To Top
+      		</a>
+      	</div>
+        <!-- {{#json}}
+        <script type="application/ld+json">
+          {{ meta json}}
+        </script>
+        {{/json}} -->
+      	<script>
+      		feather.replace();
+      	</script>
+
+        <!-- {{#analytics}}
+        {{ meta analytics}}
+        {{/analytics}} -->      <!-- footer closes the container class div -->
+         <!-- /main -->
+        <script id="quarto-html-after-body" type="application/javascript">
+        window.document.addEventListener("DOMContentLoaded", function (event) {
+          const toggleBodyColorMode = (bsSheetEl) => {
+            const mode = bsSheetEl.getAttribute("data-mode");
+            const bodyEl = window.document.querySelector("body");
+            if (mode === "dark") {
+              bodyEl.classList.add("quarto-dark");
+              bodyEl.classList.remove("quarto-light");
+            } else {
+              bodyEl.classList.add("quarto-light");
+              bodyEl.classList.remove("quarto-dark");
+            }
+          }
+          const toggleBodyColorPrimary = () => {
+            const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+            if (bsSheetEl) {
+              toggleBodyColorMode(bsSheetEl);
+            }
+          }
+          toggleBodyColorPrimary();  
+          const icon = "";
+          const anchorJS = new window.AnchorJS();
+          anchorJS.options = {
+            placement: 'right',
+            icon: icon
+          };
+          anchorJS.add('.anchored');
+            var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+            var mailtoRegex = new RegExp(/^mailto:/);
+              var filterRegex = new RegExp("https:\/\/metoffice\.github\.io\/git-working-practices\/instructor");
+            var isInternal = (href) => {
+                return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+            }
+            // Inspect non-navigation links and adorn them if external
+         	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+            for (var i=0; i<links.length; i++) {
+              const link = links[i];
+              if (!isInternal(link.href)) {
+                // undo the damage that might have been done by quarto-nav.js in the case of
+                // links that we want to consider external
+                if (link.dataset.originalHref !== undefined) {
+                  link.href = link.dataset.originalHref;
+                }
+              }
+            }
+          function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+            const config = {
+              allowHTML: true,
+              maxWidth: 500,
+              delay: 100,
+              arrow: false,
+              appendTo: function(el) {
+                  return el.parentElement;
+              },
+              interactive: true,
+              interactiveBorder: 10,
+              theme: 'quarto',
+              placement: 'bottom-start',
+            };
+            if (contentFn) {
+              config.content = contentFn;
+            }
+            if (onTriggerFn) {
+              config.onTrigger = onTriggerFn;
+            }
+            if (onUntriggerFn) {
+              config.onUntrigger = onUntriggerFn;
+            }
+            window.tippy(el, config); 
+          }
+          const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+          for (var i=0; i<noterefs.length; i++) {
+            const ref = noterefs[i];
+            tippyHover(ref, function() {
+              // use id or data attribute instead here
+              let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+              try { href = new URL(href).hash; } catch {}
+              const id = href.replace(/^#\/?/, "");
+              const note = window.document.getElementById(id);
+              if (note) {
+                return note.innerHTML;
+              } else {
+                return "";
+              }
+            });
+          }
+          const xrefs = window.document.querySelectorAll('a.quarto-xref');
+          const processXRef = (id, note) => {
+            // Strip column container classes
+            const stripColumnClz = (el) => {
+              el.classList.remove("page-full", "page-columns");
+              if (el.children) {
+                for (const child of el.children) {
+                  stripColumnClz(child);
+                }
+              }
+            }
+            stripColumnClz(note)
+            if (id === null || id.startsWith('sec-')) {
+              // Special case sections, only their first couple elements
+              const container = document.createElement("div");
+              if (note.children && note.children.length > 2) {
+                container.appendChild(note.children[0].cloneNode(true));
+                for (let i = 1; i < note.children.length; i++) {
+                  const child = note.children[i];
+                  if (child.tagName === "P" && child.innerText === "") {
+                    continue;
+                  } else {
+                    container.appendChild(child.cloneNode(true));
+                    break;
+                  }
+                }
+                if (window.Quarto?.typesetMath) {
+                  window.Quarto.typesetMath(container);
+                }
+                return container.innerHTML
+              } else {
+                if (window.Quarto?.typesetMath) {
+                  window.Quarto.typesetMath(note);
+                }
+                return note.innerHTML;
+              }
+            } else {
+              // Remove any anchor links if they are present
+              const anchorLink = note.querySelector('a.anchorjs-link');
+              if (anchorLink) {
+                anchorLink.remove();
+              }
+              if (window.Quarto?.typesetMath) {
+                window.Quarto.typesetMath(note);
+              }
+              if (note.classList.contains("callout")) {
+                return note.outerHTML;
+              } else {
+                return note.innerHTML;
+              }
+            }
+          }
+          for (var i=0; i<xrefs.length; i++) {
+            const xref = xrefs[i];
+            tippyHover(xref, undefined, function(instance) {
+              instance.disable();
+              let url = xref.getAttribute('href');
+              let hash = undefined; 
+              if (url.startsWith('#')) {
+                hash = url;
+              } else {
+                try { hash = new URL(url).hash; } catch {}
+              }
+              if (hash) {
+                const id = hash.replace(/^#\/?/, "");
+                const note = window.document.getElementById(id);
+                if (note !== null) {
+                  try {
+                    const html = processXRef(id, note.cloneNode(true));
+                    instance.setContent(html);
+                  } finally {
+                    instance.enable();
+                    instance.show();
+                  }
+                } else {
+                  // See if we can fetch this
+                  fetch(url.split('#')[0])
+                  .then(res => res.text())
+                  .then(html => {
+                    const parser = new DOMParser();
+                    const htmlDoc = parser.parseFromString(html, "text/html");
+                    const note = htmlDoc.getElementById(id);
+                    if (note !== null) {
+                      const html = processXRef(id, note);
+                      instance.setContent(html);
+                    } 
+                  }).finally(() => {
+                    instance.enable();
+                    instance.show();
+                  });
+                }
+              } else {
+                // See if we can fetch a full url (with no hash to target)
+                // This is a special case and we should probably do some content thinning / targeting
+                fetch(url)
+                .then(res => res.text())
+                .then(html => {
+                  const parser = new DOMParser();
+                  const htmlDoc = parser.parseFromString(html, "text/html");
+                  const note = htmlDoc.querySelector('main.content');
+                  if (note !== null) {
+                    // This should only happen for chapter cross references
+                    // (since there is no id in the URL)
+                    // remove the first header
+                    if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                      note.children[0].remove();
+                    }
+                    const html = processXRef(null, note);
+                    instance.setContent(html);
+                  } 
+                }).finally(() => {
+                  instance.enable();
+                  instance.show();
+                });
+              }
+            }, function(instance) {
+            });
+          }
+              let selectedAnnoteEl;
+              const selectorForAnnotation = ( cell, annotation) => {
+                let cellAttr = 'data-code-cell="' + cell + '"';
+                let lineAttr = 'data-code-annotation="' +  annotation + '"';
+                const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+                return selector;
+              }
+              const selectCodeLines = (annoteEl) => {
+                const doc = window.document;
+                const targetCell = annoteEl.getAttribute("data-target-cell");
+                const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+                const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+                const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+                const lineIds = lines.map((line) => {
+                  return targetCell + "-" + line;
+                })
+                let top = null;
+                let height = null;
+                let parent = null;
+                if (lineIds.length > 0) {
+                    //compute the position of the single el (top and bottom and make a div)
+                    const el = window.document.getElementById(lineIds[0]);
+                    top = el.offsetTop;
+                    height = el.offsetHeight;
+                    parent = el.parentElement.parentElement;
+                  if (lineIds.length > 1) {
+                    const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+                    const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+                    height = bottom - top;
+                  }
+                  if (top !== null && height !== null && parent !== null) {
+                    // cook up a div (if necessary) and position it 
+                    let div = window.document.getElementById("code-annotation-line-highlight");
+                    if (div === null) {
+                      div = window.document.createElement("div");
+                      div.setAttribute("id", "code-annotation-line-highlight");
+                      div.style.position = 'absolute';
+                      parent.appendChild(div);
+                    }
+                    div.style.top = top - 2 + "px";
+                    div.style.height = height + 4 + "px";
+                    div.style.left = 0;
+                    let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+                    if (gutterDiv === null) {
+                      gutterDiv = window.document.createElement("div");
+                      gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                      gutterDiv.style.position = 'absolute';
+                      const codeCell = window.document.getElementById(targetCell);
+                      const gutter = codeCell.querySelector('.code-annotation-gutter');
+                      gutter.appendChild(gutterDiv);
+                    }
+                    gutterDiv.style.top = top - 2 + "px";
+                    gutterDiv.style.height = height + 4 + "px";
+                  }
+                  selectedAnnoteEl = annoteEl;
+                }
+              };
+              const unselectCodeLines = () => {
+                const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+                elementsIds.forEach((elId) => {
+                  const div = window.document.getElementById(elId);
+                  if (div) {
+                    div.remove();
+                  }
+                });
+                selectedAnnoteEl = undefined;
+              };
+                // Handle positioning of the toggle
+            window.addEventListener(
+              "resize",
+              throttle(() => {
+                elRect = undefined;
+                if (selectedAnnoteEl) {
+                  selectCodeLines(selectedAnnoteEl);
+                }
+              }, 10)
+            );
+            function throttle(fn, ms) {
+            let throttle = false;
+            let timer;
+              return (...args) => {
+                if(!throttle) { // first call gets through
+                    fn.apply(this, args);
+                    throttle = true;
+                } else { // all the others get throttled
+                    if(timer) clearTimeout(timer); // cancel #2
+                    timer = setTimeout(() => {
+                      fn.apply(this, args);
+                      timer = throttle = false;
+                    }, ms);
+                }
+              };
+            }
+              // Attach click handler to the DT
+              const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+              for (const annoteDlNode of annoteDls) {
+                annoteDlNode.addEventListener('click', (event) => {
+                  const clickedEl = event.target;
+                  if (clickedEl !== selectedAnnoteEl) {
+                    unselectCodeLines();
+                    const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+                    if (activeEl) {
+                      activeEl.classList.remove('code-annotation-active');
+                    }
+                    selectCodeLines(clickedEl);
+                    clickedEl.classList.add('code-annotation-active');
+                  } else {
+                    // Unselect the line
+                    unselectCodeLines();
+                    clickedEl.classList.remove('code-annotation-active');
+                  }
+                });
+              }
+          const findCites = (el) => {
+            const parentEl = el.parentElement;
+            if (parentEl) {
+              const cites = parentEl.dataset.cites;
+              if (cites) {
+                return {
+                  el,
+                  cites: cites.split(' ')
+                };
+              } else {
+                return findCites(el.parentElement)
+              }
+            } else {
+              return undefined;
+            }
+          };
+          var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+          for (var i=0; i<bibliorefs.length; i++) {
+            const ref = bibliorefs[i];
+            const citeInfo = findCites(ref);
+            if (citeInfo) {
+              tippyHover(citeInfo.el, function() {
+                var popup = window.document.createElement('div');
+                citeInfo.cites.forEach(function(cite) {
+                  var citeDiv = window.document.createElement('div');
+                  citeDiv.classList.add('hanging-indent');
+                  citeDiv.classList.add('csl-entry');
+                  var biblioDiv = window.document.getElementById('ref-' + cite);
+                  if (biblioDiv) {
+                    citeDiv.innerHTML = biblioDiv.innerHTML;
+                  }
+                  popup.appendChild(citeDiv);
+                });
+                return popup.innerHTML;
+              });
+            }
+          }
+        });
+        </script>
+         <!-- /content -->
+      
+
+</body></html>

@@ -1,30 +1,30 @@
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="auto"><head>
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<script src="../site_libs/quarto-html/quarto.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/quarto-contrib/carpentries-theme-toggle-1.0.0/themetoggle.js"></script>
-<script src="../site_libs/quarto-contrib/carpentries-theme-toggle-1.0.0/scripts.js"></script>
-<link href="../site_libs/quarto-contrib/carpentries-css-1.0.0/styles.css" rel="stylesheet"><meta charset="utf-8">
-            <meta name="generator" content="quarto-1.6.40">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/quarto-contrib/carpentries-theme-toggle-1.0.0/themetoggle.js"></script>
+<script src="site_libs/quarto-contrib/carpentries-theme-toggle-1.0.0/scripts.js"></script>
+<link href="site_libs/quarto-contrib/carpentries-css-1.0.0/styles.css" rel="stylesheet"><meta charset="utf-8">
+            <meta name="generator" content="quarto-1.6.42">
         
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
                     
         <title>History – Git &amp; GitHub Working Practices</title>
 
-        <!--     <script src="../site_libs/quarto-contrib/carpentries-theme-toggle-1.0.0/themetoggle.js"></script>
-        <script src="../site_libs/quarto-contrib/carpentries-theme-toggle-1.0.0/scripts.js"></script>
-        <link href="../site_libs/quarto-contrib/carpentries-css-1.0.0/styles.css" rel="stylesheet">
+        <!--     <script src="site_libs/quarto-contrib/carpentries-theme-toggle-1.0.0/themetoggle.js"></script>
+        <script src="site_libs/quarto-contrib/carpentries-theme-toggle-1.0.0/scripts.js"></script>
+        <link href="site_libs/quarto-contrib/carpentries-css-1.0.0/styles.css" rel="stylesheet">
          -->
 
         <!-- <script src="quarto-nav/quarto-nav.js"></script>
@@ -40,11 +40,11 @@
         <link href="quarto-html/tippy.css" rel="stylesheet"> -->
 
         <!-- Responsive Favicon for The Carpentries -->
-        <link rel="apple-touch-icon" sizes="180x180" href="../site_libs/quarto-contrib/carpentries-favicons-1.0.0/favicons/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="../site_libs/quarto-contrib/carpentries-favicons-1.0.0/favicons/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="../site_libs/quarto-contrib/carpentries-favicons-1.0.0/favicons/favicon-16x16.png">
-        <link rel="manifest" href="../site_libs/quarto-contrib/carpentries-manifest-1.0.0/site.webmanifest">
-        <link rel="mask-icon" href="../site_libs/quarto-contrib/carpentries-favicons-1.0.0/favicons/safari-pinned-tab.svg" color="#5bbad5">
+        <link rel="apple-touch-icon" sizes="180x180" href="site_libs/quarto-contrib/carpentries-favicons-1.0.0/favicons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="site_libs/quarto-contrib/carpentries-favicons-1.0.0/favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="site_libs/quarto-contrib/carpentries-favicons-1.0.0/favicons/favicon-16x16.png">
+        <link rel="manifest" href="site_libs/quarto-contrib/carpentries-manifest-1.0.0/site.webmanifest">
+        <link rel="mask-icon" href="site_libs/quarto-contrib/carpentries-favicons-1.0.0/favicons/safari-pinned-tab.svg" color="#5bbad5">
         <meta name="msapplication-TileColor" content="#da532c">
         <meta name="theme-color" media="(prefers-color-scheme: light)" content="white">
         <meta name="theme-color" media="(prefers-color-scheme: dark)" content="black">
@@ -76,6 +76,9 @@
                            "search-label": "Search"
                          }
                        }</script>
+              <script  src="site_libs/quarto-diagram/mermaid.min.js"></script>
+              <script  src="site_libs/quarto-diagram/mermaid-init.js"></script>
+              <link  href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet" />
              -->  </head>
   <body>
         <div id="quarto-search-results"></div>
@@ -88,12 +91,11 @@
                                                        <h2 id="toc-title">On this page</h2>
                                                     
                                                    <ul>
-                                                   <li><a href="#viewing-history" id="toc-viewing-history" class="nav-link active" data-scroll-target="#viewing-history">Viewing History</a></li>
-                                                   <li><a href="#merge-options" id="toc-merge-options" class="nav-link" data-scroll-target="#merge-options">Merge Options</a>
-                                                   <ul class="collapse">
+                                                   <li><a href="#merge-options" id="toc-merge-options" class="nav-link active" data-scroll-target="#merge-options">Merge Options</a></li>
                                                    <li><a href="#merge" id="toc-merge" class="nav-link" data-scroll-target="#merge">Merge</a></li>
                                                    <li><a href="#squash-and-merge" id="toc-squash-and-merge" class="nav-link" data-scroll-target="#squash-and-merge">Squash and Merge</a></li>
-                                                   <li><a href="#rebase" id="toc-rebase" class="nav-link" data-scroll-target="#rebase">Rebase</a></li>
+                                                   <li><a href="#rebase" id="toc-rebase" class="nav-link" data-scroll-target="#rebase">Rebase</a>
+                                                   <ul class="collapse">
                                                    <li><a href="#rebase-re-writes-history" id="toc-rebase-re-writes-history" class="nav-link" data-scroll-target="#rebase-re-writes-history">Rebase Re-Writes History</a></li>
                                                    </ul></li>
                                                    </ul>
@@ -121,7 +123,7 @@
           <div class="container-fluid top-nav-container">
             <div class="col-md-8">
               <div class="large-logo">
-                <img id="cp-logo" alt="Carpentries" src="../site_libs/quarto-contrib/carpentries-images-1.0.0/images/carpentries-logo.svg">
+                <img id="cp-logo" alt="Carpentries" src="site_libs/quarto-contrib/carpentries-images-1.0.0/images/carpentries-logo.svg">
                                               </div>
             </div>
             <div class="selector-container">
@@ -183,10 +185,10 @@
                 {{/language}}{{/yaml}} -->
               <div class="dropdown" id="instructor-dropdown">
                         <button class="btn btn-secondary dropdown-toggle bordered-button" type="button" id="dropdownMenu1" data-bs-toggle="dropdown" aria-expanded="false">
-                  <i aria-hidden="true" class="icon" data-feather="eye"></i> Instructor View <i data-feather="chevron-down"></i>
+                  <i aria-hidden="true" class="icon" data-feather="eye"></i> Learner View <i data-feather="chevron-down"></i>
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                  <li><button class="dropdown-item" type="button" onclick="window.location.href='../07-history.html';">Learner View</button></li>
+                  <li><button class="dropdown-item" type="button" onclick="window.location.href='./instructor/07-history.html';">Instructor View</button></li>
                 </ul>
                       </div>
             </div>
@@ -200,7 +202,7 @@
               <span class="menu-title">Menu</span>
             </button>
             <div class="nav-logo">
-              <img class="small-logo" alt="Carpentries" src="../site_libs/quarto-contrib/carpentries-images-1.0.0/images/carpentries-logo-sm.svg">
+              <img class="small-logo" alt="Carpentries" src="site_libs/quarto-contrib/carpentries-images-1.0.0/images/carpentries-logo-sm.svg">
             </div>
             <div class="lesson-title-md">
               Git &amp; GitHub Working Practices
@@ -226,10 +228,10 @@
                   <a class="nav-link" href="key-points.html">Key Points</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="instructor-notes.html">Instructor Notes</a>
+                  <a class="nav-link" href="reference.html#glossary">Glossary</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="extract_all_images.html">Extract All Images</a>
+                  <a class="nav-link" href="profiles.html">Learner Profiles</a>
                 </li>
                                   <li class="nav-item dropdown">
                     <button class="nav-link dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false">
@@ -254,7 +256,7 @@
                 </fieldset>
               </form>
               -->
-            <!--     <a id="search-button" class="btn btn-primary" href="instructor/aio.html" role="button"
+            <!--     <a id="search-button" class="btn btn-primary" href="aio.html" role="button"
               aria-label="Search the All In One page">Search the All In One page</a>
              -->
             <div class="input-group">
@@ -533,10 +535,10 @@
                               <a href="key-points.html">Key Points</a>
                             </li>
                             <li>
-                              <a href="instructor-notes.html">Instructor Notes</a>
+                              <a href="reference.html#glossary">Glossary</a>
                             </li>
                             <li>
-                              <a href="extract_all_images.html">Extract All Images</a>
+                              <a href="profiles.html">Learner Profiles</a>
                             </li>
                                                 <!-- {{{resources}}} -->
                           </ul>
@@ -556,49 +558,25 @@
             
           </div><!-- /div.sidebar -->
         </div><!-- /div.sidebar-col -->                                <p>The history of your repository is simply its commits. A more linear history is easier to understand and can be helpful when using certain git commands to explore your history.</p>
-                      <p>Your Git history will look different depending on the merge strategy you use when merging PRs and whether you allow merging <code>main</code> into a feature branch like we did in the last episode to resolve the conflict. It’s up to you and your team to decide which strategy is best for your repository.</p>
-                      <section id="viewing-history" class="level2">
-                      <h2 class="anchored" data-anchor-id="viewing-history">Viewing History</h2>
-                      <p>You have already learnt that we can use the <code>git log</code> command to output the commit history of our repository.</p>
-                      <div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git log</span></code></pre></div>
-                      <pre class="output"><code>commit acce45c86ece7fd4823ddc6c1addb43edf4c0794
-Merge: e3fc783 ca8aca9
-Author: Robert FitzRoy &lt;r.fitzroy@mo-weather.uk&gt;
-Date:   Mon Sep 23 15:50:15 2024 +0100
-
-    Merge pull request #1 from MetOffice/mo-fitzroy-patch-1
-    
-    Create CITATION.cff
-
-commit ca8aca9f2f43a4d799eb5c9ce9596b42360faa8b
-Author: Robert FitzRoy &lt;r.fitzroy@mo-weather.uk&gt;
-Date:   Mon Sep 23 15:49:36 2024 +0100
-
-    Create CITATION.cff
-
-commit e3fc783648222d5eef0739922b06794b8d690341
-Author: Robert FitzRoy &lt;r.fitzroy@mo-weather.uk&gt;
-Date:   Fri Sep 20 13:01:05 2024 +0100
-
-    Initial commit</code></pre>
-                      <p>This shows the first 3 commits to the <code>git-training-demo</code> repository (the full output isn’t shown here because it’s very long). We can use certain flags with <code>git log</code> to better visualise the history in graph form:</p>
-                      <div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git log <span class="at">--decorate</span> <span class="at">--oneline</span> <span class="at">--graph</span></span></code></pre></div>
-                      <pre class="output"><code>*   d800b46 (HEAD -&gt; main, origin/main, origin/HEAD) Merge pull request #2 from MetOffice/mo-fitzroy-patch-2
-|\  
-| * dbc944d Add pre-commit checks
-|/  
-*   acce45c Merge pull request #1 from MetOffice/mo-fitzroy-patch-1
-|\  
-| * ca8aca9 Create CITATION.cff
-|/  
-* e3fc783 Initial commit</code></pre>
-                      <p>The <a href="https://git-scm.com/docs/git-log">GitHub Documentation for git log</a> has information on all the available flags. The key here is <code>--graph</code> shows us the graphical representation of our history on the left of the terminal. <code>*</code>’s are commits which are connected by lines. The vertical lines represent links between commits. The output above shows two feature branches each with only one commit which were then merged back into <code>main</code> via a pull request.</p>
-                      <p>You can either remember the flags using the phrase “git dog”, <code>d</code> for <code>--decorate</code>, <code>o</code> for <code>--oneline</code>, <code>g</code> for <code>--graph</code> or you can set an alias for the <code>git log</code> command:</p>
-                      <div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git config <span class="at">--global</span> alias.dog <span class="st">"log --decorate --oneline --graph"</span></span></code></pre></div>
-                      <p>This alias makes these two commands equivalent:</p>
-                      <div class="sourceCode" id="cb6"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git dog</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git log <span class="at">--decorate</span> <span class="at">--oneline</span> <span class="at">--graph</span></span></code></pre></div>
-                      <p>You can of course customise the log command with other keywords and set more aliases for different log views. Some useful examples can be found on <a href="https://stackoverflow.com/questions/1838873/visualizing-branch-topology-in-git/34467298#34467298">this Stackoverflow comment</a>.</p>
+                      <p>Your Git history will look different depending on the merge strategy you use when merging PRs and whether you allow merging <code>main</code> into a feature branch. It’s up to you and your team to decide which strategy is best for your repository.</p>
+                      <div id="accordionSpoiler1" class="accordion spoiler-accordion accordion-flush">
+                      <div class="accordion-item">
+                      <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
+                        <h3 class="accordion-header anchored" id="headingSpoiler1">
+                        <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>
+                        Viewing History
+                        </h3>
+                      </button>
+                      <div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+                      <div class="accordion-body">
+                      <p>In the <a href="https://www.astropython.com/git-novice/05-history.html">Introduction to Version Control with Git</a> lesson you learnt that we can use the <code>git log</code> command to view the commit history of our repository.</p>
+                      <p>We can use certain flags with <code>git log</code> to better visualise the history in graph form:</p>
+                      <div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git log <span class="at">--decorate</span> <span class="at">--oneline</span> <span class="at">--graph</span></span></code></pre></div>
+                      <p>The <a href="https://git-scm.com/docs/git-log">GitHub Documentation for git log</a> has information on all the available flags. Some useful examples of <code>git log</code> alias’s and flags can be found on <a href="https://stackoverflow.com/questions/1838873/visualizing-branch-topology-in-git/34467298#34467298">this Stackoverflow comment</a>.</p>
+                      </div>
+                      </div>
+                      </div>
+                      </div>
                       <div class="callout callout-style-simple callout-none no-icon callout-titled">
                       <div class="callout-header d-flex align-content-center">
                       <div class="callout-icon-container">
@@ -612,88 +590,153 @@ Date:   Fri Sep 20 13:01:05 2024 +0100
                       <p>Your IDE may have extensions which render your git history as easy to read graphs. If you use VSCode we recommend the <a href="https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph">Git Graph extension</a>.</p>
                       </div>
                       </div>
-                      </section>
                       <section id="merge-options" class="level2">
                       <h2 class="anchored" data-anchor-id="merge-options">Merge Options</h2>
-                      <p>When you opened your PRs you were given three options for merging your feature branch into <code>main</code>. We will now explore how each merging method affects the history of your repository. In all the examples below we start with the same git history.</p>
-                      <section id="merge" class="level3">
-                      <h3 class="anchored" data-anchor-id="merge">Merge</h3>
+                      <p>When you open a PR you are given three options for merging your feature branch into <code>main</code>. We will now explore how each merging method affects the history of your repository. In all the examples below we start with the same git history.</p>
+                      </section>
+                      <section id="merge" class="level2">
+                      <h2 class="anchored" data-anchor-id="merge">Merge</h2>
                       <p>Starting with:</p>
-                      <pre class="mermaid"><code>gitGraph
-    accDescr {A Git graph showing the &lt;code&gt;main&lt;/code&gt; branch with a &lt;code&gt;feature&lt;/code&gt; branch branching off at the second commit of &lt;code&gt;main&lt;/code&gt;.}
-    commit id: '4631ebc'
-    commit id: 'ee406ac'
-    branch feature
-    checkout feature
-    commit id: '7cec787 Cool feature'
-    checkout main
-    commit id: '62440f8'
-    checkout feature
-    commit id: 'cd2db46 Cool feature docs'</code></pre>
+                      <div class="cell" data-layout-align="default">
+                      <div class="cell-output-display">
+                      <div>
+                      <p></p><figure class="figure"><p></p>
+                      <div>
+                      <pre class="mermaid mermaid-js">gitGraph
+                          accDescr {A Git graph showing the main branch with a feature branch branching off at the second commit of main.}
+                          commit id: '4631ebc'
+                          commit id: 'ee406ac'
+                          branch feature
+                          checkout feature
+                          commit id: '7cec787 Cool feature'
+                          checkout main
+                          commit id: '62440f8'
+                          checkout feature
+                          commit id: 'cd2db46 Cool feature docs'
+                      </pre>
+                      </div>
+                      <p></p></figure><p></p>
+                      </div>
+                      </div>
+                      </div>
                       <p>Using merge creates a merge commit joining the two branches:</p>
-                      <pre class="mermaid"><code>gitGraph
-    accDescr {A Git graph showing the result of merging a &lt;code&gt;feature&lt;/code&gt; branch with the &lt;code&gt;main&lt;/code&gt; branch. The history is non-linear in this case and difficult to read.}
-    commit id: '4631ebc'
-    commit id: 'ee406ac'
-    branch feature
-    checkout feature
-    commit id: '7cec787 Cool feature'
-    checkout main
-    commit id: '62440f8'
-    checkout feature
-    commit id: 'cd2db46 Cool feature docs'
-    checkout main
-    merge feature</code></pre>
+                      <div class="cell" data-layout-align="default">
+                      <div class="cell-output-display">
+                      <div>
+                      <p></p><figure class="figure"><p></p>
+                      <div>
+                      <pre class="mermaid mermaid-js">gitGraph
+                          accDescr {A Git graph showing the result of merging a feature branch with the main branch. The history is non-linear in this case and difficult to read.}
+                          commit id: '4631ebc'
+                          commit id: 'ee406ac'
+                          branch feature
+                          checkout feature
+                          commit id: '7cec787 Cool feature'
+                          checkout main
+                          commit id: '62440f8'
+                          checkout feature
+                          commit id: 'cd2db46 Cool feature docs'
+                          checkout main
+                          merge feature
+                      </pre>
+                      </div>
+                      <p></p></figure><p></p>
+                      </div>
+                      </div>
+                      </div>
                       <p>This results in a non-linear history which can be hard to navigate. You can avoid this non-linear history by rebasing your <code>feature</code> branch before you merge. Rebasing a branch before you submit a PR for review is covered in the next episode.</p>
                       <p>Some teams choose to use Merge because it keeps all the individual commits that made up your change so more accurately represents the history of your repository.</p>
                       </section>
-                      <section id="squash-and-merge" class="level3">
-                      <h3 class="anchored" data-anchor-id="squash-and-merge">Squash and Merge</h3>
+                      <section id="squash-and-merge" class="level2">
+                      <h2 class="anchored" data-anchor-id="squash-and-merge">Squash and Merge</h2>
                       <p>Starting with:</p>
-                      <pre class="mermaid"><code>gitGraph
-    accDescr {A Git graph showing the &lt;code&gt;main&lt;/code&gt; branch with a &lt;code&gt;feature&lt;/code&gt; branch branching off at the second commit of &lt;code&gt;main&lt;/code&gt;.}
-    commit id: '4631ebc'
-    commit id: 'ee406ac'
-    branch feature
-    checkout feature
-    commit id: '7cec787 Cool feature'
-    checkout main
-    commit id: '62440f8'
-    checkout feature
-    commit id: 'cd2db46 Cool feature docs'</code></pre>
+                      <div class="cell" data-layout-align="default">
+                      <div class="cell-output-display">
+                      <div>
+                      <p></p><figure class="figure"><p></p>
+                      <div>
+                      <pre class="mermaid mermaid-js">gitGraph
+                          accDescr {A Git graph showing the main branch with a feature branch branching off at the second commit of main.}
+                          commit id: '4631ebc'
+                          commit id: 'ee406ac'
+                          branch feature
+                          checkout feature
+                          commit id: '7cec787 Cool feature'
+                          checkout main
+                          commit id: '62440f8'
+                          checkout feature
+                          commit id: 'cd2db46 Cool feature docs'
+                      </pre>
+                      </div>
+                      <p></p></figure><p></p>
+                      </div>
+                      </div>
+                      </div>
                       <p>Squashing before merging squashes all the commits on the feature branch into one commit which is then merged onto main:</p>
-                      <pre class="mermaid"><code>gitGraph
-    accDescr {A Git graph showing the result of squashing then merging a &lt;code&gt;feature&lt;/code&gt; branch with the &lt;code&gt;main&lt;/code&gt; branch.}
-    commit id: '4631ebc'
-    commit id: 'ee406ac'
-    commit id: '62440f8'
-    commit id: '5rtw8bq Squash &amp; Merge Cool feature'</code></pre>
+                      <div class="cell" data-layout-align="default">
+                      <div class="cell-output-display">
+                      <div>
+                      <p></p><figure class="figure"><p></p>
+                      <div>
+                      <pre class="mermaid mermaid-js">gitGraph
+                          accDescr {A Git graph showing the result of squashing then merging a feature branch with the main branch.}
+                          commit id: '4631ebc'
+                          commit id: 'ee406ac'
+                          commit id: '62440f8'
+                          commit id: '5rtw8bq Squash &amp; Merge Cool feature'
+                      </pre>
+                      </div>
+                      <p></p></figure><p></p>
+                      </div>
+                      </div>
+                      </div>
                       <p>The last commit on main <code>5rtw8bq Squash &amp; Merge Cool feature</code> is the two feature branch commits squashed together into a new one.</p>
                       <p>Here the history is linear but all our commits have been squashed into one. If you have a very large branch with many commits you might not want to squash them all into one commit. Squashing in this case will make bug hunting harder. Remember you should try and break work down into small pieces so you avoid huge branches.</p>
                       </section>
-                      <section id="rebase" class="level3">
-                      <h3 class="anchored" data-anchor-id="rebase">Rebase</h3>
+                      <section id="rebase" class="level2">
+                      <h2 class="anchored" data-anchor-id="rebase">Rebase</h2>
                       <p>Starting with:</p>
-                      <pre class="mermaid"><code>gitGraph
-    accDescr {A Git graph showing the &lt;code&gt;main&lt;/code&gt; branch with a &lt;code&gt;feature&lt;/code&gt; branch branching off at the second commit of &lt;code&gt;main&lt;/code&gt;.}
-    commit id: '4631ebc'
-    commit id: 'ee406ac'
-    branch feature
-    checkout feature
-    commit id: '7cec787 Cool feature'
-    checkout main
-    commit id: '62440f8'
-    checkout feature
-    commit id: 'cd2db46 Cool feature docs'</code></pre>
+                      <div class="cell" data-layout-align="default">
+                      <div class="cell-output-display">
+                      <div>
+                      <p></p><figure class="figure"><p></p>
+                      <div>
+                      <pre class="mermaid mermaid-js">gitGraph
+                          accDescr {A Git graph showing the main branch with a feature branch branching off at the second commit of main.}
+                          commit id: '4631ebc'
+                          commit id: 'ee406ac'
+                          branch feature
+                          checkout feature
+                          commit id: '7cec787 Cool feature'
+                          checkout main
+                          commit id: '62440f8'
+                          checkout feature
+                          commit id: 'cd2db46 Cool feature docs'
+                      </pre>
+                      </div>
+                      <p></p></figure><p></p>
+                      </div>
+                      </div>
+                      </div>
                       <p>Rebase re-writes your git history removing the <code>feature</code> branch commits from the <code>feature</code> branch and adding them to <code>main</code>:</p>
-                      <pre class="mermaid"><code>gitGraph
-    accDescr {A Git graph showing the result of rebasing a &lt;code&gt;feature&lt;/code&gt; branch with the &lt;code&gt;main&lt;/code&gt; branch.}
-    commit id: '4631ebc'
-    commit id: 'ee406ac'
-    commit id: '62440f8'
-    commit id: '7cec787 Cool feature'
-    commit id: 'cd2db46 Cool feature docs'</code></pre>
-                      </section>
+                      <div class="cell" data-layout-align="default">
+                      <div class="cell-output-display">
+                      <div>
+                      <p></p><figure class="figure"><p></p>
+                      <div>
+                      <pre class="mermaid mermaid-js">gitGraph
+                          accDescr {A Git graph showing the result of rebasing a feature branch with the main branch.}
+                          commit id: '4631ebc'
+                          commit id: 'ee406ac'
+                          commit id: '62440f8'
+                          commit id: '7cec787 Cool feature'
+                          commit id: 'cd2db46 Cool feature docs'
+                      </pre>
+                      </div>
+                      <p></p></figure><p></p>
+                      </div>
+                      </div>
+                      </div>
                       <section id="rebase-re-writes-history" class="level3 caution">
                       <h3 class="anchored" data-anchor-id="rebase-re-writes-history">Rebase Re-Writes History</h3>
                       <p>Rebasing re-writes your git history. Do <strong>NOT</strong> rebase shared branches such as <code>main</code>.</p>
@@ -786,7 +829,7 @@ Date:   Fri Sep 20 13:01:05 2024 +0100
           anchorJS.add('.anchored');
             var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
             var mailtoRegex = new RegExp(/^mailto:/);
-              var filterRegex = new RegExp("https:\/\/metoffice\.github\.io\/git-working-practices\/instructor");
+              var filterRegex = new RegExp("https:\/\/metoffice\.github\.io\/git-working-practices\/");
             var isInternal = (href) => {
                 return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
             }

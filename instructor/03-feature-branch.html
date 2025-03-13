@@ -1,30 +1,30 @@
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="auto"><head>
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<script src="../site_libs/quarto-html/quarto.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/quarto-contrib/carpentries-theme-toggle-1.0.0/themetoggle.js"></script>
-<script src="../site_libs/quarto-contrib/carpentries-theme-toggle-1.0.0/scripts.js"></script>
-<link href="../site_libs/quarto-contrib/carpentries-css-1.0.0/styles.css" rel="stylesheet"><meta charset="utf-8">
-            <meta name="generator" content="quarto-1.6.40">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/quarto-contrib/carpentries-theme-toggle-1.0.0/themetoggle.js"></script>
+<script src="site_libs/quarto-contrib/carpentries-theme-toggle-1.0.0/scripts.js"></script>
+<link href="site_libs/quarto-contrib/carpentries-css-1.0.0/styles.css" rel="stylesheet"><meta charset="utf-8">
+            <meta name="generator" content="quarto-1.6.42">
         
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
                     
         <title>Feature Branch Model – Git &amp; GitHub Working Practices</title>
 
-        <!--     <script src="../site_libs/quarto-contrib/carpentries-theme-toggle-1.0.0/themetoggle.js"></script>
-        <script src="../site_libs/quarto-contrib/carpentries-theme-toggle-1.0.0/scripts.js"></script>
-        <link href="../site_libs/quarto-contrib/carpentries-css-1.0.0/styles.css" rel="stylesheet">
+        <!--     <script src="site_libs/quarto-contrib/carpentries-theme-toggle-1.0.0/themetoggle.js"></script>
+        <script src="site_libs/quarto-contrib/carpentries-theme-toggle-1.0.0/scripts.js"></script>
+        <link href="site_libs/quarto-contrib/carpentries-css-1.0.0/styles.css" rel="stylesheet">
          -->
 
         <!-- <script src="quarto-nav/quarto-nav.js"></script>
@@ -40,11 +40,11 @@
         <link href="quarto-html/tippy.css" rel="stylesheet"> -->
 
         <!-- Responsive Favicon for The Carpentries -->
-        <link rel="apple-touch-icon" sizes="180x180" href="../site_libs/quarto-contrib/carpentries-favicons-1.0.0/favicons/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="../site_libs/quarto-contrib/carpentries-favicons-1.0.0/favicons/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="../site_libs/quarto-contrib/carpentries-favicons-1.0.0/favicons/favicon-16x16.png">
-        <link rel="manifest" href="../site_libs/quarto-contrib/carpentries-manifest-1.0.0/site.webmanifest">
-        <link rel="mask-icon" href="../site_libs/quarto-contrib/carpentries-favicons-1.0.0/favicons/safari-pinned-tab.svg" color="#5bbad5">
+        <link rel="apple-touch-icon" sizes="180x180" href="site_libs/quarto-contrib/carpentries-favicons-1.0.0/favicons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="site_libs/quarto-contrib/carpentries-favicons-1.0.0/favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="site_libs/quarto-contrib/carpentries-favicons-1.0.0/favicons/favicon-16x16.png">
+        <link rel="manifest" href="site_libs/quarto-contrib/carpentries-manifest-1.0.0/site.webmanifest">
+        <link rel="mask-icon" href="site_libs/quarto-contrib/carpentries-favicons-1.0.0/favicons/safari-pinned-tab.svg" color="#5bbad5">
         <meta name="msapplication-TileColor" content="#da532c">
         <meta name="theme-color" media="(prefers-color-scheme: light)" content="white">
         <meta name="theme-color" media="(prefers-color-scheme: dark)" content="black">
@@ -90,10 +90,10 @@
                                                    <ul>
                                                    <li><a href="#cloning-a-repository" id="toc-cloning-a-repository" class="nav-link active" data-scroll-target="#cloning-a-repository">Cloning a Repository</a></li>
                                                    <li><a href="#feature-branches" id="toc-feature-branches" class="nav-link" data-scroll-target="#feature-branches">Feature Branches</a></li>
+                                                   <li><a href="#add-in-whitespace" id="toc-add-in-whitespace" class="nav-link" data-scroll-target="#add-in-whitespace">Add in whitespace!</a></li>
                                                    <li><a href="#open-a-pr" id="toc-open-a-pr" class="nav-link" data-scroll-target="#open-a-pr">Open a PR</a></li>
                                                    <li><a href="#pull-request-templates" id="toc-pull-request-templates" class="nav-link" data-scroll-target="#pull-request-templates">Pull Request Templates</a></li>
-                                                   <li><a href="#help-some-checks-have-failed" id="toc-help-some-checks-have-failed" class="nav-link" data-scroll-target="#help-some-checks-have-failed">Help: Some checks have failed</a></li>
-                                                   <li><a href="#automatically-closing-issues-via-prs" id="toc-automatically-closing-issues-via-prs" class="nav-link" data-scroll-target="#automatically-closing-issues-via-prs">Automatically closing Issues via PRs</a></li>
+                                                   <li><a href="#fixing-failing-checks" id="toc-fixing-failing-checks" class="nav-link" data-scroll-target="#fixing-failing-checks">Fixing Failing Checks</a></li>
                                                    </ul>
                                                </nav>
             </div>
@@ -119,7 +119,7 @@
           <div class="container-fluid top-nav-container">
             <div class="col-md-8">
               <div class="large-logo">
-                <img id="cp-logo" alt="Carpentries" src="../site_libs/quarto-contrib/carpentries-images-1.0.0/images/carpentries-logo.svg">
+                <img id="cp-logo" alt="Carpentries" src="site_libs/quarto-contrib/carpentries-images-1.0.0/images/carpentries-logo.svg">
                                               </div>
             </div>
             <div class="selector-container">
@@ -181,10 +181,10 @@
                 {{/language}}{{/yaml}} -->
               <div class="dropdown" id="instructor-dropdown">
                         <button class="btn btn-secondary dropdown-toggle bordered-button" type="button" id="dropdownMenu1" data-bs-toggle="dropdown" aria-expanded="false">
-                  <i aria-hidden="true" class="icon" data-feather="eye"></i> Instructor View <i data-feather="chevron-down"></i>
+                  <i aria-hidden="true" class="icon" data-feather="eye"></i> Learner View <i data-feather="chevron-down"></i>
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                  <li><button class="dropdown-item" type="button" onclick="window.location.href='../03-feature-branch.html';">Learner View</button></li>
+                  <li><button class="dropdown-item" type="button" onclick="window.location.href='./instructor/03-feature-branch.html';">Instructor View</button></li>
                 </ul>
                       </div>
             </div>
@@ -198,7 +198,7 @@
               <span class="menu-title">Menu</span>
             </button>
             <div class="nav-logo">
-              <img class="small-logo" alt="Carpentries" src="../site_libs/quarto-contrib/carpentries-images-1.0.0/images/carpentries-logo-sm.svg">
+              <img class="small-logo" alt="Carpentries" src="site_libs/quarto-contrib/carpentries-images-1.0.0/images/carpentries-logo-sm.svg">
             </div>
             <div class="lesson-title-md">
               Git &amp; GitHub Working Practices
@@ -224,10 +224,10 @@
                   <a class="nav-link" href="key-points.html">Key Points</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="instructor-notes.html">Instructor Notes</a>
+                  <a class="nav-link" href="reference.html#glossary">Glossary</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="extract_all_images.html">Extract All Images</a>
+                  <a class="nav-link" href="profiles.html">Learner Profiles</a>
                 </li>
                                   <li class="nav-item dropdown">
                     <button class="nav-link dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false">
@@ -252,7 +252,7 @@
                 </fieldset>
               </form>
               -->
-            <!--     <a id="search-button" class="btn btn-primary" href="instructor/aio.html" role="button"
+            <!--     <a id="search-button" class="btn btn-primary" href="aio.html" role="button"
               aria-label="Search the All In One page">Search the All In One page</a>
              -->
             <div class="input-group">
@@ -531,10 +531,10 @@
                               <a href="key-points.html">Key Points</a>
                             </li>
                             <li>
-                              <a href="instructor-notes.html">Instructor Notes</a>
+                              <a href="reference.html#glossary">Glossary</a>
                             </li>
                             <li>
-                              <a href="extract_all_images.html">Extract All Images</a>
+                              <a href="profiles.html">Learner Profiles</a>
                             </li>
                                                 <!-- {{{resources}}} -->
                           </ul>
@@ -555,12 +555,50 @@
           </div><!-- /div.sidebar -->
         </div><!-- /div.sidebar-col -->                                <p>In this episode we will use the Feature Branch model to contribute to the <code>git-training-demo</code> repository.</p>
                       <p>You will need to get into pairs so that you can review each others code changes. Your instructor may have already paired you with another learner.</p>
+                      <div id="accordionSpoiler1" class="accordion spoiler-accordion accordion-flush">
+                      <div class="accordion-item">
+                      <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
+                        <h3 class="accordion-header anchored" id="headingSpoiler1">
+                        <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>
+                        Working through the material independently
+                        </h3>
+                      </button>
+                      <div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+                      <div class="accordion-body">
+                      <p>If you are working through the material in your own time, you will be able to complete all the steps in this episode without another learner. At the end of this episode you will need to wait for a repository admin to review your work.</p>
+                      </div>
+                      </div>
+                      </div>
+                      </div>
                       <section id="cloning-a-repository" class="level2">
                       <h2 class="anchored" data-anchor-id="cloning-a-repository">Cloning a Repository</h2>
                       <p>You will both need to download a copy of the <code>git-training-demo</code> repository. This is called “cloning a repository”.</p>
                       <div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cd ~/Desktop</span></code></pre></div>
                       <div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git clone git@github.com:metoffice/git-training-demo.git</span></code></pre></div>
                       <p>Make sure to navigate to the <code>Desktop</code> folder first.</p>
+                      <div id="accordionSpoiler2" class="accordion spoiler-accordion accordion-flush">
+                      <div class="accordion-item">
+                      <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler2" aria-expanded="false" aria-controls="collapseSpoiler2">
+                        <h3 class="accordion-header anchored" id="headingSpoiler2">
+                        <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>
+                        Commands that communicate between repositories
+                        </h3>
+                      </button>
+                      <div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
+                      <div class="accordion-body">
+                      <p>In the Introduction to Version Control with Git and GitHub course you learnt that only certain git commands communicate between repositories.</p>
+                      <p>They were:</p>
+                      <ul>
+                      <li><code>git fetch</code>: To fetch changes from a remote.</li>
+                      <li><code>git pull</code>: To fetch changes from a remote and merge them into a branch.</li>
+                      <li><code>git push</code>: To push changes to a remote.</li>
+                      </ul>
+                      <p><code>git clone</code> also communicates with a remote. However it is only used once to make a local copy of a remote.</p>
+                      <p>There are also other git commands that interact with remote repositories (e.g.&nbsp;<code>git ls-remote</code>), but none that appear in this course.</p>
+                      </div>
+                      </div>
+                      </div>
+                      </div>
                       </section>
                       <section id="feature-branches" class="level2">
                       <h2 class="anchored" data-anchor-id="feature-branches">Feature Branches</h2>
@@ -569,20 +607,47 @@
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git switch <span class="at">-c</span> 1_favourite_cloud</span></code></pre></div>
                       <pre class="output"><code>Switched to branch '1_favourite_cloud'</code></pre>
                       <p>Notice the name of the branch is prefixed by the number <code>1</code>. This is the Issue number of the Issue you created in Episode 2 Issues. Your team may choose a different naming convention such as prefixing the branch name by <code>feature</code>, <code>bug</code> etc.</p>
+                      <div id="accordionSpoiler3" class="accordion spoiler-accordion accordion-flush">
+                      <div class="accordion-item">
+                      <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler3" aria-expanded="false" aria-controls="collapseSpoiler3">
+                        <h3 class="accordion-header anchored" id="headingSpoiler3">
+                        <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>
+                        Older Versions of Git / JASMIN Users
+                        </h3>
+                      </button>
+                      <div id="collapseSpoiler3" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler3" aria-labelledby="headingSpoiler3">
+                      <div class="accordion-body">
+                      <p>The <code>git switch</code> command was added in Git version <strong>2.23</strong>. To check your version run:</p>
+                      <div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git <span class="at">--version</span></span></code></pre></div>
+                      <p>If your version of Git is lower than <strong>2.23</strong> you should use the <code>git checkout</code> command to swap branches. To create a branch:</p>
+                      <div class="sourceCode" id="cb6"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git checkout <span class="at">-b</span> 1_favourite_cloud</span></code></pre></div>
+                      <pre class="output"><code>Switched to branch '1_favourite_cloud'</code></pre>
+                      <p>To swap to a branch leave out the <code>-b</code> flag:</p>
+                      <div class="sourceCode" id="cb8"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git checkout 1_favourite_cloud</span></code></pre></div>
+                      <pre class="output"><code>Switched to branch '1_favourite_cloud'</code></pre>
+                      </div>
+                      </div>
+                      </div>
+                      </div>
                       <p>Add in a new file <code>cloud-mo-fitzroy.md</code>, replace <code>mo-fitzroy</code> with your username:</p>
-                      <div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> nano cloud-mo-fitzroy.md</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cat cloud-mo-fitzroy.md</span></code></pre></div>
+                      <div class="sourceCode" id="cb10"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> nano cloud-mo-fitzroy.md</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cat cloud-mo-fitzroy.md</span></code></pre></div>
                       <pre class="output"><code># My Favourite Cloud
 
-Light and fluffy cumulus.</code></pre>
+Light and fluffy cumulus.    </code></pre>
+                      </section>
+                      <section id="add-in-whitespace" class="level2 caution">
+                      <h2 class="anchored" data-anchor-id="add-in-whitespace">Add in whitespace!</h2>
+                      <p>To demonstrate automated testing via GitHub, add some spaces to the end of a line in your file.</p>
+                      </section>
                       <p>Add and commit your changes:</p>
-                      <div class="sourceCode" id="cb7"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git add cloud-mo-fitzroy.md</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git commit <span class="at">-m</span> <span class="st">"Adds Robert Fitzroy's favourite cloud"</span></span></code></pre></div>
+                      <div class="sourceCode" id="cb12"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git add cloud-mo-fitzroy.md</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git commit <span class="at">-m</span> <span class="st">"Adds Robert Fitzroy's favourite cloud"</span></span></code></pre></div>
                       <pre class="output"><code>[1_favourite_cloud b7f26e6] Adds Robert Fitzroy's favourite cloud
  1 file changed, 3 insertions(+)
  create mode 100644 cloud-mo-fitzroy.md</code></pre>
                       <p>Then push the changes to GitHub:</p>
-                      <div class="sourceCode" id="cb9"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git push</span></code></pre></div>
+                      <div class="sourceCode" id="cb14"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git push</span></code></pre></div>
                       <pre class="output"><code>Enumerating objects: 4, done.
 Counting objects: 100% (4/4), done.
 Delta compression using up to 4 threads
@@ -590,24 +655,24 @@ Compressing objects: 100% (2/2), done.
 Writing objects: 100% (3/3), 357 bytes | 178.00 KiB/s, done.
 Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
 remote: Resolving deltas: 100% (1/1), completed with 1 local object.
-remote: 
+remote:
 remote: Create a pull request for '1_favourite_cloud' on GitHub by visiting:
 remote:      https://github.com/MetOffice/git-training-demo/pull/new/1_favourite_cloud
-remote: 
+remote:
 To github.com:metoffice/git-training-demo.git
  * [new branch]      1_favourite_cloud -&gt; 1_favourite_cloud
 branch '1_favourite_cloud' set up to track 'origin/1_favourite_cloud'.</code></pre>
                       <p>Note that we didn’t have to create a remote called <code>origin</code>: Git uses this name by default when we clone a repository. This is why <code>origin</code> was a sensible choice in the git-novice lesson when we were setting up remotes by hand.</p>
                       <p>Take a look at the repository on GitHub again, and you should be able to see the <code>1_favourite_cloud</code> branch. You may need to refresh your browser to see the new branch.</p>
-                      <div id="accordionSpoiler1" class="accordion spoiler-accordion accordion-flush">
+                      <div id="accordionSpoiler4" class="accordion spoiler-accordion accordion-flush">
                       <div class="accordion-item">
-                      <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
-                        <h3 class="accordion-header anchored" id="headingSpoiler1">
+                      <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler4" aria-expanded="false" aria-controls="collapseSpoiler4">
+                        <h3 class="accordion-header anchored" id="headingSpoiler4">
                         <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>
                         fatal: no upstream branch
                         </h3>
                       </button>
-                      <div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
+                      <div id="collapseSpoiler4" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler4" aria-labelledby="headingSpoiler4">
                       <div class="accordion-body">
                       <p>If you see a message similar to the following:</p>
                       <pre class="output"><code>fatal: The current branch 1_favourite_cloud has no upstream branch.
@@ -620,20 +685,20 @@ upstream, see 'push.autoSetupRemote' in 'git help config'.</code></pre>
                       <p>You will need to set the name of the upstream GitHub branch using the recommended <code>git push</code> command.</p>
                       <p>You can get git to automatically set the upstream branch. This avoids having to run git push with the –set-upstream flag the first time you push from a new branch.</p>
                       <p>Change your git config using:</p>
-                      <div class="sourceCode" id="cb12"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git config <span class="at">--global</span> push.autoSetupRemote true</span></code></pre></div>
+                      <div class="sourceCode" id="cb17"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git config <span class="at">--global</span> push.autoSetupRemote true</span></code></pre></div>
                       </div>
                       </div>
                       </div>
                       </div>
-                      <div id="accordionSpoiler2" class="accordion spoiler-accordion accordion-flush">
+                      <div id="accordionSpoiler5" class="accordion spoiler-accordion accordion-flush">
                       <div class="accordion-item">
-                      <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler2" aria-expanded="false" aria-controls="collapseSpoiler2">
-                        <h3 class="accordion-header anchored" id="headingSpoiler2">
+                      <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler5" aria-expanded="false" aria-controls="collapseSpoiler5">
+                        <h3 class="accordion-header anchored" id="headingSpoiler5">
                         <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>
                         Some more about remotes
                         </h3>
                       </button>
-                      <div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
+                      <div id="collapseSpoiler5" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler5" aria-labelledby="headingSpoiler5">
                       <div class="accordion-body">
                       <p>In this episode and in the git-novice lesson, our local repository only had a single “remote”, called <code>origin</code>. A remote is a copy of the repository that is hosted somewhere else, that we can push to and pull from, and there’s no reason that you have to work with only one. For example, on some large projects you might have your own copy in your own GitHub account (you’d probably call this <code>origin</code>) and also the main “upstream” project repository (let’s call this <code>upstream</code> for the sake of examples). You would pull from <code>upstream</code> from time to time to get the latest updates that other people have committed. We will practice using an <code>upstream</code> repository later in the forking model.</p>
                       <p>Remember that the name you give to a remote only exists locally. It’s an alias that you choose - whether <code>origin</code>, or <code>upstream</code>, or <code>mo-fitzroy</code> - and not something intrinsic to the remote repository.</p>
@@ -649,7 +714,6 @@ upstream, see 'push.autoSetupRemote' in 'git help config'.</code></pre>
                       </div>
                       </div>
                       </div>
-                      </section>
                       <section id="open-a-pr" class="level2">
                       <h2 class="anchored" data-anchor-id="open-a-pr">Open a PR</h2>
                       <p>In the git-novice lesson you practised opening a <a href="https://www.astropython.com/git-novice/10-pull-requests.html">pull request</a>.</p>
@@ -667,27 +731,51 @@ remote:      https://github.com/MetOffice/git-training-demo/pull/new/1_favourite
                       <h2 class="anchored" data-anchor-id="pull-request-templates">Pull Request Templates</h2>
                       <p>Notice the description has filled with a template. Just like this repository used Issue templates it also uses a <a href="https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/creating-a-pull-request-template-for-your-repository">PR template</a>.</p>
                       <p>This template has a checklist that needs to be completed before opening the PR<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. It also has checklists for science and code review. In the description scroll down to the checklists which look like this:</p>
-                      <div class="sourceCode" id="cb14"><pre class="sourceCode md"><code class="sourceCode markdown"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> I have read <span class="in">`CONTRIBUTING.md`</span> and added my name as a Code Contributor.</span></code></pre></div>
+                      <div class="sourceCode" id="cb19"><pre class="sourceCode md"><code class="sourceCode markdown"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> I have read <span class="in">`CONTRIBUTING.md`</span>.</span></code></pre></div>
                       <p>Some open source projects require you to add your name to a list of contributors. We will do this later so for now mark the task as complete. Replace the space in the square checkbox brackets with an <code>x</code> to mark the task as complete:</p>
-                      <div class="sourceCode" id="cb15"><pre class="sourceCode md"><code class="sourceCode markdown"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[x]</span> I have read <span class="in">`CONTRIBUTING.md`</span> and added my name as a Code Contributor.</span></code></pre></div>
+                      <div class="sourceCode" id="cb20"><pre class="sourceCode md"><code class="sourceCode markdown"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[x]</span> I have read <span class="in">`CONTRIBUTING.md`</span>.</span></code></pre></div>
                       <p>Now when you open the PR it should look something like this:</p>
-                      <p><img src="fig/github-fork-pr-1.jpeg" class="img-fluid" alt="A screenshot of a users  pull request from their fork back to the upstream git-training-demo repository."></p>
-                      <p>This image shows PR number <code>#8</code>. This PR will close/fix Issue number <code>#7</code> (the top left arrow). You can request a review on the top right. Some repositories will be set up to automatically assign a reviewer based on how many reviews each team member currently has open<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>. The bottom arrow shows the checklist items we marked as complete.</p>
-                      <p>At the bottom of your PR you can see that a review is required before merging. All checks have passed, this repository has automatic checks for trailing whitespace, accidentally adding large files etc. More information can be found in the optional episode on <a href="./09-pre-commit.html">pre-commit hooks</a>.</p>
-                      </section>
-                      <section id="help-some-checks-have-failed" class="level2 caution">
-                      <h2 class="anchored" data-anchor-id="help-some-checks-have-failed">Help: Some checks have failed</h2>
-                      <p>If your now open Pull Request says some checks have failed this is because your changes did not pass the automatic pre-commit checks.</p>
-                      <p>Click on the <strong>Details</strong> link next to the failed test and fix your code on your local repository. Commit and then push this fix to GitHub. Your PR will automatically update and re-run the tests, you may need to refresh the page.</p>
-                      </section>
-                      <section id="automatically-closing-issues-via-prs" class="level3">
-                      <h3 class="anchored" data-anchor-id="automatically-closing-issues-via-prs">Automatically closing Issues via PRs</h3>
+                      <p><img src="fig/github-fork-pr-1.png" class="img-fluid" alt="A screenshot of a users  pull request from their fork back to the upstream git-training-demo repository."></p>
+                      <p>This image shows PR number <code>#2</code>. This PR will close/fix Issue number <code>#1</code> (the top left arrow). You can request a review on the top right. Some repositories will be set up to automatically assign a reviewer based on how many reviews each team member currently has open<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>. The middle arrow is where you assign yourself to the PR. The bottom arrow shows the checklist items we marked as complete.</p>
+                      <p>At the bottom of your PR you can see that a review is required before merging and some checks were not successful. This repository has automatic checks for trailing whitespace, accidentally adding large files etc. More information on setting up these checks can be found in the optional episode on <a href="./09-pre-commit.html">pre-commit hooks</a>.</p>
+                      <div class="callout callout-style-simple callout-none no-icon callout-titled">
+                      <div class="callout-header d-flex align-content-center">
+                      <div class="callout-icon-container">
+                      <i class="callout-icon no-icon"></i>
+                      </div>
+                      <div class="callout-title-container flex-fill">
+                      Automatically closing Issues via PRs
+                      </div>
+                      </div>
+                      <div class="callout-body-container callout-body">
                       <p>A PR can automatically close an Issue when it is merged into <code>main</code>. To use this GitHub functionality replace the templates <code>Fixes &lt;#ISSUE_NUMBER&gt;</code> line with either:</p>
-                      <div class="sourceCode" id="cb16"><pre class="sourceCode md"><code class="sourceCode markdown"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>Closes #1</span></code></pre></div>
+                      <div class="sourceCode" id="cb21"><pre class="sourceCode md"><code class="sourceCode markdown"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>Closes #1</span></code></pre></div>
                       <p>or</p>
-                      <div class="sourceCode" id="cb17"><pre class="sourceCode md"><code class="sourceCode markdown"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>Fixes #1</span></code></pre></div>
+                      <div class="sourceCode" id="cb22"><pre class="sourceCode md"><code class="sourceCode markdown"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>Fixes #1</span></code></pre></div>
                       <p>Make sure you change <code>1</code> to your Issue number. The <a href="https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/linking-a-pull-request-to-an-issue">GitHub Documentation</a> has more information on linking PRs to Issues.</p>
-                      <p>In the next episode we will look at how these changes are reviewed and merged back into <code>main</code> in more detail.</p>
+                      </div>
+                      </div>
+                      </section>
+                      <section id="fixing-failing-checks" class="level2">
+                      <h2 class="anchored" data-anchor-id="fixing-failing-checks">Fixing Failing Checks</h2>
+                      <p>Your changes did not pass the automatic pre-commit checks. The quickest way to check why a test failed is to click on the <strong>Pull request checks / pre-commit</strong> link near the bottom of the PR. Or you can navigate to the <strong>Checks</strong> tab in the PR, then select <strong>Pull request checks</strong> and click on the failing test.</p>
+                      <p><img src="fig/pre-commit-check-fail-1.png" class="img-fluid" alt="A screenshot of a users failing pre-commit check showing the whitespace test has failed."></p>
+                      <p>You can see in the test output trailing whitespace has been found. This caused the tests to fail. Lower down in the output you will see the filename, and a diff of the line with the whitespace.</p>
+                      <p>Go back to your local repository and remove the whitespace:</p>
+                      <div class="sourceCode" id="cb23"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> nano cloud-mo-fitzroy.md</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cat cloud-mo-fitzroy.md</span></code></pre></div>
+                      <pre class="output"><code># My Favourite Cloud
+
+Light and fluffy cumulus.</code></pre>
+                      <p>Add and commit your changes:</p>
+                      <div class="sourceCode" id="cb25"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git add cloud-mo-fitzroy.md</span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git commit <span class="at">-m</span> <span class="st">"Removes whitespace"</span></span></code></pre></div>
+                      <pre class="output"><code>[1_favourite_cloud c74c7e1] Removes whitespace
+ 1 file changed, 1 insertion(+), 1 deletion(-)</code></pre>
+                      <p>Push these changes to GitHub:</p>
+                      <div class="sourceCode" id="cb27"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git push</span></code></pre></div>
+                      <p>Navigate back to your PR. You should now see a message saying all checks have passed. Merging is still blocked until a colleague reviews our code.</p>
+                      <p>In the next episode we will look at how these changes are reviewed and merged back into <code>main</code>.</p>
                       <div id="discussion1" class="callout discussion">
                       <div class="callout-square">
                       <i class="callout-icon" data-feather="message-circle"></i>
@@ -797,7 +885,7 @@ remote:      https://github.com/MetOffice/git-training-demo/pull/new/1_favourite
           anchorJS.add('.anchored');
             var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
             var mailtoRegex = new RegExp(/^mailto:/);
-              var filterRegex = new RegExp("https:\/\/metoffice\.github\.io\/git-working-practices\/instructor");
+              var filterRegex = new RegExp("https:\/\/metoffice\.github\.io\/git-working-practices\/");
             var isInternal = (href) => {
                 return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
             }

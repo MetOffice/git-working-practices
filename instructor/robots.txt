@@ -1,1 +1,1 @@
-Sitemap: https://metoffice.github.io/git-working-practices/instructor/sitemap.xml
+Sitemap: https://metoffice.github.io/git-working-practices/sitemap.xml

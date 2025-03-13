@@ -1,30 +1,30 @@
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="auto"><head>
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<script src="../site_libs/quarto-html/quarto.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/quarto-contrib/carpentries-theme-toggle-1.0.0/themetoggle.js"></script>
-<script src="../site_libs/quarto-contrib/carpentries-theme-toggle-1.0.0/scripts.js"></script>
-<link href="../site_libs/quarto-contrib/carpentries-css-1.0.0/styles.css" rel="stylesheet"><meta charset="utf-8">
-            <meta name="generator" content="quarto-1.6.40">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/quarto-contrib/carpentries-theme-toggle-1.0.0/themetoggle.js"></script>
+<script src="site_libs/quarto-contrib/carpentries-theme-toggle-1.0.0/scripts.js"></script>
+<link href="site_libs/quarto-contrib/carpentries-css-1.0.0/styles.css" rel="stylesheet"><meta charset="utf-8">
+            <meta name="generator" content="quarto-1.6.42">
         
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
                     
         <title>FCM vs Git Cheat Sheet – Git &amp; GitHub Working Practices</title>
 
-        <!--     <script src="../site_libs/quarto-contrib/carpentries-theme-toggle-1.0.0/themetoggle.js"></script>
-        <script src="../site_libs/quarto-contrib/carpentries-theme-toggle-1.0.0/scripts.js"></script>
-        <link href="../site_libs/quarto-contrib/carpentries-css-1.0.0/styles.css" rel="stylesheet">
+        <!--     <script src="site_libs/quarto-contrib/carpentries-theme-toggle-1.0.0/themetoggle.js"></script>
+        <script src="site_libs/quarto-contrib/carpentries-theme-toggle-1.0.0/scripts.js"></script>
+        <link href="site_libs/quarto-contrib/carpentries-css-1.0.0/styles.css" rel="stylesheet">
          -->
 
         <!-- <script src="quarto-nav/quarto-nav.js"></script>
@@ -40,11 +40,11 @@
         <link href="quarto-html/tippy.css" rel="stylesheet"> -->
 
         <!-- Responsive Favicon for The Carpentries -->
-        <link rel="apple-touch-icon" sizes="180x180" href="../site_libs/quarto-contrib/carpentries-favicons-1.0.0/favicons/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="../site_libs/quarto-contrib/carpentries-favicons-1.0.0/favicons/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="../site_libs/quarto-contrib/carpentries-favicons-1.0.0/favicons/favicon-16x16.png">
-        <link rel="manifest" href="../site_libs/quarto-contrib/carpentries-manifest-1.0.0/site.webmanifest">
-        <link rel="mask-icon" href="../site_libs/quarto-contrib/carpentries-favicons-1.0.0/favicons/safari-pinned-tab.svg" color="#5bbad5">
+        <link rel="apple-touch-icon" sizes="180x180" href="site_libs/quarto-contrib/carpentries-favicons-1.0.0/favicons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="site_libs/quarto-contrib/carpentries-favicons-1.0.0/favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="site_libs/quarto-contrib/carpentries-favicons-1.0.0/favicons/favicon-16x16.png">
+        <link rel="manifest" href="site_libs/quarto-contrib/carpentries-manifest-1.0.0/site.webmanifest">
+        <link rel="mask-icon" href="site_libs/quarto-contrib/carpentries-favicons-1.0.0/favicons/safari-pinned-tab.svg" color="#5bbad5">
         <meta name="msapplication-TileColor" content="#da532c">
         <meta name="theme-color" media="(prefers-color-scheme: light)" content="white">
         <meta name="theme-color" media="(prefers-color-scheme: dark)" content="black">
@@ -131,7 +131,7 @@
           <div class="container-fluid top-nav-container">
             <div class="col-md-8">
               <div class="large-logo">
-                <img id="cp-logo" alt="Carpentries" src="../site_libs/quarto-contrib/carpentries-images-1.0.0/images/carpentries-logo.svg">
+                <img id="cp-logo" alt="Carpentries" src="site_libs/quarto-contrib/carpentries-images-1.0.0/images/carpentries-logo.svg">
                                               </div>
             </div>
             <div class="selector-container">
@@ -193,10 +193,10 @@
                 {{/language}}{{/yaml}} -->
               <div class="dropdown" id="instructor-dropdown">
                         <button class="btn btn-secondary dropdown-toggle bordered-button" type="button" id="dropdownMenu1" data-bs-toggle="dropdown" aria-expanded="false">
-                  <i aria-hidden="true" class="icon" data-feather="eye"></i> Instructor View <i data-feather="chevron-down"></i>
+                  <i aria-hidden="true" class="icon" data-feather="eye"></i> Learner View <i data-feather="chevron-down"></i>
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                  <li><button class="dropdown-item" type="button" onclick="window.location.href='../fcm-git_cheat_sheet.html';">Learner View</button></li>
+                  <li><button class="dropdown-item" type="button" onclick="window.location.href='./instructor/fcm-git_cheat_sheet.html';">Instructor View</button></li>
                 </ul>
                       </div>
             </div>
@@ -210,7 +210,7 @@
               <span class="menu-title">Menu</span>
             </button>
             <div class="nav-logo">
-              <img class="small-logo" alt="Carpentries" src="../site_libs/quarto-contrib/carpentries-images-1.0.0/images/carpentries-logo-sm.svg">
+              <img class="small-logo" alt="Carpentries" src="site_libs/quarto-contrib/carpentries-images-1.0.0/images/carpentries-logo-sm.svg">
             </div>
             <div class="lesson-title-md">
               Git &amp; GitHub Working Practices
@@ -236,10 +236,10 @@
                   <a class="nav-link" href="key-points.html">Key Points</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="instructor-notes.html">Instructor Notes</a>
+                  <a class="nav-link" href="reference.html#glossary">Glossary</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="extract_all_images.html">Extract All Images</a>
+                  <a class="nav-link" href="profiles.html">Learner Profiles</a>
                 </li>
                                   <li class="nav-item dropdown">
                     <button class="nav-link dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false">
@@ -264,7 +264,7 @@
                 </fieldset>
               </form>
               -->
-            <!--     <a id="search-button" class="btn btn-primary" href="instructor/aio.html" role="button"
+            <!--     <a id="search-button" class="btn btn-primary" href="aio.html" role="button"
               aria-label="Search the All In One page">Search the All In One page</a>
              -->
             <div class="input-group">
@@ -543,10 +543,10 @@
                               <a href="key-points.html">Key Points</a>
                             </li>
                             <li>
-                              <a href="instructor-notes.html">Instructor Notes</a>
+                              <a href="reference.html#glossary">Glossary</a>
                             </li>
                             <li>
-                              <a href="extract_all_images.html">Extract All Images</a>
+                              <a href="profiles.html">Learner Profiles</a>
                             </li>
                                                 <!-- {{{resources}}} -->
                           </ul>
@@ -712,7 +712,7 @@
           anchorJS.add('.anchored');
             var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
             var mailtoRegex = new RegExp(/^mailto:/);
-              var filterRegex = new RegExp("https:\/\/metoffice\.github\.io\/git-working-practices\/instructor");
+              var filterRegex = new RegExp("https:\/\/metoffice\.github\.io\/git-working-practices\/");
             var isInternal = (href) => {
                 return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
             }

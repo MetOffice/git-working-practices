@@ -1,30 +1,30 @@
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="auto"><head>
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<script src="../site_libs/quarto-html/quarto.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/quarto-contrib/carpentries-theme-toggle-1.0.0/themetoggle.js"></script>
-<script src="../site_libs/quarto-contrib/carpentries-theme-toggle-1.0.0/scripts.js"></script>
-<link href="../site_libs/quarto-contrib/carpentries-css-1.0.0/styles.css" rel="stylesheet"><meta charset="utf-8">
-            <meta name="generator" content="quarto-1.6.40">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/quarto-contrib/carpentries-theme-toggle-1.0.0/themetoggle.js"></script>
+<script src="site_libs/quarto-contrib/carpentries-theme-toggle-1.0.0/scripts.js"></script>
+<link href="site_libs/quarto-contrib/carpentries-css-1.0.0/styles.css" rel="stylesheet"><meta charset="utf-8">
+            <meta name="generator" content="quarto-1.6.42">
         
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
                     
         <title>Conflicts – Git &amp; GitHub Working Practices</title>
 
-        <!--     <script src="../site_libs/quarto-contrib/carpentries-theme-toggle-1.0.0/themetoggle.js"></script>
-        <script src="../site_libs/quarto-contrib/carpentries-theme-toggle-1.0.0/scripts.js"></script>
-        <link href="../site_libs/quarto-contrib/carpentries-css-1.0.0/styles.css" rel="stylesheet">
+        <!--     <script src="site_libs/quarto-contrib/carpentries-theme-toggle-1.0.0/themetoggle.js"></script>
+        <script src="site_libs/quarto-contrib/carpentries-theme-toggle-1.0.0/scripts.js"></script>
+        <link href="site_libs/quarto-contrib/carpentries-css-1.0.0/styles.css" rel="stylesheet">
          -->
 
         <!-- <script src="quarto-nav/quarto-nav.js"></script>
@@ -40,11 +40,11 @@
         <link href="quarto-html/tippy.css" rel="stylesheet"> -->
 
         <!-- Responsive Favicon for The Carpentries -->
-        <link rel="apple-touch-icon" sizes="180x180" href="../site_libs/quarto-contrib/carpentries-favicons-1.0.0/favicons/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="../site_libs/quarto-contrib/carpentries-favicons-1.0.0/favicons/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="../site_libs/quarto-contrib/carpentries-favicons-1.0.0/favicons/favicon-16x16.png">
-        <link rel="manifest" href="../site_libs/quarto-contrib/carpentries-manifest-1.0.0/site.webmanifest">
-        <link rel="mask-icon" href="../site_libs/quarto-contrib/carpentries-favicons-1.0.0/favicons/safari-pinned-tab.svg" color="#5bbad5">
+        <link rel="apple-touch-icon" sizes="180x180" href="site_libs/quarto-contrib/carpentries-favicons-1.0.0/favicons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="site_libs/quarto-contrib/carpentries-favicons-1.0.0/favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="site_libs/quarto-contrib/carpentries-favicons-1.0.0/favicons/favicon-16x16.png">
+        <link rel="manifest" href="site_libs/quarto-contrib/carpentries-manifest-1.0.0/site.webmanifest">
+        <link rel="mask-icon" href="site_libs/quarto-contrib/carpentries-favicons-1.0.0/favicons/safari-pinned-tab.svg" color="#5bbad5">
         <meta name="msapplication-TileColor" content="#da532c">
         <meta name="theme-color" media="(prefers-color-scheme: light)" content="white">
         <meta name="theme-color" media="(prefers-color-scheme: dark)" content="black">
@@ -76,6 +76,9 @@
                            "search-label": "Search"
                          }
                        }</script>
+              <script  src="site_libs/quarto-diagram/mermaid.min.js"></script>
+              <script  src="site_libs/quarto-diagram/mermaid-init.js"></script>
+              <link  href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet" />
              -->  </head>
   <body>
         <div id="quarto-search-results"></div>
@@ -120,7 +123,7 @@
           <div class="container-fluid top-nav-container">
             <div class="col-md-8">
               <div class="large-logo">
-                <img id="cp-logo" alt="Carpentries" src="../site_libs/quarto-contrib/carpentries-images-1.0.0/images/carpentries-logo.svg">
+                <img id="cp-logo" alt="Carpentries" src="site_libs/quarto-contrib/carpentries-images-1.0.0/images/carpentries-logo.svg">
                                               </div>
             </div>
             <div class="selector-container">
@@ -182,10 +185,10 @@
                 {{/language}}{{/yaml}} -->
               <div class="dropdown" id="instructor-dropdown">
                         <button class="btn btn-secondary dropdown-toggle bordered-button" type="button" id="dropdownMenu1" data-bs-toggle="dropdown" aria-expanded="false">
-                  <i aria-hidden="true" class="icon" data-feather="eye"></i> Instructor View <i data-feather="chevron-down"></i>
+                  <i aria-hidden="true" class="icon" data-feather="eye"></i> Learner View <i data-feather="chevron-down"></i>
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                  <li><button class="dropdown-item" type="button" onclick="window.location.href='../06-conflict.html';">Learner View</button></li>
+                  <li><button class="dropdown-item" type="button" onclick="window.location.href='./instructor/06-conflict.html';">Instructor View</button></li>
                 </ul>
                       </div>
             </div>
@@ -199,7 +202,7 @@
               <span class="menu-title">Menu</span>
             </button>
             <div class="nav-logo">
-              <img class="small-logo" alt="Carpentries" src="../site_libs/quarto-contrib/carpentries-images-1.0.0/images/carpentries-logo-sm.svg">
+              <img class="small-logo" alt="Carpentries" src="site_libs/quarto-contrib/carpentries-images-1.0.0/images/carpentries-logo-sm.svg">
             </div>
             <div class="lesson-title-md">
               Git &amp; GitHub Working Practices
@@ -225,10 +228,10 @@
                   <a class="nav-link" href="key-points.html">Key Points</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="instructor-notes.html">Instructor Notes</a>
+                  <a class="nav-link" href="reference.html#glossary">Glossary</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="extract_all_images.html">Extract All Images</a>
+                  <a class="nav-link" href="profiles.html">Learner Profiles</a>
                 </li>
                                   <li class="nav-item dropdown">
                     <button class="nav-link dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false">
@@ -253,7 +256,7 @@
                 </fieldset>
               </form>
               -->
-            <!--     <a id="search-button" class="btn btn-primary" href="instructor/aio.html" role="button"
+            <!--     <a id="search-button" class="btn btn-primary" href="aio.html" role="button"
               aria-label="Search the All In One page">Search the All In One page</a>
              -->
             <div class="input-group">
@@ -532,10 +535,10 @@
                               <a href="key-points.html">Key Points</a>
                             </li>
                             <li>
-                              <a href="instructor-notes.html">Instructor Notes</a>
+                              <a href="reference.html#glossary">Glossary</a>
                             </li>
                             <li>
-                              <a href="extract_all_images.html">Extract All Images</a>
+                              <a href="profiles.html">Learner Profiles</a>
                             </li>
                                                 <!-- {{{resources}}} -->
                           </ul>
@@ -563,7 +566,7 @@
                         Instructor Note
                         </h3>
                       </button>
-                      <div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
+                      <div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
                       <div class="accordion-body">
                       <p>To create the conflict for all learners your co-instructor should follow along making the same changes the learners make. The co-instructors PR should be merged just before the learners open their PRs. If the co-instructor has the relevant permissions they can do this themselves while the instructor is still teaching.</p>
                       </div>
@@ -634,7 +637,7 @@ url: "https://github.com/MetOffice/git-training-demo"</code></pre>
                         Practising By Yourself
                         </h3>
                       </button>
-                      <div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
+                      <div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
                       <div class="accordion-body">
                       <p>If you’re working through this lesson on your own, you won’t see a conflict. You should still follow the materials to learn what to do when you encounter a conflict.</p>
                       </div>
@@ -662,30 +665,41 @@ url: "https://github.com/MetOffice/git-training-demo"</code></pre>
                       <section id="resolving-conflicts" class="level2">
                       <h2 class="anchored" data-anchor-id="resolving-conflicts">Resolving Conflicts</h2>
                       <p>We’re going to resolve the conflict by merging in the <code>main</code> branch into our feature branch <code>7_add-citation-fitzroy</code>:</p>
-                      <pre class="mermaid"><code>gitGraph
-    accDescr {A git graph showing the &lt;code&gt;main&lt;/code&gt; branch being merged
-    into the &lt;code&gt;7_add-citation-fitzroy&lt;/code&gt; branch to resolve merge conflicts.}
-    commit id: 'cdb7fa6'
-    branch 7_add-citation-fitzroy
-    commit id: 'a3c5e13 Adds Robert Fitzroy as an author'
-    checkout main
-    commit id: 's7dja9o'
-    checkout 7_add-citation-fitzroy
-    merge main</code></pre>
+                      <div class="cell" data-layout-align="default">
+                      <div class="cell-output-display">
+                      <div>
+                      <p></p><figure class="figure"><p></p>
+                      <div>
+                      <pre class="mermaid mermaid-js">gitGraph
+                          accDescr {A git graph showing the main branch being merged
+                          into the 7_add-citation-fitzroy branch to resolve merge conflicts.}
+                          commit id: 'cdb7fa6'
+                          branch 7_add-citation-fitzroy
+                          commit id: 'a3c5e13 Adds Robert Fitzroy as an author'
+                          checkout main
+                          commit id: 's7dja9o'
+                          checkout 7_add-citation-fitzroy
+                          merge main
+                      </pre>
+                      </div>
+                      <p></p></figure><p></p>
+                      </div>
+                      </div>
+                      </div>
                       <p>First we need to make sure our fork’s <code>main</code> branch is in sync with the upstream repository. Navigate to your fork on GitHub and click on the <strong>Sync fork</strong> button.</p>
                       <p>In your local copy of your fork, update the <code>main</code> branch:</p>
-                      <div class="sourceCode" id="cb11"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git switch main</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git pull</span></code></pre></div>
+                      <div class="sourceCode" id="cb10"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git switch main</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git pull</span></code></pre></div>
                       <p>Switch back to the feature branch:</p>
-                      <div class="sourceCode" id="cb12"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git switch 7_add-citation-fitzroy</span></code></pre></div>
+                      <div class="sourceCode" id="cb11"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git switch 7_add-citation-fitzroy</span></code></pre></div>
                       <pre class="output"><code>Switched to branch '7_add-citation-fitzroy'</code></pre>
                       <p>Merge in the <code>main</code> branch:</p>
-                      <div class="sourceCode" id="cb14"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git merge main</span></code></pre></div>
+                      <div class="sourceCode" id="cb13"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git merge main</span></code></pre></div>
                       <pre class="output"><code>Auto-merging CITATION.cff
 CONFLICT (content): Merge conflict in CITATION.cff
 Automatic merge failed; fix conflicts and then commit the result.</code></pre>
                       <p>Git is warning us about the conflict. We are still merging, if you run <code>git status</code> you will see:</p>
-                      <div class="sourceCode" id="cb16"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git status</span></code></pre></div>
+                      <div class="sourceCode" id="cb15"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git status</span></code></pre></div>
                       <pre class="output"><code>On branch 7_add-citation-fitzroy
 Your branch is up to date with 'origin/7_add-citation-fitzroy'.
 
@@ -700,7 +714,7 @@ Unmerged paths:
 no changes added to commit (use "git add" and/or "git commit -a")</code></pre>
                       <p>The message tells us <strong>both modified</strong> the <code>CITATION.cff</code> file since both <code>main</code> and our feature branch modified this file.</p>
                       <p>If we look at the <code>CITATION.cff</code> file now:</p>
-                      <div class="sourceCode" id="cb18"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cat CITATION.cff</span></code></pre></div>
+                      <div class="sourceCode" id="cb17"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cat CITATION.cff</span></code></pre></div>
                       <pre class="output"><code>cff-version: 1.2.0
 message: "Met Office Colleagues and Partners"
 authors:
@@ -721,7 +735,7 @@ date-released: 2024-09-23
 url: "https://github.com/MetOffice/git-training-demo"</code></pre>
                       <p>Our change is preceded by <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</code>. Git has then inserted <code>=======</code> as a separator between the conflicting changes and marked the end of the content downloaded from GitHub with <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code>. (The string of letters and digits after that marker identifies the commit we’ve just downloaded.)</p>
                       <p>It is now up to us to edit this file to remove these markers and reconcile the changes. We can do anything we want: keep the change made in the local repository, keep the change made in the remote repository, write something new to replace both, or get rid of the change entirely. Let’s replace both so that the file looks like this:</p>
-                      <div class="sourceCode" id="cb20"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cat CITATION.cff</span></code></pre></div>
+                      <div class="sourceCode" id="cb19"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cat CITATION.cff</span></code></pre></div>
                       <pre class="output"><code>cff-version: 1.2.0
 message: "Met Office Colleagues and Partners"
 authors:
@@ -738,8 +752,8 @@ doi: 10.4321/zenodo.1234
 date-released: 2024-09-23
 url: "https://github.com/MetOffice/git-training-demo"</code></pre>
                       <p>To finish merging, we add <code>CITATION.cff</code> to the changes being made by the merge and then commit:</p>
-                      <div class="sourceCode" id="cb22"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git add CITATION.cff </span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git status</span></code></pre></div>
+                      <div class="sourceCode" id="cb21"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git add CITATION.cff </span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git status</span></code></pre></div>
                       <pre class="output"><code>On branch 7_add-citation-fitzroy
 All conflicts fixed but you are still merging.
   (use "git commit" to conclude merge)
@@ -747,10 +761,10 @@ All conflicts fixed but you are still merging.
 Changes to be committed:
 
     modified:   CITATION.cff</code></pre>
-                      <div class="sourceCode" id="cb24"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git commit</span></code></pre></div>
+                      <div class="sourceCode" id="cb23"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git commit</span></code></pre></div>
                       <pre class="output"><code>[7_add-citation-fitzroy 312c561] Merge branch 'main' into 7_add-citation-fitzroy</code></pre>
                       <p>Now we can push our changes to GitHub:</p>
-                      <div class="sourceCode" id="cb26"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git push</span></code></pre></div>
+                      <div class="sourceCode" id="cb25"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git push</span></code></pre></div>
                       <pre class="output"><code>Enumerating objects: 7, done.
 Counting objects: 100% (7/7), done.
 Delta compression using up to 4 threads
@@ -788,20 +802,20 @@ To github.com:mo-fitzroy/git-training-demo.git
                       <p>What does Git do when there is a conflict in an image or some other non-textual file that is stored in version control?</p>
                       <div class="proof solution">
                       <p><span class="proof-title"><em>Solution</em> (Solution). </span>Let’s try it with your <code>weather</code> repository. Suppose you take a picture of the television forecast and call it <code>forecast.jpg</code>. Jimmy has already created a feature branch to add the image in.</p>
-                      <div class="sourceCode" id="cb28"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git switch add_forecast_image</span></code></pre></div>
+                      <div class="sourceCode" id="cb27"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git switch add_forecast_image</span></code></pre></div>
                       <p>If you do not have an image file of forecast available, you can create a dummy binary file like this:</p>
-                      <div class="sourceCode" id="cb29"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> head <span class="at">--bytes</span> 1024 /dev/urandom <span class="op">&gt;</span> forecast.jpg</span>
-<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> ls <span class="at">-lh</span> forecast.jpg</span></code></pre></div>
+                      <div class="sourceCode" id="cb28"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> head <span class="at">--bytes</span> 1024 /dev/urandom <span class="op">&gt;</span> forecast.jpg</span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> ls <span class="at">-lh</span> forecast.jpg</span></code></pre></div>
                       <pre class="output"><code>-rw-r--r-- 1 mo-eormerod 57095 1.0K Mar  8 20:24 forecast.jpg</code></pre>
                       <p><code>ls</code> shows us that this created a 1-kilobyte file. It is full of random bytes read from the special file, <code>/dev/urandom</code>.</p>
                       <p>Now, suppose you add <code>forecast.jpg</code> to your repository:</p>
-                      <div class="sourceCode" id="cb31"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git add forecast.jpg</span>
-<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git commit <span class="at">-m</span> <span class="st">"Add picture of forecast"</span></span></code></pre></div>
+                      <div class="sourceCode" id="cb30"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git add forecast.jpg</span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git commit <span class="at">-m</span> <span class="st">"Add picture of forecast"</span></span></code></pre></div>
                       <pre class="output"><code>[add_forecast_image 8e4115c] Add picture of forecast
  1 file changed, 0 insertions(+), 0 deletions(-)
  create mode 100644 forecast.jpg</code></pre>
                       <p>Suppose that Jimmy has added a similar picture in the meantime. His is a picture of a forecast from Chile, but it is <em>also</em> called <code>forecast.jpg</code>. When you try to push, you get a familiar message:</p>
-                      <div class="sourceCode" id="cb33"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git push</span></code></pre></div>
+                      <div class="sourceCode" id="cb32"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git push</span></code></pre></div>
                       <pre class="output"><code>To https://github.com/mo-eormerod/weather.git
  ! [rejected]        add_forecast_image -&gt; add_forecast_image (fetch first)
 error: failed to push some refs to 'https://github.com/mo-eormerod/weather.git'
@@ -811,7 +825,7 @@ hint: to the same ref. You may want to first integrate the remote changes
 hint: (e.g., 'git pull ...') before pushing again.
 hint: See the 'Note about fast-forwards' in 'git push --help' for details.</code></pre>
                       <p>We’ve learned that we must pull first and resolve any conflicts:</p>
-                      <div class="sourceCode" id="cb35"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git pull</span></code></pre></div>
+                      <div class="sourceCode" id="cb34"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git pull</span></code></pre></div>
                       <p>When there is a conflict on an image or other binary file, git prints a message like this:</p>
                       <pre class="output"><code>$ git pull
 remote: Counting objects: 3, done.
@@ -829,25 +843,25 @@ Automatic merge failed; fix conflicts and then commit the result.</code></pre>
                       <pre class="output"><code>warning: Cannot merge binary files: forecast.jpg (HEAD vs. 439dc8c08869c342438f6dc4a2b615b05b93c76e)</code></pre>
                       <p>Git cannot automatically insert conflict markers into an image as it does for text files. So, instead of editing the image file, we must check out the version we want to keep. Then we can add and commit this version.</p>
                       <p>On the key line above, Git has conveniently given us commit identifiers for the two versions of <code>forecast.jpg</code>. Our version is <code>HEAD</code>, and Jimmy’s version is <code>439dc8c0...</code>. If we want to use our version, we can use <code>git checkout</code>:</p>
-                      <div class="sourceCode" id="cb38"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git checkout HEAD forecast.jpg</span>
-<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git add forecast.jpg</span>
-<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git commit <span class="at">-m</span> <span class="st">"Use image of just the local forecast"</span></span></code></pre></div>
+                      <div class="sourceCode" id="cb37"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git checkout HEAD forecast.jpg</span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git add forecast.jpg</span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git commit <span class="at">-m</span> <span class="st">"Use image of just the local forecast"</span></span></code></pre></div>
                       <pre class="output"><code>[add_forecast_image 21032c3] Use image of just the local forecast</code></pre>
                       <p>If instead we want to use Jimmy’s version, we can use <code>git checkout</code> with Jimmy’s commit identifier, <code>439dc8c0</code>:</p>
-                      <div class="sourceCode" id="cb40"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git checkout 439dc8c0 forecast.jpg</span>
-<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git add forecast.jpg</span>
-<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git commit <span class="at">-m</span> <span class="st">"Use image of just the local forecast"</span></span></code></pre></div>
+                      <div class="sourceCode" id="cb39"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git checkout 439dc8c0 forecast.jpg</span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git add forecast.jpg</span>
+<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git commit <span class="at">-m</span> <span class="st">"Use image of just the local forecast"</span></span></code></pre></div>
                       <pre class="output"><code>[add_forecast_image da21b34] Use image of forecast with nachos instead of just forecast</code></pre>
                       <p>We can also keep <em>both</em> images. The catch is that we cannot keep them under the same name. But, we can check out each version in succession and <em>rename</em> it, then add the renamed versions. First, check out each image and rename it:</p>
-                      <div class="sourceCode" id="cb42"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git checkout HEAD forecast.jpg</span>
-<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git mv forecast.jpg forecast-only.jpg</span>
-<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git checkout 439dc8c0 forecast.jpg</span>
-<span id="cb42-4"><a href="#cb42-4" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mv forecast.jpg forecast-chile.jpg</span></code></pre></div>
+                      <div class="sourceCode" id="cb41"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git checkout HEAD forecast.jpg</span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git mv forecast.jpg forecast-only.jpg</span>
+<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git checkout 439dc8c0 forecast.jpg</span>
+<span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mv forecast.jpg forecast-chile.jpg</span></code></pre></div>
                       <p>Then, remove the old <code>forecast.jpg</code> and add the two new files:</p>
-                      <div class="sourceCode" id="cb43"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git rm forecast.jpg</span>
-<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git add forecast-only.jpg</span>
-<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git add forecast-chile.jpg</span>
-<span id="cb43-4"><a href="#cb43-4" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git commit <span class="at">-m</span> <span class="st">"Use two images: local forecast and Chile forecast"</span></span></code></pre></div>
+                      <div class="sourceCode" id="cb42"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git rm forecast.jpg</span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git add forecast-only.jpg</span>
+<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git add forecast-chile.jpg</span>
+<span id="cb42-4"><a href="#cb42-4" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git commit <span class="at">-m</span> <span class="st">"Use two images: local forecast and Chile forecast"</span></span></code></pre></div>
                       <pre class="output"><code>[add_forecast_image 94ae08c] Use two images: local forecast and Chile forecast
  2 files changed, 0 insertions(+), 0 deletions(-)
  create mode 100644 forecast-chile.jpg
@@ -940,7 +954,7 @@ Automatic merge failed; fix conflicts and then commit the result.</code></pre>
           anchorJS.add('.anchored');
             var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
             var mailtoRegex = new RegExp(/^mailto:/);
-              var filterRegex = new RegExp("https:\/\/metoffice\.github\.io\/git-working-practices\/instructor");
+              var filterRegex = new RegExp("https:\/\/metoffice\.github\.io\/git-working-practices\/");
             var isInternal = (href) => {
                 return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
             }

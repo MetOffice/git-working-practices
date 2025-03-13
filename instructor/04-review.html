@@ -1,30 +1,30 @@
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="auto"><head>
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<script src="../site_libs/quarto-html/quarto.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/quarto-contrib/carpentries-theme-toggle-1.0.0/themetoggle.js"></script>
-<script src="../site_libs/quarto-contrib/carpentries-theme-toggle-1.0.0/scripts.js"></script>
-<link href="../site_libs/quarto-contrib/carpentries-css-1.0.0/styles.css" rel="stylesheet"><meta charset="utf-8">
-            <meta name="generator" content="quarto-1.6.40">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/quarto-contrib/carpentries-theme-toggle-1.0.0/themetoggle.js"></script>
+<script src="site_libs/quarto-contrib/carpentries-theme-toggle-1.0.0/scripts.js"></script>
+<link href="site_libs/quarto-contrib/carpentries-css-1.0.0/styles.css" rel="stylesheet"><meta charset="utf-8">
+            <meta name="generator" content="quarto-1.6.42">
         
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
                     
         <title>Review – Git &amp; GitHub Working Practices</title>
 
-        <!--     <script src="../site_libs/quarto-contrib/carpentries-theme-toggle-1.0.0/themetoggle.js"></script>
-        <script src="../site_libs/quarto-contrib/carpentries-theme-toggle-1.0.0/scripts.js"></script>
-        <link href="../site_libs/quarto-contrib/carpentries-css-1.0.0/styles.css" rel="stylesheet">
+        <!--     <script src="site_libs/quarto-contrib/carpentries-theme-toggle-1.0.0/themetoggle.js"></script>
+        <script src="site_libs/quarto-contrib/carpentries-theme-toggle-1.0.0/scripts.js"></script>
+        <link href="site_libs/quarto-contrib/carpentries-css-1.0.0/styles.css" rel="stylesheet">
          -->
 
         <!-- <script src="quarto-nav/quarto-nav.js"></script>
@@ -40,11 +40,11 @@
         <link href="quarto-html/tippy.css" rel="stylesheet"> -->
 
         <!-- Responsive Favicon for The Carpentries -->
-        <link rel="apple-touch-icon" sizes="180x180" href="../site_libs/quarto-contrib/carpentries-favicons-1.0.0/favicons/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="../site_libs/quarto-contrib/carpentries-favicons-1.0.0/favicons/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="../site_libs/quarto-contrib/carpentries-favicons-1.0.0/favicons/favicon-16x16.png">
-        <link rel="manifest" href="../site_libs/quarto-contrib/carpentries-manifest-1.0.0/site.webmanifest">
-        <link rel="mask-icon" href="../site_libs/quarto-contrib/carpentries-favicons-1.0.0/favicons/safari-pinned-tab.svg" color="#5bbad5">
+        <link rel="apple-touch-icon" sizes="180x180" href="site_libs/quarto-contrib/carpentries-favicons-1.0.0/favicons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="site_libs/quarto-contrib/carpentries-favicons-1.0.0/favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="site_libs/quarto-contrib/carpentries-favicons-1.0.0/favicons/favicon-16x16.png">
+        <link rel="manifest" href="site_libs/quarto-contrib/carpentries-manifest-1.0.0/site.webmanifest">
+        <link rel="mask-icon" href="site_libs/quarto-contrib/carpentries-favicons-1.0.0/favicons/safari-pinned-tab.svg" color="#5bbad5">
         <meta name="msapplication-TileColor" content="#da532c">
         <meta name="theme-color" media="(prefers-color-scheme: light)" content="white">
         <meta name="theme-color" media="(prefers-color-scheme: dark)" content="black">
@@ -76,6 +76,9 @@
                            "search-label": "Search"
                          }
                        }</script>
+              <script  src="site_libs/quarto-diagram/mermaid.min.js"></script>
+              <script  src="site_libs/quarto-diagram/mermaid-init.js"></script>
+              <link  href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet" />
              -->  </head>
   <body>
         <div id="quarto-search-results"></div>
@@ -117,7 +120,7 @@
           <div class="container-fluid top-nav-container">
             <div class="col-md-8">
               <div class="large-logo">
-                <img id="cp-logo" alt="Carpentries" src="../site_libs/quarto-contrib/carpentries-images-1.0.0/images/carpentries-logo.svg">
+                <img id="cp-logo" alt="Carpentries" src="site_libs/quarto-contrib/carpentries-images-1.0.0/images/carpentries-logo.svg">
                                               </div>
             </div>
             <div class="selector-container">
@@ -179,10 +182,10 @@
                 {{/language}}{{/yaml}} -->
               <div class="dropdown" id="instructor-dropdown">
                         <button class="btn btn-secondary dropdown-toggle bordered-button" type="button" id="dropdownMenu1" data-bs-toggle="dropdown" aria-expanded="false">
-                  <i aria-hidden="true" class="icon" data-feather="eye"></i> Instructor View <i data-feather="chevron-down"></i>
+                  <i aria-hidden="true" class="icon" data-feather="eye"></i> Learner View <i data-feather="chevron-down"></i>
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                  <li><button class="dropdown-item" type="button" onclick="window.location.href='../04-review.html';">Learner View</button></li>
+                  <li><button class="dropdown-item" type="button" onclick="window.location.href='./instructor/04-review.html';">Instructor View</button></li>
                 </ul>
                       </div>
             </div>
@@ -196,7 +199,7 @@
               <span class="menu-title">Menu</span>
             </button>
             <div class="nav-logo">
-              <img class="small-logo" alt="Carpentries" src="../site_libs/quarto-contrib/carpentries-images-1.0.0/images/carpentries-logo-sm.svg">
+              <img class="small-logo" alt="Carpentries" src="site_libs/quarto-contrib/carpentries-images-1.0.0/images/carpentries-logo-sm.svg">
             </div>
             <div class="lesson-title-md">
               Git &amp; GitHub Working Practices
@@ -222,10 +225,10 @@
                   <a class="nav-link" href="key-points.html">Key Points</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="instructor-notes.html">Instructor Notes</a>
+                  <a class="nav-link" href="reference.html#glossary">Glossary</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="extract_all_images.html">Extract All Images</a>
+                  <a class="nav-link" href="profiles.html">Learner Profiles</a>
                 </li>
                                   <li class="nav-item dropdown">
                     <button class="nav-link dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false">
@@ -250,7 +253,7 @@
                 </fieldset>
               </form>
               -->
-            <!--     <a id="search-button" class="btn btn-primary" href="instructor/aio.html" role="button"
+            <!--     <a id="search-button" class="btn btn-primary" href="aio.html" role="button"
               aria-label="Search the All In One page">Search the All In One page</a>
              -->
             <div class="input-group">
@@ -529,10 +532,10 @@
                               <a href="key-points.html">Key Points</a>
                             </li>
                             <li>
-                              <a href="instructor-notes.html">Instructor Notes</a>
+                              <a href="reference.html#glossary">Glossary</a>
                             </li>
                             <li>
-                              <a href="extract_all_images.html">Extract All Images</a>
+                              <a href="profiles.html">Learner Profiles</a>
                             </li>
                                                 <!-- {{{resources}}} -->
                           </ul>
@@ -552,26 +555,37 @@
             
           </div><!-- /div.sidebar -->
         </div><!-- /div.sidebar-col -->                                <p>In this section we will explore how to properly review code and suggest changes if necessary. Both science and code reviews happen in a Pull Request. The general process is outlined in the diagram below:</p>
-                      <pre class="mermaid"><code>sequenceDiagram
-   accDescr {A sequence diagram showing the process of reviewing.}
-   autonumber
-   actor Developer
-   actor Reviewer
+                      <div class="cell" data-layout-align="default">
+                      <div class="cell-output-display">
+                      <div>
+                      <p></p><figure class="figure"><p></p>
+                      <div>
+                      <pre class="mermaid mermaid-js">sequenceDiagram
+                         accDescr {A sequence diagram showing the process of reviewing.}
+                         autonumber
+                         actor Developer
+                         actor Reviewer
 
-   Developer-&gt;&gt;Reviewer: Request a reviewer
-   Reviewer-&gt;&gt;Reviewer: #32;
-   Note over Reviewer: Add the reviewer&lt;br/&gt;to the pull request
-   Reviewer-&gt;&gt;Reviewer: #32;
-   Note over Reviewer: Perform the review
-   loop
-      Reviewer-&gt;&gt;Developer: Submit the review
-      Developer-&gt;&gt;Developer: #32;
-      Note over Developer: Respond to each&lt;br/&gt;review comment
-      Developer-&gt;&gt;Reviewer: Re-request a review
-      Reviewer-&gt;&gt;Reviewer: #32;
-      Note over Reviewer: Respond to each review&lt;br/&gt;comment response
-   end
-   Reviewer-&gt;&gt;Developer: Approve the pull request</code></pre>
+                         Developer-&gt;&gt;Reviewer: Request a reviewer
+                         Reviewer-&gt;&gt;Reviewer: #32;
+                         Note over Reviewer: Add the reviewer&lt;br/&gt;to the pull request
+                         Reviewer-&gt;&gt;Reviewer: #32;
+                         Note over Reviewer: Perform the review
+                         loop
+                            Reviewer-&gt;&gt;Developer: Submit the review
+                            Developer-&gt;&gt;Developer: #32;
+                            Note over Developer: Respond to each&lt;br/&gt;review comment
+                            Developer-&gt;&gt;Reviewer: Re-request a review
+                            Reviewer-&gt;&gt;Reviewer: #32;
+                            Note over Reviewer: Respond to each review&lt;br/&gt;comment response
+                         end
+                         Reviewer-&gt;&gt;Developer: Approve the pull request
+                      </pre>
+                      </div>
+                      <p></p></figure><p></p>
+                      </div>
+                      </div>
+                      </div>
                       <p>Make sure you know who is in your pair. Find your colleagues open PR on the <code>git-training-demo</code> repository using the Pull Requests tab or find the request for review in your notifications.</p>
                       <section id="reviewing-changes" class="level2">
                       <h2 class="anchored" data-anchor-id="reviewing-changes">Reviewing Changes</h2>
@@ -585,11 +599,27 @@
                       <p><img src="fig/pr-3.png" class="img-fluid" alt="A screenshot of a PR showing the diff in the Files changed tab. The Review changes button has been clicked to show the Review popup."></p>
                       <p>Normally it is useful to review each file one at a time and make comments inline first before adding general comments. Close the review popup and hover next to a line number until it becomes highlighted. Click on the line to add an inline comment:</p>
                       <p><img src="fig/pr-4.png" class="img-fluid" alt="A screenshot of a PR showing the diff in the Files changed tab. A line has been highlighted to show how to add an inline comment."></p>
+                      <p>Inline comments can cover multiple lines. Click on the first line number then drag your mouse down to the last line your comment covers.</p>
+                      <div id="accordionInstructor1" class="accordion instructor-note accordion-flush">
+                      <div class="accordion-item">
+                      <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
+                        <h3 class="accordion-header anchored" id="headingInstructor1">
+                        <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div>
+                        Instructor Note
+                        </h3>
+                      </button>
+                      <div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
+                      <div class="accordion-body">
+                      <p>Ensure you show learners how to create multiline comments. It doesn’t matter if learners choose to leave a single or multiline comment/suggestion for their review.</p>
+                      </div>
+                      </div>
+                      </div>
+                      </div>
                       <p>You can make suggested changes using inline comments. Click on the file icon or press <kbd>Ctrl+g</kbd>:</p>
                       <p><img src="fig/pr-suggestion.png" class="img-fluid" alt="A screenshot of a PR showing the diff in the Files changed tab. A line has been highlighted to show how to add an inline comment with a suggestion."></p>
                       <p>Add in a suggested change for your review. Click on the green <strong>Start a review</strong> button. Now click on the green button in the top right which says <strong>Finish your review</strong> or <strong>Review Changes</strong>, add a comment, and select <strong>Request changes</strong>. When you’re finished click the green <strong>Submit review</strong> button.</p>
                       <p><img src="fig/pr-suggestion-2.png" class="img-fluid" alt="A screenshot of a PR showing the diff in the Files changed tab showing the review popup."></p>
-                      <p>The PRs <strong>Conversation</strong> tab now looks like this:</p>
+                      <p>The PRs <strong>Conversation</strong> tab now looks like this towards the bottom of the page:</p>
                       <p><img src="fig/pr-review-1.png" class="img-fluid" alt="A screenshot of a PR showing the Conversation tab with a review that has requested changes."></p>
                       </section>
                       <section id="responding-to-review" class="level2">
@@ -611,7 +641,27 @@
                       <p><img src="fig/pr-review-3.png" class="img-fluid" alt="A screenshot of a PR showing the Conversation tab with a requested change that has been resolved."></p>
                       <p>Click on the <strong>View changes</strong> button. If you are happy that your requested changes have been addressed then you can approve the PR:</p>
                       <p><img src="fig/pr-review-4.png" class="img-fluid" alt="A screenshot of a PR showing the Files changed tab showing how to Approve a review."></p>
-                      <p>Swap back to the Conversations tab. The PR is now ready to merge and has no conflicts with the base (<code>main</code> in this case) branch. Click <strong>Squash and merge</strong>; don’t forget to move the PR number to the start of the commit message like you did in the Version Control with Git lesson:</p>
+                      <p>Swap back to the Conversations tab. The PR is now ready to merge and has no conflicts with the base (<code>main</code> in this case) branch.</p>
+                      <div id="accordionInstructor2" class="accordion instructor-note accordion-flush">
+                      <div class="accordion-item">
+                      <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor2" aria-expanded="false" aria-controls="collapseInstructor2">
+                        <h3 class="accordion-header anchored" id="headingInstructor2">
+                        <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div>
+                        Instructor Note
+                        </h3>
+                      </button>
+                      <div id="collapseInstructor2" class="accordion-collapse collapse" aria-labelledby="headingInstructor2" data-bs-parent="#accordionInstructor2">
+                      <div class="accordion-body">
+                      <p>Important!</p>
+                      <blockquote class="blockquote">
+                      <p>Click any of the 3 merge options</p>
+                      </blockquote>
+                      <p>The two instructors can select squash and merge, and rebase and merge. Some learners will have skipped ahead and already clicked on a normal merge. This guarantees the repository history shows all three merge types.</p>
+                      </div>
+                      </div>
+                      </div>
+                      </div>
+                      <p>Click any of the 3 merge options; don’t forget to move the PR number to the start of the commit message like you did in the Version Control with Git lesson:</p>
                       <p><img src="fig/pr-review-5.png" class="img-fluid" alt="A screenshot of a PR showing the Conversations tab. The PR is ready to merge."></p>
                       <div class="callout callout-style-simple callout-none no-icon callout-titled">
                       <div class="callout-header d-flex align-content-center">
@@ -633,6 +683,22 @@
                       <p>If you head back to the main page of the <code>git-training-demo</code> repository you will see your new file in the code view for the <code>main</code> branch. The commit message for the PR merge is shown next to it. If you hover over the PR number (in this case <code>#2</code>) a popup will appear with details of the merged PR. Click on the number to take you to the closed PR.</p>
                       <p><img src="fig/pr-review-7.png" class="img-fluid" alt="A screenshot of the weather repositories main Code tab showing the files in the main branch. The new shipping-forecast.md file can be seen with the commit message from the PR squash and merge commit that created it. The PR number, #4, link is being hovered over to display a popup with brief details of PR #4."></p>
                       <p>Head over to the repositories <strong>Issues</strong> tab. Check that your Issue for adding your favourite cloud file was closed when you merged the PR.</p>
+                      <div id="accordionInstructor3" class="accordion instructor-note accordion-flush">
+                      <div class="accordion-item">
+                      <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor3" aria-expanded="false" aria-controls="collapseInstructor3">
+                        <h3 class="accordion-header anchored" id="headingInstructor3">
+                        <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div>
+                        Instructor Note
+                        </h3>
+                      </button>
+                      <div id="collapseInstructor3" class="accordion-collapse collapse" aria-labelledby="headingInstructor3" data-bs-parent="#accordionInstructor3">
+                      <div class="accordion-body">
+                      <p>There may not be time for learners to complete the challenge (updating their local main branch and deleting their local feature branch). You should update your local main branch and use <code>git log --oneline --graph</code> to demonstrate the messy history that has been created due to each learner selecting a random merge strategy in their PRs.</p>
+                      <p>You can also show learners the Network Graph on the Insights tab in GitHub. This will show the history of the repository and can be contrasted with forking in the afternoon sessions.</p>
+                      </div>
+                      </div>
+                      </div>
+                      </div>
                       <div id="discussion1" class="callout discussion">
                       <div class="callout-square">
                       <i class="callout-icon" data-feather="message-circle"></i>
@@ -651,8 +717,8 @@
                       <ol type="1">
                       <li>Update your local copy of the <code>git-training-demo</code> repository</li>
                       </ol>
-                      <div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git switch main</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git pull</span></code></pre></div>
+                      <div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git switch main</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git pull</span></code></pre></div>
                       <pre class="output"><code>remote: Enumerating objects: 4, done.
 remote: Counting objects: 100% (4/4), done.
 remote: Compressing objects: 100% (3/3), done.
@@ -668,13 +734,25 @@ Fast-forward
                       <ol start="2" type="1">
                       <li>Delete any branches that are no longer necessary</li>
                       </ol>
-                      <div class="sourceCode" id="cb4"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git remote prune origin</span></code></pre></div>
+                      <div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git remote prune origin</span></code></pre></div>
                       <pre class="output"><code>Pruning origin
 URL: git@github.com:metoffice/git-training-demo.git
  * [pruned] origin/1_favourite_cloud</code></pre>
-                      <div class="sourceCode" id="cb6"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git branch <span class="at">-D</span> 1_favourite_cloud</span></code></pre></div>
+                      <div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git branch <span class="at">-D</span> 1_favourite_cloud</span></code></pre></div>
                       <pre class="output"><code>Deleted branch 1_favourite_cloud (was b7f26e6).</code></pre>
                       </div>
+                      </div>
+                      </section>
+                      </div>
+                      <div id="discussion2" class="callout discussion">
+                      <div class="callout-square">
+                      <i class="callout-icon" data-feather="message-circle"></i>
+                      </div>
+                      <section id="how-was-your-pr-merged" class="level3 callout-title callout-inner">
+                      <h3 class="callout-title anchored" data-anchor-id="how-was-your-pr-merged">How was your PR merged?</h3>
+                      <div class="callout-content">
+                      <p>In this episode you merged each others PRs. The reviewer used a random merge strategy to merge each PR.</p>
+                      <p>Explore the history of the repository with <code>git log</code> and find your PR merge. How has the chosen merge strategy affected the repositories history?</p>
                       </div>
                       </section>
                       </div>
@@ -763,7 +841,7 @@ URL: git@github.com:metoffice/git-training-demo.git
           anchorJS.add('.anchored');
             var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
             var mailtoRegex = new RegExp(/^mailto:/);
-              var filterRegex = new RegExp("https:\/\/metoffice\.github\.io\/git-working-practices\/instructor");
+              var filterRegex = new RegExp("https:\/\/metoffice\.github\.io\/git-working-practices\/");
             var isInternal = (href) => {
                 return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
             }
