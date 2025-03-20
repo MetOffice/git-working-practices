@@ -331,7 +331,7 @@ sequenceDiagram
     participant GHM
     participant GHF
     end
-    box Your Fork - Local
+    box Your Working Copy - Local
     participant M
     participant F
     end
