@@ -324,14 +324,14 @@ sequenceDiagram
     GHM -->> M: #f
     Note right of GHM: git pull
     Note over F: Delete branch:<br/>git branch -d feature
-    box Upstream Remote - GitHub
+    box Met Office Repo - GitHub
     participant UM
     end
-    box Fork Remote - GitHub
+    box Your Fork - GitHub
     participant GHM
     participant GHF
     end
-    box Fork - Local
+    box Your Fork - Local
     participant M
     participant F
     end
