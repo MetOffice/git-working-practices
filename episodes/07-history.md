@@ -190,8 +190,8 @@ gitGraph
     commit id: '4631ebc'
     commit id: 'ee406ac'
     commit id: '62440f8'
-    commit id: '7cec787 Cool feature'
-    commit id: 'cd2db46 Cool feature docs'
+    commit id: '9bfg54s Cool feature'
+    commit id: '1vyd742 Cool feature docs'
 ```
 
 ::: caution
