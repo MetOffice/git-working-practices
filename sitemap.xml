@@ -1,95 +1,147 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://metoffice.github.io/git-working-practices/profiles/profiles.html</loc>
-    <lastmod>2025-03-12T21:55:25.936Z</lastmod>
+    <loc>https://metoffice.github.io/git-working-practices/00-repo-access.html</loc>
   </url>
   <url>
-    <loc>https://metoffice.github.io/git-working-practices/instructors/instructor-notes.html</loc>
-    <lastmod>2025-03-12T21:51:26.386Z</lastmod>
+    <loc>https://metoffice.github.io/git-working-practices/01-issues.html</loc>
   </url>
   <url>
-    <loc>https://metoffice.github.io/git-working-practices/learners/fcm-git_cheat_sheet.html</loc>
-    <lastmod>2024-11-11T17:05:05.044Z</lastmod>
+    <loc>https://metoffice.github.io/git-working-practices/02-branching.html</loc>
   </url>
   <url>
-    <loc>https://metoffice.github.io/git-working-practices/episodes/key-points.html</loc>
-    <lastmod>2025-03-12T21:55:25.886Z</lastmod>
+    <loc>https://metoffice.github.io/git-working-practices/03-feature-branch.html</loc>
   </url>
   <url>
-    <loc>https://metoffice.github.io/git-working-practices/episodes/aio.html</loc>
-    <lastmod>2025-03-12T21:55:25.884Z</lastmod>
+    <loc>https://metoffice.github.io/git-working-practices/04-review.html</loc>
   </url>
   <url>
-    <loc>https://metoffice.github.io/git-working-practices/episodes/Break.html</loc>
-    <lastmod>2025-03-12T21:51:26.354Z</lastmod>
+    <loc>https://metoffice.github.io/git-working-practices/05-forks.html</loc>
   </url>
   <url>
-    <loc>https://metoffice.github.io/git-working-practices/episodes/08-rebase.html</loc>
-    <lastmod>2025-03-12T21:51:26.353Z</lastmod>
+    <loc>https://metoffice.github.io/git-working-practices/06-conflict.html</loc>
   </url>
   <url>
-    <loc>https://metoffice.github.io/git-working-practices/episodes/06-conflict.html</loc>
-    <lastmod>2025-03-12T21:51:26.353Z</lastmod>
+    <loc>https://metoffice.github.io/git-working-practices/07-history.html</loc>
   </url>
   <url>
-    <loc>https://metoffice.github.io/git-working-practices/episodes/04-review.html</loc>
-    <lastmod>2025-03-12T21:51:26.352Z</lastmod>
+    <loc>https://metoffice.github.io/git-working-practices/08-rebase.html</loc>
   </url>
   <url>
-    <loc>https://metoffice.github.io/git-working-practices/episodes/02-branching.html</loc>
-    <lastmod>2025-03-12T21:51:26.350Z</lastmod>
+    <loc>https://metoffice.github.io/git-working-practices/09-pre-commit.html</loc>
   </url>
   <url>
-    <loc>https://metoffice.github.io/git-working-practices/episodes/00-repo-access.html</loc>
-    <lastmod>2025-03-12T21:51:26.350Z</lastmod>
+    <loc>https://metoffice.github.io/git-working-practices/404.html</loc>
+  </url>
+  <url>
+    <loc>https://metoffice.github.io/git-working-practices/Break.html</loc>
+  </url>
+  <url>
+    <loc>https://metoffice.github.io/git-working-practices/CODE_OF_CONDUCT.html</loc>
+  </url>
+  <url>
+    <loc>https://metoffice.github.io/git-working-practices/End.html</loc>
+  </url>
+  <url>
+    <loc>https://metoffice.github.io/git-working-practices/LICENSE.html</loc>
+  </url>
+  <url>
+    <loc>https://metoffice.github.io/git-working-practices/aio.html</loc>
+  </url>
+  <url>
+    <loc>https://metoffice.github.io/git-working-practices/discuss.html</loc>
+  </url>
+  <url>
+    <loc>https://metoffice.github.io/git-working-practices/fcm-git_cheat_sheet.html</loc>
+  </url>
+  <url>
+    <loc>https://metoffice.github.io/git-working-practices/images.html</loc>
   </url>
   <url>
     <loc>https://metoffice.github.io/git-working-practices/index.html</loc>
-    <lastmod>2025-03-12T21:50:13.076Z</lastmod>
   </url>
   <url>
-    <loc>https://metoffice.github.io/git-working-practices/site/built/index.html</loc>
-    <lastmod>2024-11-11T17:53:33.531Z</lastmod>
+    <loc>https://metoffice.github.io/git-working-practices/instructor/00-repo-access.html</loc>
   </url>
   <url>
-    <loc>https://metoffice.github.io/git-working-practices/episodes/01-issues.html</loc>
-    <lastmod>2025-03-12T21:51:26.350Z</lastmod>
+    <loc>https://metoffice.github.io/git-working-practices/instructor/01-issues.html</loc>
   </url>
   <url>
-    <loc>https://metoffice.github.io/git-working-practices/episodes/03-feature-branch.html</loc>
-    <lastmod>2025-03-12T21:51:26.351Z</lastmod>
+    <loc>https://metoffice.github.io/git-working-practices/instructor/02-branching.html</loc>
   </url>
   <url>
-    <loc>https://metoffice.github.io/git-working-practices/episodes/05-forks.html</loc>
-    <lastmod>2025-03-12T21:51:26.352Z</lastmod>
+    <loc>https://metoffice.github.io/git-working-practices/instructor/03-feature-branch.html</loc>
   </url>
   <url>
-    <loc>https://metoffice.github.io/git-working-practices/episodes/07-history.html</loc>
-    <lastmod>2025-03-12T21:51:26.353Z</lastmod>
+    <loc>https://metoffice.github.io/git-working-practices/instructor/04-review.html</loc>
   </url>
   <url>
-    <loc>https://metoffice.github.io/git-working-practices/episodes/09-pre-commit.html</loc>
-    <lastmod>2025-03-12T21:51:26.354Z</lastmod>
+    <loc>https://metoffice.github.io/git-working-practices/instructor/05-forks.html</loc>
   </url>
   <url>
-    <loc>https://metoffice.github.io/git-working-practices/episodes/End.html</loc>
-    <lastmod>2025-03-12T21:51:26.355Z</lastmod>
+    <loc>https://metoffice.github.io/git-working-practices/instructor/06-conflict.html</loc>
   </url>
   <url>
-    <loc>https://metoffice.github.io/git-working-practices/episodes/extract_all_images.html</loc>
-    <lastmod>2025-03-12T21:55:25.886Z</lastmod>
+    <loc>https://metoffice.github.io/git-working-practices/instructor/07-history.html</loc>
   </url>
   <url>
-    <loc>https://metoffice.github.io/git-working-practices/learners/discuss.html</loc>
-    <lastmod>2025-03-12T21:51:26.386Z</lastmod>
+    <loc>https://metoffice.github.io/git-working-practices/instructor/08-rebase.html</loc>
   </url>
   <url>
-    <loc>https://metoffice.github.io/git-working-practices/learners/reference.html</loc>
-    <lastmod>2025-03-12T21:51:26.386Z</lastmod>
+    <loc>https://metoffice.github.io/git-working-practices/instructor/09-pre-commit.html</loc>
   </url>
   <url>
-    <loc>https://metoffice.github.io/git-working-practices/profiles/learner-profiles.html</loc>
-    <lastmod>2025-03-12T21:50:13.109Z</lastmod>
+    <loc>https://metoffice.github.io/git-working-practices/instructor/404.html</loc>
+  </url>
+  <url>
+    <loc>https://metoffice.github.io/git-working-practices/instructor/Break.html</loc>
+  </url>
+  <url>
+    <loc>https://metoffice.github.io/git-working-practices/instructor/CODE_OF_CONDUCT.html</loc>
+  </url>
+  <url>
+    <loc>https://metoffice.github.io/git-working-practices/instructor/End.html</loc>
+  </url>
+  <url>
+    <loc>https://metoffice.github.io/git-working-practices/instructor/LICENSE.html</loc>
+  </url>
+  <url>
+    <loc>https://metoffice.github.io/git-working-practices/instructor/aio.html</loc>
+  </url>
+  <url>
+    <loc>https://metoffice.github.io/git-working-practices/instructor/discuss.html</loc>
+  </url>
+  <url>
+    <loc>https://metoffice.github.io/git-working-practices/instructor/fcm-git_cheat_sheet.html</loc>
+  </url>
+  <url>
+    <loc>https://metoffice.github.io/git-working-practices/instructor/images.html</loc>
+  </url>
+  <url>
+    <loc>https://metoffice.github.io/git-working-practices/instructor/index.html</loc>
+  </url>
+  <url>
+    <loc>https://metoffice.github.io/git-working-practices/instructor/instructor-notes.html</loc>
+  </url>
+  <url>
+    <loc>https://metoffice.github.io/git-working-practices/instructor/key-points.html</loc>
+  </url>
+  <url>
+    <loc>https://metoffice.github.io/git-working-practices/instructor/profiles.html</loc>
+  </url>
+  <url>
+    <loc>https://metoffice.github.io/git-working-practices/instructor/reference.html</loc>
+  </url>
+  <url>
+    <loc>https://metoffice.github.io/git-working-practices/instructor-notes.html</loc>
+  </url>
+  <url>
+    <loc>https://metoffice.github.io/git-working-practices/key-points.html</loc>
+  </url>
+  <url>
+    <loc>https://metoffice.github.io/git-working-practices/profiles.html</loc>
+  </url>
+  <url>
+    <loc>https://metoffice.github.io/git-working-practices/reference.html</loc>
   </url>
 </urlset>

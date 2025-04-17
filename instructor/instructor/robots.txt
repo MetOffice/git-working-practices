@@ -1,1 +1,0 @@
-Sitemap: https://metoffice.github.io/git-working-practices/instructor/sitemap.xml
