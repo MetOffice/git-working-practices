@@ -4,7 +4,7 @@
 # git-working-practices
 
 An introduction to working practices using Git and GitHub.
-Please see [https://www.astropython.com/git-working-practices/](https://www.astropython.com/git-working-practices/) for a rendered version of this material,
+Please see [https://metoffice.github.io/git-working-practices/](https://metoffice.github.io/git-working-practices/) for a rendered version of this material,
 or [the lesson template documentation][lesson-example] for instructions on formatting, building, and submitting material.
 
 Maintainers:

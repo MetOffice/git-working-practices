@@ -23,7 +23,7 @@ If you **DO NOT** see the output:
 Hi <username>! You've successfully authenticated, but GitHub does not provide shell access.
 ```
 
-Please go back to the [introduction lesson's SSH setup instructions](https://www.astropython.com/git-novice/#ssh-setup).
+Please go back to the [introduction lesson's SSH setup instructions](https://metoffice.github.io/git-novice/#ssh-setup).
 
 ## Single sign-on (SSO) Check
 
@@ -38,7 +38,7 @@ If the key is already authorised, it will say "Deauthorise" instead,
 and nothing more needs to be done.
 
 Full instructions on SSH key setup and SSO authorisation
-can be found in the [introduction lesson's SSH setup instructions](https://www.astropython.com/git-novice/#ssh-setup).
+can be found in the [introduction lesson's SSH setup instructions](https://metoffice.github.io/git-novice/#ssh-setup).
 
 ## Give Your GitHub Username to the Instructors
 

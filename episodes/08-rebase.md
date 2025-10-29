@@ -314,7 +314,7 @@ Add the file and confirm the amendment:
 For the last few commands we have included the
 full terminal prompt showing the git status
 provided by the `git-prompt.sh` script
-you set up in the [git-novice lesson](https://www.astropython.com/git-novice/index.html#git-autocomplete).
+you set up in the [git-novice lesson](https://metoffice.github.io/git-novice/index.html#git-autocomplete).
 You can see the prompt clearly states we are
 rebasing, `REBASE`, and that it is on
 line `1/3` of the rebase to-do file we edited earlier.

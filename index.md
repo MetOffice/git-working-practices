@@ -42,7 +42,7 @@ Some previous experience with the shell is expected,
 *but isn't mandatory*.
 
 This is a follow up course from the
-[Version Control with Git](https://www.astropython.com/git-novice/)
+[Version Control with Git](https://metoffice.github.io/git-novice/)
 lesson. Please ensure you are comfortable with the
 beginner material prior to starting this course.
 

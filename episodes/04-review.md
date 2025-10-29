@@ -252,7 +252,7 @@ can be contrasted with forking in the afternoon sessions.
 
 ## Local Cleanup
 
-In the [git-novice](https://www.astropython.com/git-novice/10-pull-requests.html#updating-your-local-repo)
+In the [git-novice](https://metoffice.github.io/git-novice/10-pull-requests.html#updating-your-local-repo)
 lesson you learnt how to pull changes
 and clean up your branches after merging a PR.
 

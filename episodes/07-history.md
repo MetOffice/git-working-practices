@@ -34,7 +34,7 @@ best for your repository.
 ## Viewing History
 
 In the [Introduction to Version Control
-with Git](https://www.astropython.com/git-novice/05-history.html) lesson you learnt that we can use the
+with Git](https://metoffice.github.io/git-novice/05-history.html) lesson you learnt that we can use the
 `git log` command to view the commit history
 of our repository.
 
