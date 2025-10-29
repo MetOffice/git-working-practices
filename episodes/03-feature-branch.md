@@ -270,7 +270,7 @@ associated with a repository. Here are some of the most useful ones:
 ## Open a PR
 
 In the git-novice lesson you practised opening a
-[pull request](https://www.astropython.com/git-novice/10-pull-requests.html).
+[pull request](https://metoffice.github.io/git-novice/10-pull-requests.html).
 
 You should see a notification appear on GitHub telling you the
 `1_favourite_cloud` branch had recent pushes.
