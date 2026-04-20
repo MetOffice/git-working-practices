@@ -89,7 +89,7 @@ $ git clone git@github.com:mo-fitzroy/git-training-demo.git ~/Desktop/mo-fitzroy
 Replace 'mo-fitzroy' with the Owner's username.
 
 If you choose to clone without the clone path
-(`~/Desktop/mo-fitzroy-weather`) specified at the end,
+(`~/Desktop/mo-fitzroy-git-training-demo`) specified at the end,
 you will clone inside the `git-training-demo` folder!
 
 ```output
