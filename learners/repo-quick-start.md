@@ -60,8 +60,8 @@ $ git commit -m "Initial commit"
 
 4. Check if you are on the `main` branch with `git status` or your terminal prompt
    if you have [Git Autocomplete](./setup.md#git-autocomplete) setup.
-   Rename the default branch from `master` to `main`
-   (master is considered outdated terminology) if your current branch is `master`.
+   If your current branch is `master` rename the default branch from `master` to `main`
+   (master is considered outdated terminology).
 
 ```bash
 $ git branch -M master main
