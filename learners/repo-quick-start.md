@@ -29,6 +29,9 @@ To create a new repository on GitHub:
     - Private: only you
     - Internal (organisations only): read permissions to anyone in the organisation
     - Public: read permissions to anyone
+   Note: For all Met Office work
+   the owner must be the Met Office GitHub organisation
+   and the visibility must be private.
 3. Tick the box to initialise with a README file (unless [creating a local repository](./repo-quick-start.md#local-first) first)
 
 ### Clone the GitHub remote
