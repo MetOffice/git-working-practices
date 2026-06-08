@@ -71,7 +71,7 @@ $ git branch -M master main
 ```
 
 5. Create a [new GitHub repository](https://github.com/new) with no files.
-5. Set up links to the new GitHub repository
+6. Set up links to the new GitHub repository
 
 ```bash
 git remote add origin git@github.com:<organisation>/<repository>.git
