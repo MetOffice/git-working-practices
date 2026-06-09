@@ -2,6 +2,19 @@
 title: Setup
 ---
 
+## Learning Outcomes
+
+By the end of the course you will be able to:
+
+- give collaborators access to your repositories.
+- manage work using Issues, milestones, labels, and Projects.
+- name and describe some branching models.
+- use the feature branch model to contribute to a GitHub repository.
+- conduct reviews on GitHub with help from automated testing using GitHub Actions.
+- describe the effect of the three merge options on a repositories history.
+- use forks to contribute to a GitHub repository.
+- resolve conflicts.
+
 ## Pre-workshop Survey
 
 Please remember to fill out the pre-workshop survey prior
