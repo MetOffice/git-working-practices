@@ -47,6 +47,7 @@
           </ul></li>
       </div>
 
+
       <div class="dropdown" id="instructor-dropdown">
         <button class="btn btn-secondary dropdown-toggle bordered-button" type="button" id="dropdownMenu1" data-bs-toggle="dropdown" aria-expanded="false">
           <i aria-hidden="true" class="icon" data-feather="eye"></i> Instructor View <i data-feather="chevron-down"></i>
@@ -89,7 +90,7 @@
           <button class="nav-link dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false">
             More <i data-feather="chevron-down"></i>
           </button>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown"><hr><li><a class="dropdown-item" href="discuss.html">Discussion</a></li><li><a class="dropdown-item" href="fcm-git_cheat_sheet.html">FCM vs Git Cheat Sheet</a></li><li><a class="dropdown-item" href="reference.html">Git Cheatsheets for Quick Reference</a></li>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown"><hr><li><a class="dropdown-item" href="discuss.html">Discussion</a></li><li><a class="dropdown-item" href="reference.html">Git Cheatsheets for Quick Reference</a></li><li><a class="dropdown-item" href="feature-branch-dev.html">Feature Branch Development</a></li><li><a class="dropdown-item" href="forking-dev.html">Development with Forks</a></li><li><a class="dropdown-item" href="fcm-git_cheat_sheet.html">FCM vs Git Cheat Sheet</a></li>
           </ul></li>
       </ul></div>
     <!--
@@ -336,7 +337,7 @@
                       <li>
                         <a href="../instructor/images.html">Extract All Images</a>
                       </li>
-                      <hr><li><a class="dropdown-item" href="discuss.html">Discussion</a></li><li><a class="dropdown-item" href="fcm-git_cheat_sheet.html">FCM vs Git Cheat Sheet</a></li><li><a class="dropdown-item" href="reference.html">Git Cheatsheets for Quick Reference</a></li>
+                      <hr><li><a class="dropdown-item" href="discuss.html">Discussion</a></li><li><a class="dropdown-item" href="reference.html">Git Cheatsheets for Quick Reference</a></li><li><a class="dropdown-item" href="feature-branch-dev.html">Feature Branch Development</a></li><li><a class="dropdown-item" href="forking-dev.html">Development with Forks</a></li><li><a class="dropdown-item" href="fcm-git_cheat_sheet.html">FCM vs Git Cheat Sheet</a></li>
                     </ul></div>
                 </div>
               </div>
@@ -423,7 +424,7 @@ Using forks has no impact on how likely conflicts are to occur.</p>
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
   <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
 <div class="accordion-body">
 <p>To create the conflict for all learners your co-instructor should
 follow along making the same changes the learners make. The
@@ -543,7 +544,7 @@ These changes now conflict with the one you made.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Practising By Yourself </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
 <div class="accordion-body">
 <p>If you’re working through this lesson on your own, you won’t see a
 conflict. You should still follow the materials to learn what to do when
@@ -801,6 +802,7 @@ tools (e.g. <code>htmltidy</code>, <code>perltidy</code>,
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Challenge</span>
 <div id="conflicts-on-non-textual-files" class="callout-inner">
 <h3 class="callout-title">Conflicts on Non-textual files</h3>
 <div class="callout-content">
@@ -814,7 +816,7 @@ non-textual file that is stored in version control?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>Let’s try it with your <code>weather</code> repository. Suppose you
 take a picture of the television forecast and call it
@@ -984,8 +986,8 @@ files:</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
 </div>
+<span class="callout-header">Key Points</span>
 <div class="callout-inner">
-<h3 class="callout-title">Key Points</h3>
 <div class="callout-content">
 <ul><li>Conflicts occur when two or more people change the same lines of the
 same file.</li>
@@ -1024,15 +1026,17 @@ resolved.</li>
 	
         | <a href="https://github.com/metoffice/git-working-practices/blob/main/CONTRIBUTING.md" class="external-link">Contributing</a>
         | <a href="https://github.com/metoffice/git-working-practices/" class="external-link">Source</a></p>
-				<p><a href="https://github.com/metoffice/git-working-practices/blob/main/CITATION" class="external-link">Cite</a> | <a href="mailto:d.theodorakis@metoffice.gov.uk">Contact</a> | <a href="https://carpentries.org/about/" class="external-link">About</a></p>
-			</div>
-			<div class="col-md-6">
+        <p>
+        <a href="https://github.com/metoffice/git-working-practices/blob/main/" class="external-link">Cite</a>
+        | <a href="mailto:d.theodorakis@metoffice.gov.uk">Contact</a> | <a href="https://carpentries.org/about/" class="external-link">About</a></p>
+		</div>
+		<div class="col-md-6">
 
         <p>Materials licensed under <a href="LICENSE.html">CC-BY 4.0</a> by the authors</p>
 
         <p>Template licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">CC-BY 4.0</a> by <a href="https://carpentries.org/" class="external-link">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/astroDimitrios/sandpaper/tree/4aa05d502eeb4de64fbcd430b468e22dd4952718" class="external-link">sandpaper (0.16.11)</a>, <a href="https://github.com/carpentries/pegboard/tree/5e0d711121a581777d83cf270e298c933f112d52" class="external-link">pegboard (0.7.9)</a>, and <a href="https://github.com/astroDimitrios/varnish/tree/7c1ab925aa2bd2e6769ba68caa820231306b105b" class="external-link">varnish (1.0.5)</a></p>
-			</div>
+        <p>Built with <a href="https://github.com/astroDimitrios/sandpaper/tree/34be278fccd935ffe3c42836c517f6efc8f64028" class="external-link">sandpaper (0.20.1.9000)</a>, <a href="https://github.com/carpentries/pegboard/tree/7dc6acfdd6233c0d124a0ecf288325edc40dd96d" class="external-link">pegboard (0.7.9)</a>, and <a href="https://github.com/astroDimitrios/varnish/tree/5c2d7048e460689fcd39f676f7b08844bf21e676" class="external-link">varnish (1.0.9)</a></p>
+		</div>
 		</footer></div> <!-- / div.container -->
 	<div id="to-top">
 		<a href="#top">
@@ -1042,10 +1046,10 @@ resolved.</li>
   <script type="application/ld+json">
     {
   "@context": "https://schema.org",
-  "@type": "TrainingMaterial",
+  "@type": "LearningResource",
   "@id": "https://metoffice.github.io/git-working-practices/instructor/06-conflict.html",
   "inLanguage": "en",
-  "dct:conformsTo": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE",
+  "dct:conformsTo": "https://bioschemas.org/profiles/LearningResource/1.0-RELEASE",
   "description": "A Carpentries Lesson teaching foundational data and coding skills to researchers worldwide",
   "keywords": "software, data, lesson, The Carpentries, Git, GitHub",
   "name": "Conflicts",
@@ -1054,7 +1058,7 @@ resolved.</li>
   "identifier": "https://metoffice.github.io/git-working-practices/instructor/06-conflict.html",
   "dateCreated": "2024-11-11",
   "dateModified": "2025-03-12",
-  "datePublished": "2025-04-15"
+  "datePublished": "2026-06-09"
 }
 
   </script><script>

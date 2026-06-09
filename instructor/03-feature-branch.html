@@ -47,6 +47,7 @@
           </ul></li>
       </div>
 
+
       <div class="dropdown" id="instructor-dropdown">
         <button class="btn btn-secondary dropdown-toggle bordered-button" type="button" id="dropdownMenu1" data-bs-toggle="dropdown" aria-expanded="false">
           <i aria-hidden="true" class="icon" data-feather="eye"></i> Instructor View <i data-feather="chevron-down"></i>
@@ -89,7 +90,7 @@
           <button class="nav-link dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false">
             More <i data-feather="chevron-down"></i>
           </button>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown"><hr><li><a class="dropdown-item" href="discuss.html">Discussion</a></li><li><a class="dropdown-item" href="fcm-git_cheat_sheet.html">FCM vs Git Cheat Sheet</a></li><li><a class="dropdown-item" href="reference.html">Git Cheatsheets for Quick Reference</a></li>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown"><hr><li><a class="dropdown-item" href="discuss.html">Discussion</a></li><li><a class="dropdown-item" href="reference.html">Git Cheatsheets for Quick Reference</a></li><li><a class="dropdown-item" href="feature-branch-dev.html">Feature Branch Development</a></li><li><a class="dropdown-item" href="forking-dev.html">Development with Forks</a></li><li><a class="dropdown-item" href="fcm-git_cheat_sheet.html">FCM vs Git Cheat Sheet</a></li>
           </ul></li>
       </ul></div>
     <!--
@@ -338,7 +339,7 @@
                       <li>
                         <a href="../instructor/images.html">Extract All Images</a>
                       </li>
-                      <hr><li><a class="dropdown-item" href="discuss.html">Discussion</a></li><li><a class="dropdown-item" href="fcm-git_cheat_sheet.html">FCM vs Git Cheat Sheet</a></li><li><a class="dropdown-item" href="reference.html">Git Cheatsheets for Quick Reference</a></li>
+                      <hr><li><a class="dropdown-item" href="discuss.html">Discussion</a></li><li><a class="dropdown-item" href="reference.html">Git Cheatsheets for Quick Reference</a></li><li><a class="dropdown-item" href="feature-branch-dev.html">Feature Branch Development</a></li><li><a class="dropdown-item" href="forking-dev.html">Development with Forks</a></li><li><a class="dropdown-item" href="fcm-git_cheat_sheet.html">FCM vs Git Cheat Sheet</a></li>
                     </ul></div>
                 </div>
               </div>
@@ -374,7 +375,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Feature Branch Model</h1>
-        <p>Last updated on 2025-03-12 |
+        <p>Last updated on 2026-06-04 |
 
         <a href="https://github.com/metoffice/git-working-practices/edit/main/episodes/03-feature-branch.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -424,7 +425,7 @@ learner.</p>
   Working through the material independently
   </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
 <div class="accordion-body">
 <p>If you are working through the material in your own time, you will be
 able to complete all the steps in this episode without another learner.
@@ -457,7 +458,7 @@ repository”.</p>
   Commands that communicate between repositories
   </h3>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
+<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
 <div class="accordion-body">
 <p>In the Introduction to Version Control with Git and GitHub course you
 learnt that only certain git commands communicate between
@@ -507,7 +508,7 @@ such as prefixing the branch name by <code>feature</code>,
   Older Versions of Git / JASMIN Users
   </h3>
 </button>
-<div id="collapseSpoiler3" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler3" aria-labelledby="headingSpoiler3">
+<div id="collapseSpoiler3" class="accordion-collapse collapse" aria-labelledby="headingSpoiler3" data-bs-parent="#accordionSpoiler3">
 <div class="accordion-body">
 <p>The <code>git switch</code> command was added in Git version
 <strong>2.23</strong>. To check your version run:</p>
@@ -563,6 +564,7 @@ Light and fluffy cumulus.    </code></pre>
 <div class="callout-square">
 <i class="callout-icon" data-feather="alert-triangle"></i>
 </div>
+<span class="callout-header">Caution</span>
 <div id="add-in-whitespace" class="callout-inner">
 <h3 class="callout-title">Add in whitespace!</h3>
 <div class="callout-content">
@@ -624,7 +626,7 @@ refresh your browser to see the new branch.</p>
   fatal: no upstream branch
   </h3>
 </button>
-<div id="collapseSpoiler4" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler4" aria-labelledby="headingSpoiler4">
+<div id="collapseSpoiler4" class="accordion-collapse collapse" aria-labelledby="headingSpoiler4" data-bs-parent="#accordionSpoiler4">
 <div class="accordion-body">
 <p>If you see a message similar to the following:</p>
 <div class="codewrapper">
@@ -661,7 +663,7 @@ push from a new branch.</p>
   Some more about remotes
   </h3>
 </button>
-<div id="collapseSpoiler5" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler5" aria-labelledby="headingSpoiler5">
+<div id="collapseSpoiler5" class="accordion-collapse collapse" aria-labelledby="headingSpoiler5" data-bs-parent="#accordionSpoiler5">
 <div class="accordion-body">
 <p>In this episode and in the git-novice lesson, our local repository
 only had a single “remote”, called <code>origin</code>. A remote is a
@@ -705,7 +707,7 @@ this to change <code>upstream</code> to <code>mo-fitzroy</code>.</li>
 </div>
 </div>
 </section><section><h2 class="section-heading" id="open-a-pr">Open a PR<a class="anchor" aria-label="anchor" href="#open-a-pr"></a></h2>
-<hr class="half-width"><p>In the git-novice lesson you practised opening a <a href="https://www.astropython.com/git-novice/10-pull-requests.html" class="external-link">pull
+<hr class="half-width"><p>In the git-novice lesson you practised opening a <a href="https://metoffice.github.io/git-novice/10-pull-requests.html" class="external-link">pull
 request</a>.</p>
 <p>You should see a notification appear on GitHub telling you the
 <code>1_favourite_cloud</code> branch had recent pushes. The
@@ -772,6 +774,7 @@ hooks</a>.</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
+<span class="callout-header">Callout</span>
 <div id="automatically-closing-issues-via-prs" class="callout-inner">
 <h3 class="callout-title">Automatically closing Issues via PRs</h3>
 <div class="callout-content">
@@ -846,6 +849,7 @@ and merged back into <code>main</code>.</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
+<span class="callout-header">Discussion</span>
 <div id="assign-a-reviewer" class="callout-inner">
 <h3 class="callout-title">Assign a Reviewer</h3>
 <div class="callout-content">
@@ -865,8 +869,8 @@ not have been granted permissions, ask your instructors for help)</li>
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
 </div>
+<span class="callout-header">Key Points</span>
 <div class="callout-inner">
-<h3 class="callout-title">Key Points</h3>
 <div class="callout-content">
 <ul><li>Cloning a repository gives you a local copy of the repository:
 <code>git clone &lt;repository&gt; &lt;directory&gt;</code>
@@ -919,15 +923,17 @@ reviewers.<a href="#fnref2" class="footnote-back">↩︎</a></p></li>
 	
         | <a href="https://github.com/metoffice/git-working-practices/blob/main/CONTRIBUTING.md" class="external-link">Contributing</a>
         | <a href="https://github.com/metoffice/git-working-practices/" class="external-link">Source</a></p>
-				<p><a href="https://github.com/metoffice/git-working-practices/blob/main/CITATION" class="external-link">Cite</a> | <a href="mailto:d.theodorakis@metoffice.gov.uk">Contact</a> | <a href="https://carpentries.org/about/" class="external-link">About</a></p>
-			</div>
-			<div class="col-md-6">
+        <p>
+        <a href="https://github.com/metoffice/git-working-practices/blob/main/" class="external-link">Cite</a>
+        | <a href="mailto:d.theodorakis@metoffice.gov.uk">Contact</a> | <a href="https://carpentries.org/about/" class="external-link">About</a></p>
+		</div>
+		<div class="col-md-6">
 
         <p>Materials licensed under <a href="LICENSE.html">CC-BY 4.0</a> by the authors</p>
 
         <p>Template licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">CC-BY 4.0</a> by <a href="https://carpentries.org/" class="external-link">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/astroDimitrios/sandpaper/tree/4aa05d502eeb4de64fbcd430b468e22dd4952718" class="external-link">sandpaper (0.16.11)</a>, <a href="https://github.com/carpentries/pegboard/tree/5e0d711121a581777d83cf270e298c933f112d52" class="external-link">pegboard (0.7.9)</a>, and <a href="https://github.com/astroDimitrios/varnish/tree/7c1ab925aa2bd2e6769ba68caa820231306b105b" class="external-link">varnish (1.0.5)</a></p>
-			</div>
+        <p>Built with <a href="https://github.com/astroDimitrios/sandpaper/tree/34be278fccd935ffe3c42836c517f6efc8f64028" class="external-link">sandpaper (0.20.1.9000)</a>, <a href="https://github.com/carpentries/pegboard/tree/7dc6acfdd6233c0d124a0ecf288325edc40dd96d" class="external-link">pegboard (0.7.9)</a>, and <a href="https://github.com/astroDimitrios/varnish/tree/5c2d7048e460689fcd39f676f7b08844bf21e676" class="external-link">varnish (1.0.9)</a></p>
+		</div>
 		</footer></div> <!-- / div.container -->
 	<div id="to-top">
 		<a href="#top">
@@ -937,10 +943,10 @@ reviewers.<a href="#fnref2" class="footnote-back">↩︎</a></p></li>
   <script type="application/ld+json">
     {
   "@context": "https://schema.org",
-  "@type": "TrainingMaterial",
+  "@type": "LearningResource",
   "@id": "https://metoffice.github.io/git-working-practices/instructor/03-feature-branch.html",
   "inLanguage": "en",
-  "dct:conformsTo": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE",
+  "dct:conformsTo": "https://bioschemas.org/profiles/LearningResource/1.0-RELEASE",
   "description": "A Carpentries Lesson teaching foundational data and coding skills to researchers worldwide",
   "keywords": "software, data, lesson, The Carpentries, Git, GitHub",
   "name": "Feature Branch Model",
@@ -948,8 +954,8 @@ reviewers.<a href="#fnref2" class="footnote-back">↩︎</a></p></li>
   "url": "https://metoffice.github.io/git-working-practices/instructor/03-feature-branch.html",
   "identifier": "https://metoffice.github.io/git-working-practices/instructor/03-feature-branch.html",
   "dateCreated": "2024-11-11",
-  "dateModified": "2025-03-12",
-  "datePublished": "2025-04-15"
+  "dateModified": "2026-06-04",
+  "datePublished": "2026-06-09"
 }
 
   </script><script>

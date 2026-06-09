@@ -55,6 +55,12 @@
     <loc>https://metoffice.github.io/git-working-practices/fcm-git_cheat_sheet.html</loc>
   </url>
   <url>
+    <loc>https://metoffice.github.io/git-working-practices/feature-branch-dev.html</loc>
+  </url>
+  <url>
+    <loc>https://metoffice.github.io/git-working-practices/forking-dev.html</loc>
+  </url>
+  <url>
     <loc>https://metoffice.github.io/git-working-practices/images.html</loc>
   </url>
   <url>
@@ -115,6 +121,12 @@
     <loc>https://metoffice.github.io/git-working-practices/instructor/fcm-git_cheat_sheet.html</loc>
   </url>
   <url>
+    <loc>https://metoffice.github.io/git-working-practices/instructor/feature-branch-dev.html</loc>
+  </url>
+  <url>
+    <loc>https://metoffice.github.io/git-working-practices/instructor/forking-dev.html</loc>
+  </url>
+  <url>
     <loc>https://metoffice.github.io/git-working-practices/instructor/images.html</loc>
   </url>
   <url>
@@ -133,6 +145,9 @@
     <loc>https://metoffice.github.io/git-working-practices/instructor/reference.html</loc>
   </url>
   <url>
+    <loc>https://metoffice.github.io/git-working-practices/instructor/repo-quick-start.html</loc>
+  </url>
+  <url>
     <loc>https://metoffice.github.io/git-working-practices/instructor-notes.html</loc>
   </url>
   <url>
@@ -143,5 +158,8 @@
   </url>
   <url>
     <loc>https://metoffice.github.io/git-working-practices/reference.html</loc>
+  </url>
+  <url>
+    <loc>https://metoffice.github.io/git-working-practices/repo-quick-start.html</loc>
   </url>
 </urlset>
