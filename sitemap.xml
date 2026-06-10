@@ -46,9 +46,6 @@
     <loc>https://metoffice.github.io/git-working-practices/LICENSE.html</loc>
   </url>
   <url>
-    <loc>https://metoffice.github.io/git-working-practices/aio.html</loc>
-  </url>
-  <url>
     <loc>https://metoffice.github.io/git-working-practices/discuss.html</loc>
   </url>
   <url>
@@ -59,9 +56,6 @@
   </url>
   <url>
     <loc>https://metoffice.github.io/git-working-practices/forking-dev.html</loc>
-  </url>
-  <url>
-    <loc>https://metoffice.github.io/git-working-practices/images.html</loc>
   </url>
   <url>
     <loc>https://metoffice.github.io/git-working-practices/index.html</loc>
@@ -112,9 +106,6 @@
     <loc>https://metoffice.github.io/git-working-practices/instructor/LICENSE.html</loc>
   </url>
   <url>
-    <loc>https://metoffice.github.io/git-working-practices/instructor/aio.html</loc>
-  </url>
-  <url>
     <loc>https://metoffice.github.io/git-working-practices/instructor/discuss.html</loc>
   </url>
   <url>
@@ -127,16 +118,7 @@
     <loc>https://metoffice.github.io/git-working-practices/instructor/forking-dev.html</loc>
   </url>
   <url>
-    <loc>https://metoffice.github.io/git-working-practices/instructor/images.html</loc>
-  </url>
-  <url>
     <loc>https://metoffice.github.io/git-working-practices/instructor/index.html</loc>
-  </url>
-  <url>
-    <loc>https://metoffice.github.io/git-working-practices/instructor/instructor-notes.html</loc>
-  </url>
-  <url>
-    <loc>https://metoffice.github.io/git-working-practices/instructor/key-points.html</loc>
   </url>
   <url>
     <loc>https://metoffice.github.io/git-working-practices/instructor/profiles.html</loc>
@@ -145,21 +127,9 @@
     <loc>https://metoffice.github.io/git-working-practices/instructor/reference.html</loc>
   </url>
   <url>
-    <loc>https://metoffice.github.io/git-working-practices/instructor/repo-quick-start.html</loc>
-  </url>
-  <url>
-    <loc>https://metoffice.github.io/git-working-practices/instructor-notes.html</loc>
-  </url>
-  <url>
-    <loc>https://metoffice.github.io/git-working-practices/key-points.html</loc>
-  </url>
-  <url>
     <loc>https://metoffice.github.io/git-working-practices/profiles.html</loc>
   </url>
   <url>
     <loc>https://metoffice.github.io/git-working-practices/reference.html</loc>
-  </url>
-  <url>
-    <loc>https://metoffice.github.io/git-working-practices/repo-quick-start.html</loc>
   </url>
 </urlset>
